@@ -198,6 +198,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
     func showSearchBar() {
         airportSearchArr = []
         airportSearchBar.alpha = 0
+        airportSearchBar.text = ""
+        searchTableView.reloadData()
         navigationItem.titleView = airportSearchBar
         navigationItem.setRightBarButton(nil, animated: true)
         navigationItem.setLeftBarButton(nil, animated: true)
