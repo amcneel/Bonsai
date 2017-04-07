@@ -17,10 +17,10 @@ func getBackgroundImage(){
         var response:URLResponse? = nil;
         do{
             let data = try NSURLConnection.sendSynchronousRequest(request as URLRequest, returning: &response)
-            print(data)
+            //print(data)
         }
         catch{
-            print("error with getting data")
+            //print("error with getting data")
         }
         
         

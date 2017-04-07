@@ -11,7 +11,7 @@ import Foundation
 import CoreLocation
 
 //customstring convertible allows public var description to be used
-class Airport: CustomStringConvertible{
+class Airport: NSObject{
     
     private var name:String
     private var code:String
@@ -35,11 +35,21 @@ class Airport: CustomStringConvertible{
         return loc
     }
     
+    
+    override var hash: Int {
+        let myString = name+" "+code
+        return myString.hashValue
+    }
+    
     //for debugging use, when I wanted to print out the airports to make sure they loaded correctly
-    public var description: String{
+    override var description: String{
         let locString = String(describing: loc.coordinate)
         let s = "Code: "+code+", Name: "+name+", Coords: "+locString
         return s
     }
     
+}
+
+func ==(lhs: Airport, rhs: Airport) -> Bool {
+    return lhs.getName() == rhs.getName() && lhs.getCode() == rhs.getCode()
 }
