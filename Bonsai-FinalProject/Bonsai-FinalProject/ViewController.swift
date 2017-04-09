@@ -13,6 +13,7 @@ import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var mainView: UIView!
     var curAirport:Airport?
     
     let locationManager = CLLocationManager()
@@ -31,6 +32,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
     
     
     var airportSearchArr:[Airport] = []    //the array of airports displayed when the search bar is in use
+    
+    let blurView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.light))
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,9 +60,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         curLocButtonItem = navigationItem.leftBarButtonItem
         airportSearchBar.showsCancelButton = true
         
+        //set background image
+        mainView.backgroundColor = UIColor(patternImage: UIImage(named: "city_night")!)
+        searchTableView.backgroundColor = .clear
+        searchTableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         
         //set the timer to poll once a minute
         updateTimer = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(updateWaitTimeAndDisplay), userInfo: nil, repeats: true)
+        
+        
+        //add a blur view - used in show search bar and hide search bar
+        blurView.frame = self.view.bounds
         
     }
     
@@ -135,9 +147,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
     func updateWaitTimeAndDisplay(){
         let waitTime = getWaitTime(airport: curAirport!)
         //the next 4 lines of code are temporary, they just change the labels on the phone so we can see our location, the closest airport, and wait times.  It is ugly and should be changed
-        let waitTimeString = "Your wait time is between "+String(waitTime.lower)+" and "+String(waitTime.upper)+" minutes, with an expected value of "+String(waitTime.expected)+" minutes"
+        let waitTimeString = String(Int(waitTime.expected))
         waitLabel.text = waitTimeString
-        airportLabel.text = "Your airport is: \(curAirport!.getName())"
+        airportLabel.text = curAirport?.getCode()
         //testPost()
     }
     
@@ -181,13 +193,35 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let myCell = UITableViewCell(style: .default, reuseIdentifier: nil)
+        //let myCell = UITableViewCell(style: .default, reuseIdentifier: nil)
+        let myCell = searchTableView.dequeueReusableCell(withIdentifier: "AirportSearchCell", for: indexPath) as! AirportSearchCell
         let a = airportSearchArr[indexPath.row]
-        let aString = a.getCode()+" - "+a.getName()
-        myCell.textLabel?.text = aString
+        //let aString = a.getCode()+" - "+a.getName()
+        //myCell.textLabel?.text = aString
+        myCell.code.text = a.getCode()
+        
+        myCell.name.text = a.getName()
+        
+        myCell.tintColor = UIColor.white
         return myCell
         
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let myCell = cell as! AirportSearchCell
+        
+        myCell.code.tintColor = UIColor.white
+        myCell.code.shadowColor = UIColor.black
+        myCell.name.tintColor = UIColor.white
+        myCell.name.shadowColor = UIColor.black
+        //myCell.backgroundColor = myCell.backgroundColor?.withAlphaComponent(0.1)
+        myCell.backgroundColor = .clear
+        
+        print(myCell)
+        print(myCell.tintColor)
+        
+    }
+ 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         curAirport = airportSearchArr[indexPath.row]
@@ -197,17 +231,26 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
     
     func showSearchBar() {
         airportSearchArr = []
-        airportSearchBar.alpha = 0
         airportSearchBar.text = ""
         searchTableView.reloadData()
         navigationItem.titleView = airportSearchBar
+        airportSearchBar.alpha = 0
         navigationItem.setRightBarButton(nil, animated: true)
         navigationItem.setLeftBarButton(nil, animated: true)
-        UIView.animate(withDuration: 5.0, animations: {
-            //self.airportSearchBar.alpha = 1
+        mainView.addSubview(blurView)
+        blurView.alpha = 0
+        UIView.animate(withDuration: 0.3, animations: {
+            self.view.layoutIfNeeded()
+            self.airportSearchBar.alpha = 1
+            self.blurView.alpha = 1
         }, completion: { finished in
             self.airportSearchBar.becomeFirstResponder()
             self.searchTableView.isHidden = false
+            
+            //add a blur over the original image
+            
+            
+            
         })
     }
     
@@ -217,8 +260,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         UIView.animate(withDuration: 0.3, animations: {
             self.navigationItem.titleView = nil
             self.searchTableView.isHidden = true
+            self.blurView.alpha = 0
         }, completion: { finished in
-            
+            self.blurView.removeFromSuperview()
         })
     }
     

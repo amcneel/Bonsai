@@ -10,6 +10,7 @@
 		6849EC231E983CDE0026DA65 /* Search.png in Resources */ = {isa = PBXBuildFile; fileRef = 6849EC221E983CDE0026DA65 /* Search.png */; };
 		6849EC251E9845240026DA65 /* Marker Filled-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 6849EC241E9845240026DA65 /* Marker Filled-25.png */; };
 		6849EC611E9AD6530026DA65 /* AlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6849EC601E9AD6530026DA65 /* AlarmView.swift */; };
+		6849EC631E9AE82E0026DA65 /* AirportSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6849EC621E9AE82E0026DA65 /* AirportSearchCell.swift */; };
 		686113EE1E981C3C00729FD1 /* BackgroundImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686113ED1E981C3C00729FD1 /* BackgroundImageHandler.swift */; };
 		6886A56C1E95885C00A57868 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886A56B1E95885C00A57868 /* AppDelegate.swift */; };
 		6886A56E1E95885C00A57868 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886A56D1E95885C00A57868 /* ViewController.swift */; };
@@ -51,6 +52,7 @@
 		6849EC221E983CDE0026DA65 /* Search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Search.png; sourceTree = "<group>"; };
 		6849EC241E9845240026DA65 /* Marker Filled-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marker Filled-25.png"; sourceTree = "<group>"; };
 		6849EC601E9AD6530026DA65 /* AlarmView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmView.swift; sourceTree = "<group>"; };
+		6849EC621E9AE82E0026DA65 /* AirportSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportSearchCell.swift; sourceTree = "<group>"; };
 		686113ED1E981C3C00729FD1 /* BackgroundImageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundImageHandler.swift; sourceTree = "<group>"; };
 		6886A5681E95885C00A57868 /* Bonsai-FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bonsai-FinalProject.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6886A56B1E95885C00A57868 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				6886A56D1E95885C00A57868 /* ViewController.swift */,
 				6886A5E31E95A77500A57868 /* WaitTime.swift */,
 				6886A56F1E95885C00A57868 /* Main.storyboard */,
+				6849EC621E9AE82E0026DA65 /* AirportSearchCell.swift */,
 				6849EC601E9AD6530026DA65 /* AlarmView.swift */,
 				6886A5721E95885C00A57868 /* Assets.xcassets */,
 				6886A5741E95885C00A57868 /* LaunchScreen.storyboard */,
@@ -318,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6886A56E1E95885C00A57868 /* ViewController.swift in Sources */,
+				6849EC631E9AE82E0026DA65 /* AirportSearchCell.swift in Sources */,
 				6886A56C1E95885C00A57868 /* AppDelegate.swift in Sources */,
 				6849EC611E9AD6530026DA65 /* AlarmView.swift in Sources */,
 				6886A5E21E95A6AD00A57868 /* SwiftyJSON.swift in Sources */,
