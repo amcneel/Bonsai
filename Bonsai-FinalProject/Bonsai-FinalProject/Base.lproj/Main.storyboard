@@ -41,6 +41,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LZf-og-7Ko">
+                                <rect key="frame" x="2" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2qb-ht-Tyx">
                                 <rect key="frame" x="0.0" y="20" width="377" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -58,16 +63,14 @@
                                                 <rect key="frame" x="336" y="9" width="25" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button" image="Search.png"/>
+                                                <connections>
+                                                    <action selector="searchButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EYc-Tw-Va6"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LZf-og-7Ko">
-                                <rect key="frame" x="2" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -75,6 +78,8 @@
                     <connections>
                         <outlet property="airportLabel" destination="HbG-73-nHF" id="kMV-pw-7co"/>
                         <outlet property="navBar" destination="2qb-ht-Tyx" id="BqP-yn-pEp"/>
+                        <outlet property="navBarNav" destination="dcJ-uG-crf" id="1rf-gn-lrk"/>
+                        <outlet property="navItem" destination="dcJ-uG-crf" id="Urb-Uo-WJ0"/>
                         <outlet property="searchBar" destination="LZf-og-7Ko" id="7B3-IW-KPx"/>
                         <outlet property="searchTableView" destination="2eo-R3-Wmc" id="iVC-U2-3Lg"/>
                         <outlet property="waitLabel" destination="JmU-5f-Qsn" id="jnW-Bj-QOy"/>
