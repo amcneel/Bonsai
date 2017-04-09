@@ -203,8 +203,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         navigationItem.titleView = airportSearchBar
         navigationItem.setRightBarButton(nil, animated: true)
         navigationItem.setLeftBarButton(nil, animated: true)
-        UIView.animate(withDuration: 0.5, animations: {
-            self.airportSearchBar.alpha = 1
+        UIView.animate(withDuration: 5.0, animations: {
+            //self.airportSearchBar.alpha = 1
         }, completion: { finished in
             self.airportSearchBar.becomeFirstResponder()
             self.searchTableView.isHidden = false
