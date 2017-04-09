@@ -15,6 +15,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
     
     var curAirport:Airport?
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var navBar: UINavigationBar!
     let locationManager = CLLocationManager()
     var airports:[Airport] = []
@@ -52,7 +53,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         searchTableView.isHidden = true
         
         //setup the navigation bar
-        navigationItem.titleView = nil
+        
         searchBarButtonItem = navigationItem.rightBarButtonItem
         curLocButtonItem = navigationItem.leftBarButtonItem
         airportSearchBar.showsCancelButton = true
