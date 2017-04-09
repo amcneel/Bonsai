@@ -11,6 +11,7 @@ import UIKit
 class AlarmView: UIViewController, UITextFieldDelegate{
     
     
+    @IBOutlet weak var navBar: UINavigationBar!
     
     @IBOutlet weak var datePicker: UIDatePicker!
     

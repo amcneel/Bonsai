@@ -15,6 +15,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
     
     var curAirport:Airport?
     
+    @IBOutlet weak var navBar: UINavigationBar!
     let locationManager = CLLocationManager()
     var airports:[Airport] = []
     
