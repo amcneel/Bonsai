@@ -15,15 +15,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
     
     var curAirport:Airport?
     
-    @IBOutlet weak var navItem: UINavigationItem!
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var navBar: UINavigationBar!
     let locationManager = CLLocationManager()
     var airports:[Airport] = []
     
     @IBOutlet weak var airportLabel: UILabel!
     @IBOutlet weak var waitLabel: UILabel!
     
+    var airportSearchBar = UISearchBar()
     @IBOutlet weak var searchTableView: UITableView!
     
     var searchBarButtonItem: UIBarButtonItem?
@@ -47,16 +45,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         locationManager.requestWhenInUseAuthorization()
         //locationManager.startUpdatingLocation()
         locationManager.requestLocation()
-        searchBar.delegate = self
+        airportSearchBar.delegate = self
         searchTableView.delegate = self
         searchTableView.dataSource = self
         searchTableView.isHidden = true
         
         //setup the navigation bar
-        
-        searchBarButtonItem = navItem.rightBarButtonItem
-        curLocButtonItem = navItem.leftBarButtonItem
-        searchBar.showsCancelButton = true
+        navigationItem.titleView = nil
+        searchBarButtonItem = navigationItem.rightBarButtonItem
+        curLocButtonItem = navigationItem.leftBarButtonItem
+        airportSearchBar.showsCancelButton = true
         
         
         //set the timer to poll once a minute
@@ -199,10 +197,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
     
     func showSearchBar() {
         airportSearchArr = []
-        searchBar.alpha = 0
-        searchBar.text = ""
+        airportSearchBar.alpha = 0
+        airportSearchBar.text = ""
         searchTableView.reloadData()
-        navItem.tit.titleView = airportSearchBar
+        navigationItem.titleView = airportSearchBar
         navigationItem.setRightBarButton(nil, animated: true)
         navigationItem.setLeftBarButton(nil, animated: true)
         UIView.animate(withDuration: 5.0, animations: {
@@ -228,13 +226,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         hideSearchBar()
     }
     
-    
     @IBAction func searchButtonPressed(_ sender: Any) {
         showSearchBar()
     }
     
     
-    @IBAction func useCurrentLocationButtonPressed(_ sender: Any) {
+    
+    @IBAction func useCurrentLocationButtonPressed(_ sender: UIButton) {
         locationManager.requestLocation()
     }
     

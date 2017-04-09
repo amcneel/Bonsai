@@ -9,10 +9,8 @@
 import UIKit
 
 class AlarmView: UIViewController, UITextFieldDelegate{
-    //hi
     
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var navBar: UINavigationBar!
+    
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
