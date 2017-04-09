@@ -159,7 +159,7 @@
         <!--Alarm-->
         <scene sceneID="abb-nr-bGC">
             <objects>
-                <viewController id="g9W-o9-a5L" customClass="AlarmView" customModule="Bonsai_FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="g9W-o9-a5L" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NHT-ay-y9d"/>
                         <viewControllerLayoutGuide type="bottom" id="9Mk-tv-lMC"/>
@@ -239,11 +239,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Alarm" image="Alarm Clock Filled-25.png" id="c1V-gg-hkm"/>
+<<<<<<< HEAD
                     <connections>
                         <outlet property="datePicker" destination="5Xc-g4-PqA" id="baa-e2-dv6"/>
                         <outlet property="navBar" destination="l7s-1k-VNE" id="kJy-4u-9pH"/>
                         <outlet property="searchBar" destination="x5s-Pw-abx" id="SBs-Qf-S9g"/>
                     </connections>
+=======
+>>>>>>> parent of 601a7a1... latest version
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ysn-aN-7qS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
