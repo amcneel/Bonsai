@@ -9,9 +9,15 @@
 import UIKit
 import CoreLocation
 
-
+enum AirportType{
+    case location
+    case searchbar
+}
 
 class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    var airportType:AirportType = .location //used in update, determines which function to use when determining the wait times
     
     @IBOutlet weak var mainView: UIView!
     var curAirport:Airport?
@@ -140,7 +146,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         let someLocation = locations[0]
         //print("Your location is \(someLocation)")
         curAirport = getClosestAirport(location: someLocation)
-        updateWaitTimeAndDisplay()
         
     }
     
@@ -266,6 +271,39 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         })
     }
     
+    func update(){
+        
+        /*
+        DispatchQueue.global(qos: .userInitiated).async{
+            self.getMovies()
+            
+            DispatchQueue.main.async {
+                self.movieCollectionView.isHidden = false
+                self.activityIndicator.stopAnimating()
+                self.movieCollectionView.reloadData()
+                print("Done")
+            }
+        }
+ 
+        */
+        
+        DispatchQueue.global(qos: .userInitiated).async{
+            switch self.airportType{
+            case .location:
+                self.locationManager.requestLocation()
+                break
+            default:
+                break
+            }
+            
+            DispatchQueue.main.async {
+                self.updateWaitTimeAndDisplay()
+            }
+        }
+        
+        
+    }
+    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         hideSearchBar()
     }
@@ -273,8 +311,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
     @IBAction func searchButtonPressed(_ sender: Any) {
         showSearchBar()
     }
-    
-    
     
     @IBAction func useCurrentLocationButtonPressed(_ sender: UIButton) {
         locationManager.requestLocation()
