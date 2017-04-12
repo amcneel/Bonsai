@@ -16,7 +16,10 @@ enum AirportType{
 
 class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
     
+    var firstTimeLoading:Bool = true
+    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     var airportType:AirportType = .location //used in update, determines which function to use when determining the wait times
     
     @IBOutlet weak var mainView: UIView!
@@ -54,7 +57,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         //locationManager.startUpdatingLocation()
-        locationManager.requestLocation()
         airportSearchBar.delegate = self
         searchTableView.delegate = self
         searchTableView.dataSource = self
@@ -77,6 +79,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         
         //add a blur view - used in show search bar and hide search bar
         blurView.frame = self.view.bounds
+        
+        //set the text fields to blank and start animating the activity indicator until the airport data is loaded
+        activityIndicator.startAnimating()
+        airportLabel.alpha = 0
+        waitLabel.alpha = 0
+        
+        
+        
+        
+        update()
         
     }
     
@@ -153,9 +165,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         let waitTime = getWaitTime(airport: curAirport!)
         //the next 4 lines of code are temporary, they just change the labels on the phone so we can see our location, the closest airport, and wait times.  It is ugly and should be changed
         let waitTimeString = String(Int(waitTime.expected))
+        
+        //make the labels transition smoothly
+        let animation: CATransition = CATransition()
+        animation.duration = 1.0
+        animation.type = kCATransitionFade
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        self.airportLabel.layer.add(animation, forKey: "changeTextTransition")
+        self.waitLabel.layer.add(animation, forKey: "changeTextTransition")
+        
+        
         waitLabel.text = waitTimeString
         airportLabel.text = curAirport?.getCode()
-        //testPost()
+        
+        
+        
     }
     
     
@@ -231,7 +255,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         curAirport = airportSearchArr[indexPath.row]
         hideSearchBar()
-        updateWaitTimeAndDisplay()
+        airportType = .searchbar
+        update()
     }
     
     func showSearchBar() {
@@ -271,33 +296,41 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         })
     }
     
-    func update(){
-        
-        /*
-        DispatchQueue.global(qos: .userInitiated).async{
-            self.getMovies()
+    func updateFadeIn(){
+        UIView.animate(withDuration: 0.3, animations: {
+            self.activityIndicator.alpha = 0
+            self.airportLabel.alpha = 1
+            self.waitLabel.alpha = 1
+        }, completion: { finished in
             
-            DispatchQueue.main.async {
-                self.movieCollectionView.isHidden = false
-                self.activityIndicator.stopAnimating()
-                self.movieCollectionView.reloadData()
-                print("Done")
-            }
-        }
- 
-        */
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.isHidden = true
+            
+        })
+    }
+    
+    
+    func update(){
         
         DispatchQueue.global(qos: .userInitiated).async{
             switch self.airportType{
             case .location:
                 self.locationManager.requestLocation()
+                while self.curAirport == nil{
+                    sleep(1)
+                }
                 break
             default:
                 break
             }
             
             DispatchQueue.main.async {
+                
                 self.updateWaitTimeAndDisplay()
+                //if this is the first time updating, have the labels fade in
+                if self.airportType == .location{
+                    self.updateFadeIn()
+                }
             }
         }
         
@@ -313,7 +346,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
     }
     
     @IBAction func useCurrentLocationButtonPressed(_ sender: UIButton) {
-        locationManager.requestLocation()
+        curAirport = nil
+        airportType = .location
+        update()
     }
     
 }
