@@ -157,17 +157,21 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvG-Ud-Yra">
                                 <rect key="frame" x="124.5" y="473" width="126" height="30"/>
-                                <state key="normal" title="Continue as Guest"/>
+                                <state key="normal" title="Continue as Guest">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="jgV-LG-Nrf" kind="modal" id="wNX-Ri-HB5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOv-MV-G4g">
                                 <rect key="frame" x="160.5" y="357" width="55" height="30"/>
-                                <state key="normal" title="Sign Up"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.30182202567005978" green="1" blue="0.50033029170072441" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="OOv-MV-G4g" firstAttribute="centerX" secondItem="jvG-Ud-Yra" secondAttribute="centerX" id="HqY-Aw-uSq"/>
                             <constraint firstItem="AAm-RK-LwF" firstAttribute="leading" secondItem="181-ex-Bap" secondAttribute="leadingMargin" constant="55" id="Mva-AW-r5s"/>
