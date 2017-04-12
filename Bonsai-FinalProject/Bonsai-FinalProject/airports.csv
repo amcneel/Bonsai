@@ -13,13 +13,17 @@ IAH,George Bush Intercontinental Houston ,-95.3368,29.9902,5,"Terminal A, Termin
 MIA,Miami International ,-80.287,25.7959,3,"North terminal, Central terminal, South terminal"
 MCO,Orlando International ,-81.3081,28.4312,2,"Terminal A, terminal B"
 EWR,Newark Liberty International ,-74.1745,40.6895,3,"Terminal A, Terminal B, terminal C"
-SEA,eattle–Tacoma International Airport,-122.3088,47.4502,2,"Domestic Terminal, Maynard Holbrook Jackson Jr. International Terminal"
-MSP,Minneapolis–Saint Paul International,-93.2223,44.8848,2,"Terminal 1-Lindbergh, Terminal 2-Humphrey"
+SEA,Seattle Tacoma International Airport,-122.3088,47.4502,2,"Domestic Terminal, Maynard Holbrook Jackson Jr. International Terminal"
+MSP,Minneapolis Saint Paul International,-93.2223,44.8848,2,"Terminal 1-Lindbergh, Terminal 2-Humphrey"
 DTW,Detroit Metropolitan Wayne County Airport,-83.3554,42.2162,2,"Edward H. McNamara Terminal , North terminal"
 PHL,Philadelphia International Airport,-75.2424,39.8744,6,"Terminal A East, Terminals B and C, Terminal D, Terminal E, Terminal F (Concourses 1, 2, and 3)"
 BOS,Boston Logan International Airport,-71.0096,42.3656,4,"Terminal A, Terminal B, Terminal C, Terminal E"
 LGA,LaGuardia Airport ,-73.874,40.7769,4,"Terminal A, Terminal B, terminal C, Terminal D"
-FLL,Fort Lauderdale–Hollywood International,-80.1506,26.0742,4,"Terminal 1 – New Terminal (yellow)Terminal 2 – ""Delta"" Terminal (red)Terminal 3 – Main Terminal (purple )Terminal 4 – International Terminal (green) "
+FLL,Fort Lauderdale–Hollywood International,-80.1506,26.0742,4,"Terminal 1 – New Terminal (yellow)
+Terminal 2 – ""Delta"" Terminal (red)
+Terminal 3 – Main Terminal (purple )
+Terminal 4 – International Terminal (green) 
+"
 BWI,Baltimore/Washington International Thurgood Marshall Airport,-76.6684,39.1774,5 Concourses,"Concourses A, B, C, D, E"
 IAD,Washington Dulles International,-77.4565,38.9531,3,main terminal and two midfield terminal buildings
 SLC,Salt Lake City International,-111.9791,40.7899,3,"Terminal 1,2, International terminal"
