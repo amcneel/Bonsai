@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qLp-DW-D8K">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qLp-DW-D8K">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -204,42 +204,59 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flight Date:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qX7-zU-6qw">
+                                <rect key="frame" x="114" y="144" width="147" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="V5j-ze-ojR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvG-Kj-tX9">
+                                <rect key="frame" x="96" y="345" width="182" height="217"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="217" id="BaF-JL-uQ5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwN-b8-LTP">
+                                <rect key="frame" x="124" y="570" width="126" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fJY-eA-I5X"/>
+                                    <constraint firstAttribute="width" constant="126" id="j5P-HD-Fwv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <state key="normal" title="Set Notification">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Xc-g4-PqA">
-                                <rect key="frame" x="0.0" y="169" width="375" height="216"/>
+                                <rect key="frame" x="0.0" y="225" width="375" height="216"/>
                                 <gestureRecognizers/>
                                 <date key="date" timeIntervalSinceReferenceDate="513463666.95290202">
                                     <!--2017-04-09 20:47:46 +0000-->
                                 </date>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flight Date:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qX7-zU-6qw">
-                                <rect key="frame" x="114" y="144" width="147" height="37"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvG-Kj-tX9">
-                                <rect key="frame" x="96" y="393" width="182" height="217"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qX7-zU-6qw" firstAttribute="centerX" secondItem="5Xc-g4-PqA" secondAttribute="centerX" id="2uU-f9-B3l"/>
-                            <constraint firstItem="qX7-zU-6qw" firstAttribute="top" secondItem="w2w-XO-jcN" secondAttribute="bottom" constant="26" id="3o1-sn-YqS"/>
-                            <constraint firstItem="w2w-XO-jcN" firstAttribute="leading" secondItem="k0f-a3-2m6" secondAttribute="leadingMargin" constant="80" id="4Hp-Y0-bZh"/>
-                            <constraint firstItem="wvG-Kj-tX9" firstAttribute="top" secondItem="5Xc-g4-PqA" secondAttribute="bottom" constant="8" symbolic="YES" id="7dQ-5Y-ied"/>
-                            <constraint firstItem="5Xc-g4-PqA" firstAttribute="top" secondItem="w2w-XO-jcN" secondAttribute="bottom" constant="51" id="EVE-n7-i86"/>
-                            <constraint firstItem="wvG-Kj-tX9" firstAttribute="trailing" secondItem="w2w-XO-jcN" secondAttribute="trailing" id="HUu-mk-2EV"/>
-                            <constraint firstAttribute="trailing" secondItem="5Xc-g4-PqA" secondAttribute="trailing" id="Iqr-b9-9EI"/>
-                            <constraint firstItem="qX7-zU-6qw" firstAttribute="leading" secondItem="k0f-a3-2m6" secondAttribute="leadingMargin" constant="98" id="SUu-fc-hTc"/>
-                            <constraint firstItem="wvG-Kj-tX9" firstAttribute="leading" secondItem="w2w-XO-jcN" secondAttribute="leading" id="UQQ-O8-fns"/>
-                            <constraint firstItem="9Mk-tv-lMC" firstAttribute="top" secondItem="wvG-Kj-tX9" secondAttribute="bottom" constant="8" symbolic="YES" id="eaJ-dL-sIS"/>
-                            <constraint firstItem="5Xc-g4-PqA" firstAttribute="leading" secondItem="k0f-a3-2m6" secondAttribute="leading" id="glg-eJ-8Jy"/>
-                            <constraint firstItem="w2w-XO-jcN" firstAttribute="centerX" secondItem="qX7-zU-6qw" secondAttribute="centerX" id="kbO-44-YJ6"/>
-                            <constraint firstItem="9Mk-tv-lMC" firstAttribute="top" secondItem="qX7-zU-6qw" secondAttribute="bottom" constant="437" id="saD-GZ-beW"/>
-                            <constraint firstItem="9Mk-tv-lMC" firstAttribute="top" secondItem="5Xc-g4-PqA" secondAttribute="bottom" constant="233" id="wOo-fb-jOR"/>
+                            <constraint firstItem="w2w-XO-jcN" firstAttribute="trailing" secondItem="wvG-Kj-tX9" secondAttribute="trailing" id="1P4-qb-OIa"/>
+                            <constraint firstItem="5Xc-g4-PqA" firstAttribute="top" secondItem="w2w-XO-jcN" secondAttribute="bottom" constant="107" id="66d-Ta-5Aw"/>
+                            <constraint firstItem="w2w-XO-jcN" firstAttribute="leading" secondItem="k0f-a3-2m6" secondAttribute="leadingMargin" constant="80" id="6xb-Oc-TW6"/>
+                            <constraint firstItem="jwN-b8-LTP" firstAttribute="top" secondItem="wvG-Kj-tX9" secondAttribute="bottom" constant="8" symbolic="YES" id="Ah0-QH-Jj8"/>
+                            <constraint firstItem="9Mk-tv-lMC" firstAttribute="top" secondItem="jwN-b8-LTP" secondAttribute="bottom" constant="18" id="GMc-UE-nua"/>
+                            <constraint firstItem="w2w-XO-jcN" firstAttribute="top" secondItem="NHT-ay-y9d" secondAttribute="bottom" constant="33" id="Ghu-b7-Raa"/>
+                            <constraint firstItem="qX7-zU-6qw" firstAttribute="leading" secondItem="k0f-a3-2m6" secondAttribute="leadingMargin" constant="98" id="P0U-Zc-h87"/>
+                            <constraint firstAttribute="trailing" secondItem="5Xc-g4-PqA" secondAttribute="trailing" id="Rat-AV-js1"/>
+                            <constraint firstItem="wvG-Kj-tX9" firstAttribute="centerX" secondItem="jwN-b8-LTP" secondAttribute="centerX" id="XZZ-X3-PUW"/>
+                            <constraint firstItem="qX7-zU-6qw" firstAttribute="top" secondItem="w2w-XO-jcN" secondAttribute="bottom" constant="26" id="bZ9-0I-cJ2"/>
+                            <constraint firstItem="qX7-zU-6qw" firstAttribute="centerX" secondItem="5Xc-g4-PqA" secondAttribute="centerX" id="fe9-vf-vbQ"/>
+                            <constraint firstItem="w2w-XO-jcN" firstAttribute="centerX" secondItem="qX7-zU-6qw" secondAttribute="centerX" id="hkv-mt-35s"/>
+                            <constraint firstItem="5Xc-g4-PqA" firstAttribute="leading" secondItem="k0f-a3-2m6" secondAttribute="leading" id="siJ-ye-q6x"/>
+                            <constraint firstItem="w2w-XO-jcN" firstAttribute="leading" secondItem="wvG-Kj-tX9" secondAttribute="leading" id="w4H-f1-Cff"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Alarm" image="Alarm Clock Filled-25.png" id="c1V-gg-hkm"/>
