@@ -44,6 +44,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
     
     let blurView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.light))
     
+    var bezierBorder = BezierBorder()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,7 +87,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         waitLabel.alpha = 0
         
         
+        //set the border to surround the wait label
+        let frame = CGRect(x: 0, y: 0, width: mainView.frame.width, height: mainView.frame.height)
+        let bezierBorder = BezierBorder(frame: frame)
+        bezierBorder.setBounds(subject: waitLabel.frame)
+        mainView.addSubview(bezierBorder)
         
+        
+        UIView.animate(withDuration: 0.5, animations: {
+            self.bezierBorder.value = 45
+        })
+        print(bezierBorder.value)
         
         update()
         
@@ -178,6 +189,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         waitLabel.text = waitTimeString
         airportLabel.text = curAirport?.getCode()
         
+        bezierBorder.value = CGFloat(Int(waitTime.expected))
+        bezierBorder.setNeedsDisplay()
         
         
     }
