@@ -30,6 +30,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
     
     @IBOutlet weak var airportLabel: UILabel!
     @IBOutlet weak var waitLabel: UILabel!
+    @IBOutlet weak var minsLabel: UILabel!
     
     var airportSearchBar = UISearchBar()
     @IBOutlet weak var searchTableView: UITableView!
@@ -44,6 +45,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
     
     let blurView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.light))
     
+    var bezierBorder:BezierBorder? = nil
+    var borderBackground:CAShapeLayer? = nil
+    var borderFront:CAShapeLayer? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,8 +88,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         activityIndicator.startAnimating()
         airportLabel.alpha = 0
         waitLabel.alpha = 0
+        minsLabel.alpha = 0
         
-        
+        //set the border to surround the wait label
+        bezierBorder = BezierBorder(s: 10, r: waitLabel.frame)
+        borderBackground = bezierBorder?.backgroundLayer
+        borderFront = bezierBorder?.frontLayer
+        mainView.layer.addSublayer(borderBackground!)
+        mainView.layer.addSublayer(borderFront!)
         
         
         update()
@@ -178,6 +188,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         waitLabel.text = waitTimeString
         airportLabel.text = curAirport?.getCode()
         
+        bezierBorder?.setValue(v:CGFloat(Int(waitTime.expected)))
         
         
     }
@@ -301,6 +312,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
             self.activityIndicator.alpha = 0
             self.airportLabel.alpha = 1
             self.waitLabel.alpha = 1
+            self.minsLabel.alpha = 1
         }, completion: { finished in
             
             self.activityIndicator.stopAnimating()
@@ -328,7 +340,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
                 
                 self.updateWaitTimeAndDisplay()
                 //if this is the first time updating, have the labels fade in
-                if self.airportType == .location{
+                //if this is the location have the labels fade in
+                if self.airportType == .location || self.firstTimeLoading{
                     self.updateFadeIn()
                 }
             }
