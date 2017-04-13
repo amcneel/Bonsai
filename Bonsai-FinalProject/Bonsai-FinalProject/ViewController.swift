@@ -30,6 +30,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
     
     @IBOutlet weak var airportLabel: UILabel!
     @IBOutlet weak var waitLabel: UILabel!
+    @IBOutlet weak var minsLabel: UILabel!
     
     var airportSearchBar = UISearchBar()
     @IBOutlet weak var searchTableView: UITableView!
@@ -87,7 +88,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         activityIndicator.startAnimating()
         airportLabel.alpha = 0
         waitLabel.alpha = 0
-        
+        minsLabel.alpha = 0
         
         //set the border to surround the wait label
         bezierBorder = BezierBorder(s: 10, r: waitLabel.frame)
@@ -311,6 +312,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
             self.activityIndicator.alpha = 0
             self.airportLabel.alpha = 1
             self.waitLabel.alpha = 1
+            self.minsLabel.alpha = 1
         }, completion: { finished in
             
             self.activityIndicator.stopAnimating()

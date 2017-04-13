@@ -136,6 +136,7 @@
                         <outlet property="activityIndicator" destination="sbv-n1-g11" id="AVZ-pg-A77"/>
                         <outlet property="airportLabel" destination="HbG-73-nHF" id="kMV-pw-7co"/>
                         <outlet property="mainView" destination="qFL-e2-dRV" id="4L2-cj-9M6"/>
+                        <outlet property="minsLabel" destination="yKZ-bw-g2q" id="TNV-UR-PXK"/>
                         <outlet property="searchTableView" destination="2eo-R3-Wmc" id="iVC-U2-3Lg"/>
                         <outlet property="waitLabel" destination="JmU-5f-Qsn" id="jnW-Bj-QOy"/>
                     </connections>
