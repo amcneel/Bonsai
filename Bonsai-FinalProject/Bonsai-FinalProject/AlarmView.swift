@@ -20,11 +20,11 @@ class AlarmView: UIViewController, UITextFieldDelegate, UIPickerViewDelegate{
         super.viewDidLoad()
         
         datePicker.minimumDate = Date()
-        datePicker.setValue(UIColor.white, forKeyPath: "textColor")
+        //datePicker.setValue(UIColor.white, forKeyPath: "textColor")
         datePicker.datePickerMode = .countDownTimer
         datePicker.datePickerMode = .dateAndTime
         datePicker.addTarget(self, action: #selector(AlarmView.datePickerValueChanged(sender:)), for: UIControlEvents.valueChanged)
-        alarmTime.text = "Your alarm is not scheduled. Please enter your flight time."
+        alarmTime.text = "Your alarm is not scheduled."
     }
     
     func datePickerValueChanged (sender: UIDatePicker) {
@@ -38,8 +38,8 @@ class AlarmView: UIViewController, UITextFieldDelegate, UIPickerViewDelegate{
         dateFormatter.dateStyle = DateFormatter.Style.none
         dateFormatter.timeStyle = DateFormatter.Style.short
         timeStr = timeStr + " at " + dateFormatter.string(from: sender.date)
-        alarmTime.text = "You alarm is scheduled for " + timeStr + ". Press enter to confirm this time."
-        alarmTime.tintColor = UIColor.white
+        alarmTime.text = "Your alarm is scheduled for " + timeStr + ". Press enter to confirm this time."
+        //alarmTime.tintColor = UIColor.white
         
     }
     
