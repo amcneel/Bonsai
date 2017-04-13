@@ -11,61 +11,58 @@ import UIKit
 
 /// A view for displaying a quantitative value. Set the `value` property to update the view.
 /// To animate changes, call the `animateValue` method.
-class BezierBorder: UIView {
+class BezierBorder {
     
-    var timer:Timer? //used for animating between values, for now going to try doing it asynchronously <- update asynchronous didn't work, explanation in update method
+    var backgroundLayer = CAShapeLayer()
+    var frontLayer = CAShapeLayer()
     
     var size:Float
-    var color:UIColor
+    let backgroundColor:UIColor = UIColor.clear
     
-    var outerColor:UIColor
+    var radius:CGFloat
+    var center:CGPoint
     
-    var radius:CGFloat = 0
-    var radiusCenter:CGPoint = CGPoint(x: 0, y: 0)
-    
-    public var value: CGFloat {
-        get {
-            return innerVal
-        }
-        set(newValue) {
-            oldInnerVal = innerVal
-            innerVal = newValue
-            update()
-            
-        }
-    }
-    
-    private var oldInnerVal:CGFloat = 0
-    private var innerVal:CGFloat = 0
-    private var displayVal:CGFloat = 0
+    var oldColor:UIColor = UIColor.clear
+    private var oldValue:CGFloat
+    public var value:CGFloat
     
     let maxValue:CGFloat = 60 //1 hour = maximum circle
     
     var innerPath:UIBezierPath = UIBezierPath()
     
-    override init(frame: CGRect) {
-        color = UIColor.black
-        outerColor = UIColor.white
-        size = 10
-        super.init(frame: frame)
-        backgroundColor = UIColor.clear
+    var didLoad:Bool = false
+    
+    
+    init(s:Float, r:CGRect){
+        size = s
+        radius = max(r.width, r.height)/1.9+CGFloat(size)
+        center = CGPoint(x: r.midX, y: r.midY)
+        //radius = 150
+        //center = CGPoint(x: 0, y: 0)
         
         
+        backgroundLayer.path = UIBezierPath(arcCenter: center, radius: radius, startAngle: CGFloat(-1*M_PI/2), endAngle: CGFloat(M_PI*3/2), clockwise: true).cgPath
+        backgroundLayer.fillColor = UIColor.clear.cgColor
+        backgroundLayer.strokeColor = backgroundColor.cgColor
+        backgroundLayer.lineWidth = CGFloat(size)
+        frontLayer.path = UIBezierPath(arcCenter: center, radius: radius, startAngle: CGFloat(-1*M_PI/2), endAngle: CGFloat(M_PI*3/2), clockwise: true).cgPath
+        frontLayer.fillColor = UIColor.clear.cgColor
+        frontLayer.lineWidth = CGFloat(size)
+        frontLayer.strokeEnd = 0
+        
+        oldValue = 0
+        value = 0
     }
-    
-    
     
     func getPathColor() -> UIColor{
         //0 = green, 30 = yellow, 60 = red
-        var v = displayVal
+        var v = value
         if v > maxValue{
             v = maxValue
         }
         v = v/maxValue  //normalize it to be between 0 and 1
-        
         var red:CGFloat = 0
         var green:CGFloat = 0
-        
         if v > 0.5{
             red = 1
             green = 2*(1-v)
@@ -75,105 +72,82 @@ class BezierBorder: UIView {
             green = 1
             red = 2*v
         }
-        
         let c = UIColor(red: red, green: green, blue: 0, alpha: 1)
         return c
     }
     
-    func setBounds(subject:CGRect){
-        radius = max(subject.width, subject.height)/1.9+CGFloat(size)
-        radiusCenter = CGPoint(x: subject.midX, y: subject.midY)
+    func setValue(v:CGFloat){
+        oldValue = value
+        value = v
+        animate()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        super.draw(rect)
-        // Drawing code
-        print("draw1")
-        outerColor.setStroke()
-        let outerPath = getOuterPath()
-        outerPath.lineCapStyle = .square
-        outerPath.lineWidth=CGFloat(size)
-        outerPath.stroke()
-        
-        getPathColor().setStroke()
-        let innerPath = getInnerPath()
-        innerPath.lineCapStyle = .square
-        innerPath.lineWidth=CGFloat(size)
-        innerPath.stroke()
-        print("draw2")
-        
-        
+    func loadBackgroundLayer(){
+        let animcolor = CABasicAnimation(keyPath: "strokeColor")
+        animcolor.fromValue         = UIColor.clear.cgColor
+        animcolor.toValue           = UIColor.white.cgColor
+        animcolor.duration          = 1.0;
+        animcolor.isRemovedOnCompletion = false;
+        animcolor.fillMode = kCAFillModeForwards;
+        animcolor.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        backgroundLayer.add(animcolor, forKey: "strokeColor")
     }
     
     func animate(){
-        print(displayVal, innerVal)
-        if displayVal == innerVal{
-            timer?.invalidate()
-            timer = nil
-            return
-        }
-        if displayVal > innerVal{
-            displayVal -= 1
+        
+        if !didLoad{
+            //this only happens before it has loaded, load it in once
+            didLoad = true
+            loadBackgroundLayer()
+            //backgroundLayer.strokeColor = UIColor.white.cgColor
         }
         else{
-            displayVal += 1
+            backgroundLayer.strokeColor = UIColor.white.cgColor
         }
-        self.setNeedsDisplay()
-    }
-    
-    func update(){
         
-        let totalAnimationtime = CGFloat(0.5)
-        let singleFrameAnimationTime = Double(totalAnimationtime/(abs(innerVal-oldInnerVal)))
         
-        displayVal = oldInnerVal //the value we will animate
         
-        timer = Timer.scheduledTimer(timeInterval: singleFrameAnimationTime, target: self, selector: #selector(animate), userInfo: nil, repeats: true)
+        let drawAnimation = CABasicAnimation(keyPath:"strokeEnd")
+        drawAnimation.repeatCount = 1.0
         
-        /*
-        //the issue with this portion of the code is that setNeedsDisplay (aka redrawing the view) doesn't work as intended when inside Async
-        //going to use timer instead
-        DispatchQueue.global(qos: .userInitiated).async{
-            while(self.displayVal != self.innerVal){
-                print(self.displayVal, self.innerVal)
-                if self.displayVal > self.innerVal{
-                    self.displayVal -= 1
-                }
-                else{
-                    self.displayVal += 1
-                }
-                self.setNeedsDisplay()
-                sleep(UInt32(singleFrameAnimationTime))
-            }
-            
-            DispatchQueue.main.async {
-         
-            }
+        let ov = oldValue/maxValue
+        
+        var v = value
+        if v > maxValue{
+            v = maxValue
         }
-         */
+        v = v/maxValue
         
+        
+        
+        // Animate from the full stroke being drawn to none of the stroke being drawn
+        drawAnimation.fromValue = NSNumber(value: Double(ov))
+        drawAnimation.toValue = NSNumber(value: Double(v))
+        
+        drawAnimation.duration = 1.0
+        
+        drawAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        drawAnimation.isRemovedOnCompletion = false;
+        drawAnimation.fillMode = kCAFillModeForwards;
+        drawAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        frontLayer.add(drawAnimation, forKey: "strokeEnd")
+        
+        //animate the color changing
+        let newColor = getPathColor()
+        let animcolor = CABasicAnimation(keyPath: "strokeColor")
+        animcolor.fromValue         = oldColor.cgColor
+        animcolor.toValue           = newColor.cgColor
+        animcolor.duration          = 1.0;
+        animcolor.isRemovedOnCompletion = false;
+        animcolor.fillMode = kCAFillModeForwards;
+        animcolor.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        frontLayer.add(animcolor, forKey: "strokeColor")
+        
+        oldColor = newColor
+        
+        //frontLayer.strokeEnd = v
     }
     
-    
-    
-    func getInnerPath() -> UIBezierPath {
-        let path = UIBezierPath()
-        let endA = displayVal/maxValue * CGFloat(M_PI*2)
-        path.addArc(withCenter: radiusCenter, radius: radius, startAngle: 0, endAngle: endA, clockwise: false)
-        return path
-    }
-    
-    func getOuterPath() -> UIBezierPath {
-        let path = UIBezierPath()
-        path.addArc(withCenter: radiusCenter, radius: radius, startAngle: 0, endAngle: CGFloat(M_PI * 2), clockwise: true)
-        return path
-    }
     
     
 }

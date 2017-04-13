@@ -44,7 +44,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
     
     let blurView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.light))
     
-    var bezierBorder = BezierBorder()
+    var bezierBorder:BezierBorder? = nil
+    var borderBackground:CAShapeLayer? = nil
+    var borderFront:CAShapeLayer? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,16 +90,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         
         
         //set the border to surround the wait label
-        let frame = CGRect(x: 0, y: 0, width: mainView.frame.width, height: mainView.frame.height)
-        let bezierBorder = BezierBorder(frame: frame)
-        bezierBorder.setBounds(subject: waitLabel.frame)
-        mainView.addSubview(bezierBorder)
+        bezierBorder = BezierBorder(s: 10, r: waitLabel.frame)
+        borderBackground = bezierBorder?.backgroundLayer
+        borderFront = bezierBorder?.frontLayer
+        mainView.layer.addSublayer(borderBackground!)
+        mainView.layer.addSublayer(borderFront!)
         
-        
-        UIView.animate(withDuration: 0.5, animations: {
-            self.bezierBorder.value = 45
-        })
-        print(bezierBorder.value)
         
         update()
         
@@ -189,8 +187,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         waitLabel.text = waitTimeString
         airportLabel.text = curAirport?.getCode()
         
-        bezierBorder.value = CGFloat(Int(waitTime.expected))
-        bezierBorder.setNeedsDisplay()
+        bezierBorder?.setValue(v:CGFloat(Int(waitTime.expected)))
         
         
     }
@@ -341,7 +338,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
                 
                 self.updateWaitTimeAndDisplay()
                 //if this is the first time updating, have the labels fade in
-                if self.airportType == .location{
+                //if this is the location have the labels fade in
+                if self.airportType == .location || self.firstTimeLoading{
                     self.updateFadeIn()
                 }
             }
