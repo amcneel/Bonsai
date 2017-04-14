@@ -16,8 +16,34 @@ enum AirportType{
 
 class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
     
+    //these buttons need outlets because they need to be disabled while the app is searching it's own location or the app messes up
+    @IBOutlet weak var locationButton: UIButton!
+    @IBOutlet weak var searchButton: UIButton!
+    
+    
+    //this view is shown when the airport does not have bonsai installed
+    //it consists of a label saying that bonsai is not installed and a button requesting that bonsai be installed
+    
+    @IBOutlet weak var requestView: UIView!
+    @IBOutlet weak var requestViewYConstraint: NSLayoutConstraint!
+    @IBOutlet weak var requestAirportNameLabel: UILabel!
+    //blurs the background when the request button is showing for legibility
+    @IBOutlet weak var requestBlurView: UIVisualEffectView!
+    
+    
+    
+    //this view is shows when the airport has bonsai installed
+    //it has the corner airport view, the wait time, and the surrounding circle
+    @IBOutlet weak var waitTimeView: UIView!
+    @IBOutlet weak var waitTimeViewYConstraint: NSLayoutConstraint!
+    
+    var curAirportHasBonsai:Bool = true     //used to see whether to show install button or wait time
+    var prevAirportHasBonsai:Bool = true    //used for transitions between airports
+    var canFadeIn:Bool = true   //allows the main wait time components to fade in, only affects things if the user has not yet selected an airport with bonsai installed
+    
     var firstTimeLoading:Bool = true
     
+    @IBOutlet weak var requestInstallationButton: BonsaiButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var airportType:AirportType = .location //used in update, determines which function to use when determining the wait times
@@ -43,11 +69,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
     
     var airportSearchArr:[Airport] = []    //the array of airports displayed when the search bar is in use
     
+    
     let blurView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.light))
     
     var bezierBorder:BezierBorder? = nil
     var borderBackground:CAShapeLayer? = nil
     var borderFront:CAShapeLayer? = nil
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,9 +122,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         bezierBorder = BezierBorder(s: 10, r: waitLabel.frame)
         borderBackground = bezierBorder?.backgroundLayer
         borderFront = bezierBorder?.frontLayer
-        mainView.layer.addSublayer(borderBackground!)
-        mainView.layer.addSublayer(borderFront!)
+        waitTimeView.layer.addSublayer(borderBackground!)
+        waitTimeView.layer.addSublayer(borderFront!)
         
+        //move the request installation button to off the screen
+        self.requestView.alpha = 0
+        self.requestViewYConstraint.constant = self.mainView.frame.height
+        
+        requestBlurView.effect = UIBlurEffect(style: UIBlurEffectStyle.light)
+        requestBlurView.alpha = 0
         
         update()
         
@@ -160,7 +194,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         return wt
     }
     
-    //the main function atm
+    
     //once we obtain our location, it calculates the closest airport and wait time
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         //this is our location, i think
@@ -169,29 +203,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         //print("Your location is \(someLocation)")
         curAirport = getClosestAirport(location: someLocation)
         
+        prevAirportHasBonsai = curAirportHasBonsai
+        //THIS NEEDS TO CHANGE
+        if curAirport?.getCode() == "STL" || curAirport?.getCode() == "BOS"{
+            curAirportHasBonsai = false
+        }
+        else{
+            curAirportHasBonsai = true
+        }
+        
     }
     
-    func updateWaitTimeAndDisplay(){
-        let waitTime = getWaitTime(airport: curAirport!)
-        //the next 4 lines of code are temporary, they just change the labels on the phone so we can see our location, the closest airport, and wait times.  It is ugly and should be changed
-        let waitTimeString = String(Int(waitTime.expected))
-        
-        //make the labels transition smoothly
-        let animation: CATransition = CATransition()
-        animation.duration = 1.0
-        animation.type = kCATransitionFade
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        self.airportLabel.layer.add(animation, forKey: "changeTextTransition")
-        self.waitLabel.layer.add(animation, forKey: "changeTextTransition")
-        
-        
-        waitLabel.text = waitTimeString
-        airportLabel.text = curAirport?.getCode()
-        
-        bezierBorder?.setValue(v:CGFloat(Int(waitTime.expected)))
-        
-        
-    }
+    
     
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error){
@@ -233,15 +256,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        //let myCell = UITableViewCell(style: .default, reuseIdentifier: nil)
         let myCell = searchTableView.dequeueReusableCell(withIdentifier: "AirportSearchCell", for: indexPath) as! AirportSearchCell
         let a = airportSearchArr[indexPath.row]
-        //let aString = a.getCode()+" - "+a.getName()
-        //myCell.textLabel?.text = aString
         myCell.code.text = a.getCode()
-        
         myCell.name.text = a.getName()
-        
         myCell.tintColor = UIColor.white
         return myCell
         
@@ -257,14 +275,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         //myCell.backgroundColor = myCell.backgroundColor?.withAlphaComponent(0.1)
         myCell.backgroundColor = .clear
         
-        print(myCell)
-        print(myCell.tintColor)
         
     }
  
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         curAirport = airportSearchArr[indexPath.row]
+        
+        prevAirportHasBonsai = curAirportHasBonsai
+        //THIS NEEDS TO CHANGE
+        if curAirport?.getCode() == "STL" || curAirport?.getCode() == "BOS"{
+            curAirportHasBonsai = false
+        }
+        else{
+            curAirportHasBonsai = true
+        }
+        
         hideSearchBar()
         airportType = .searchbar
         update()
@@ -322,11 +348,61 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
     }
     
     
+    //this function moves the request installation button onto the screen if bonsai is not installed and off the screen if bonsai is installed
+    func bonsaiInstallationCheck(){
+        if curAirportHasBonsai{
+            UIView.animate(withDuration: 0.6, animations: {
+                self.waitTimeView.alpha = 1
+                self.waitTimeViewYConstraint.constant = 0
+                
+                self.requestView.alpha = 0
+                self.requestViewYConstraint.constant = self.mainView.frame.height
+                self.requestBlurView.alpha = 0
+                
+                
+                self.view.layoutIfNeeded()
+            }, completion: { finished in
+                
+                
+            })
+        }
+        else{
+            //doesnt have bonsai, load the request button
+            
+            //we have to move everything onto the screen if the previous airport did have bonsai
+            if prevAirportHasBonsai == true{
+                
+                if airportType == .searchbar{
+                    requestBlurView.alpha = 1
+                }
+                UIView.animate(withDuration: 0.6, animations: {
+                    self.waitTimeView.alpha = 0
+                    self.waitTimeViewYConstraint.constant = -1*self.mainView.frame.height
+                    
+                    self.requestView.alpha = 1
+                    self.requestViewYConstraint.constant = 0
+                    self.requestBlurView.alpha = 1
+                    
+                    self.view.layoutIfNeeded()
+                }, completion: { finished in
+                    self.bezierBorder?.setValue(v: 0)
+                    self.waitLabel.text = ""
+                })
+            }
+            else{
+                //stuff to do if you load an airport that doesn't have bonsai from an airport that did have bonsai
+            }
+            
+        }
+    }
+    
     func update(){
         
         DispatchQueue.global(qos: .userInitiated).async{
             switch self.airportType{
             case .location:
+                self.searchButton.isEnabled = false
+                self.locationButton.isEnabled = false
                 self.locationManager.requestLocation()
                 while self.curAirport == nil{
                     sleep(1)
@@ -337,15 +413,41 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
             }
             
             DispatchQueue.main.async {
-                
+                self.locationButton.isEnabled = true
+                self.searchButton.isEnabled = true
+                self.bonsaiInstallationCheck()
+                self.updateFadeIn() //this doesn't affect anything if the components have already faded in
                 self.updateWaitTimeAndDisplay()
-                //if this is the first time updating, have the labels fade in
-                //if this is the location have the labels fade in
-                if self.airportType == .location || self.firstTimeLoading{
-                    self.updateFadeIn()
-                }
             }
         }
+        
+        
+    }
+    
+    func updateWaitTimeAndDisplay(){
+        
+        if curAirportHasBonsai{
+            let waitTime = getWaitTime(airport: curAirport!)
+            let waitTimeString = String(Int(waitTime.expected))
+            
+            //make the labels transition smoothly
+            let animation: CATransition = CATransition()
+            animation.duration = 1.0
+            animation.type = kCATransitionFade
+            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+            self.airportLabel.layer.add(animation, forKey: "changeTextTransition")
+            self.waitLabel.layer.add(animation, forKey: "changeTextTransition")
+            
+            waitLabel.text = waitTimeString
+            airportLabel.text = curAirport?.getCode()
+            
+            bezierBorder?.setValue(v:CGFloat(Int(waitTime.expected)))
+        }
+        else{
+            self.requestAirportNameLabel.text = curAirport?.getName()
+        }
+        
+        
         
         
     }

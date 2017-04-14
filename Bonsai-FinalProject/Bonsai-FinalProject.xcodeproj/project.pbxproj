@@ -24,6 +24,7 @@
 		6886A5E01E95A1BC00A57868 /* airports.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6886A5DF1E95A1BC00A57868 /* airports.csv */; };
 		6886A5E21E95A6AD00A57868 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886A5E11E95A6AD00A57868 /* SwiftyJSON.swift */; };
 		6886A5E41E95A77500A57868 /* WaitTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886A5E31E95A77500A57868 /* WaitTime.swift */; };
+		68BC5C521EA03920005274FE /* BonsaiButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC5C511EA03920005274FE /* BonsaiButton.swift */; };
 		EF7844FC1E98108500DC82D3 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7844FB1E98108500DC82D3 /* Airport.swift */; };
 		EF7844FE1E98208000DC82D3 /* Airport Filled-25.png in Resources */ = {isa = PBXBuildFile; fileRef = EF7844FD1E98208000DC82D3 /* Airport Filled-25.png */; };
 		EF7845001E98209500DC82D3 /* Alarm Clock Filled-25.png in Resources */ = {isa = PBXBuildFile; fileRef = EF7844FF1E98209500DC82D3 /* Alarm Clock Filled-25.png */; };
@@ -80,6 +81,7 @@
 		6886A5DF1E95A1BC00A57868 /* airports.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = airports.csv; sourceTree = "<group>"; };
 		6886A5E11E95A6AD00A57868 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		6886A5E31E95A77500A57868 /* WaitTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitTime.swift; sourceTree = "<group>"; };
+		68BC5C511EA03920005274FE /* BonsaiButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BonsaiButton.swift; sourceTree = "<group>"; };
 		EF7844FB1E98108500DC82D3 /* Airport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
 		EF7844FD1E98208000DC82D3 /* Airport Filled-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Airport Filled-25.png"; sourceTree = "<group>"; };
 		EF7844FF1E98209500DC82D3 /* Alarm Clock Filled-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Alarm Clock Filled-25.png"; sourceTree = "<group>"; };
@@ -150,21 +152,22 @@
 				EF815DA41EA004F60055C3BE /* Tree.png */,
 				EF7845061E9822E900DC82D3 /* Bonsai.png */,
 				EF7844FB1E98108500DC82D3 /* Airport.swift */,
-				6886A56B1E95885C00A57868 /* AppDelegate.swift */,
-				6886A5DD1E95A14500A57868 /* csvparser.swift */,
-				6886A5E11E95A6AD00A57868 /* SwiftyJSON.swift */,
-				6886A56D1E95885C00A57868 /* ViewController.swift */,
-				681278451E9ED03F0090A6D1 /* BezierBorder.swift */,
-				6886A5E31E95A77500A57868 /* WaitTime.swift */,
-				EF815DA81EA010200055C3BE /* SignInController.swift */,
-				6886A56F1E95885C00A57868 /* Main.storyboard */,
 				6849EC621E9AE82E0026DA65 /* AirportSearchCell.swift */,
 				6849EC601E9AD6530026DA65 /* AlarmView.swift */,
+				6886A56B1E95885C00A57868 /* AppDelegate.swift */,
+				686113ED1E981C3C00729FD1 /* BackgroundImageHandler.swift */,
+				681278451E9ED03F0090A6D1 /* BezierBorder.swift */,
+				68BC5C511EA03920005274FE /* BonsaiButton.swift */,
+				6886A5DD1E95A14500A57868 /* csvparser.swift */,
+				6886A56F1E95885C00A57868 /* Main.storyboard */,
+				6886A5E11E95A6AD00A57868 /* SwiftyJSON.swift */,
+				EF815DA81EA010200055C3BE /* SignInController.swift */,
 				EF815DA01E9FFD3E0055C3BE /* TitleButton.swift */,
+				6886A56D1E95885C00A57868 /* ViewController.swift */,
+				6886A5E31E95A77500A57868 /* WaitTime.swift */,
 				6886A5721E95885C00A57868 /* Assets.xcassets */,
 				6886A5741E95885C00A57868 /* LaunchScreen.storyboard */,
 				6886A5771E95885C00A57868 /* Info.plist */,
-				686113ED1E981C3C00729FD1 /* BackgroundImageHandler.swift */,
 				6886A5DF1E95A1BC00A57868 /* airports.csv */,
 				EF7845051E98218A00DC82D3 /* Icons */,
 			);
@@ -353,6 +356,7 @@
 				6849EC631E9AE82E0026DA65 /* AirportSearchCell.swift in Sources */,
 				6886A56C1E95885C00A57868 /* AppDelegate.swift in Sources */,
 				6849EC611E9AD6530026DA65 /* AlarmView.swift in Sources */,
+				68BC5C521EA03920005274FE /* BonsaiButton.swift in Sources */,
 				EF815DA11E9FFD3E0055C3BE /* TitleButton.swift in Sources */,
 				681278461E9ED03F0090A6D1 /* BezierBorder.swift in Sources */,
 				6886A5E21E95A6AD00A57868 /* SwiftyJSON.swift in Sources */,
