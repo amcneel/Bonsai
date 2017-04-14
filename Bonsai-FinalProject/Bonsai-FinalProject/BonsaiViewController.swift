@@ -23,7 +23,7 @@ var airportType:AirportType = .location //used in update, determines which funct
 //the base class for the views that utilize the searchbar
 class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
 
-    
+    @IBOutlet weak var mainView: UIView!
     
     let locationManager = CLLocationManager()
     var airports:[Airport] = []
@@ -232,6 +232,31 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
         update()
     }
     
+    func showSearchBar() {
+        airportSearchArr = []
+        airportSearchBar.text = ""
+        searchTableView.reloadData()
+        navigationItem.titleView = airportSearchBar
+        airportSearchBar.alpha = 0
+        navigationItem.setRightBarButton(nil, animated: true)
+        navigationItem.setLeftBarButton(nil, animated: true)
+        mainView.addSubview(blurView)
+        blurView.alpha = 0
+        UIView.animate(withDuration: 0.3, animations: {
+            self.view.layoutIfNeeded()
+            self.airportSearchBar.alpha = 1
+            self.blurView.alpha = 1
+        }, completion: { finished in
+            self.airportSearchBar.becomeFirstResponder()
+            self.searchTableView.isHidden = false
+            
+            //add a blur over the original image
+            
+            
+            
+        })
+    }
+    
     func hideSearchBar() {
         preconditionFailure("function 'hideSearchBar' must be overridden")
     }
@@ -241,5 +266,6 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
         preconditionFailure("function 'update' must be overridden")
     }
 
+    
     
 }

@@ -38,7 +38,7 @@ class ViewController: BonsaiViewController {
     @IBOutlet weak var requestInstallationButton: BonsaiButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var theMainView: UIView!
     
     @IBOutlet weak var airportLabel: UILabel!
     @IBOutlet weak var waitLabel: UILabel!
@@ -55,18 +55,8 @@ class ViewController: BonsaiViewController {
     
     override func viewDidLoad() {
         
+        mainView = theMainView
         searchTableView = theSearchTableView
-        
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        
-        
-        //setup the navigation bar
-        navigationItem.titleView = nil
-        searchBarButtonItem = navigationItem.rightBarButtonItem
-        curLocButtonItem = navigationItem.leftBarButtonItem
-        airportSearchBar.showsCancelButton = true
         
         //set background image
         mainView.backgroundColor = UIColor(patternImage: UIImage(named: "city_night")!)
@@ -94,7 +84,10 @@ class ViewController: BonsaiViewController {
         requestBlurView.effect = UIBlurEffect(style: UIBlurEffectStyle.light)
         requestBlurView.alpha = 0
         
-        update()
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        
         
     }
     
@@ -103,15 +96,7 @@ class ViewController: BonsaiViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func showSearchBar() {
-        airportSearchArr = []
-        airportSearchBar.text = ""
-        searchTableView.reloadData()
-        navigationItem.titleView = airportSearchBar
-        airportSearchBar.alpha = 0
-        navigationItem.setRightBarButton(nil, animated: true)
-        navigationItem.setLeftBarButton(nil, animated: true)
-        mainView.addSubview(blurView)
+    override func showSearchBar() {
         if curAirportHasBonsai{
             blurView.alpha = 0
         }
@@ -119,20 +104,7 @@ class ViewController: BonsaiViewController {
             blurView.alpha = 1
             requestBlurView.alpha = 0
         }
-        
-        UIView.animate(withDuration: 0.3, animations: {
-            self.view.layoutIfNeeded()
-            self.airportSearchBar.alpha = 1
-            self.blurView.alpha = 1
-        }, completion: { finished in
-            self.airportSearchBar.becomeFirstResponder()
-            self.searchTableView.isHidden = false
-            
-            //add a blur over the original image
-            
-            
-            
-        })
+        super.showSearchBar()
     }
     
     override func hideSearchBar() {
@@ -215,7 +187,7 @@ class ViewController: BonsaiViewController {
                 
                 
                 
-                UIView.animate(withDuration: 0.4, animations: {
+                UIView.animate(withDuration: 0.6, animations: {
                     self.requestAirportNameLabel.alpha = 0
                 }, completion: { finished in
                     self.requestAirportNameLabel.text = curAirport?.getName()

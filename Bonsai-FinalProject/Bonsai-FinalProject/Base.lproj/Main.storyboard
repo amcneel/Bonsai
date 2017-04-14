@@ -210,7 +210,6 @@
                         <outlet property="activityIndicator" destination="sbv-n1-g11" id="AVZ-pg-A77"/>
                         <outlet property="airportLabel" destination="HbG-73-nHF" id="kMV-pw-7co"/>
                         <outlet property="locationButton" destination="CeH-2O-SpL" id="pz8-Js-Opj"/>
-                        <outlet property="mainView" destination="qFL-e2-dRV" id="4L2-cj-9M6"/>
                         <outlet property="minsLabel" destination="yKZ-bw-g2q" id="TNV-UR-PXK"/>
                         <outlet property="requestAirportNameLabel" destination="oed-p2-kWK" id="kYd-ul-kfj"/>
                         <outlet property="requestBlurView" destination="1VN-Kb-thn" id="ymI-SC-A0H"/>
@@ -218,6 +217,7 @@
                         <outlet property="requestView" destination="h7b-pg-Zbe" id="iOv-Np-ePI"/>
                         <outlet property="requestViewYConstraint" destination="xrh-jg-rKZ" id="EjY-xX-rAP"/>
                         <outlet property="searchButton" destination="WJZ-eb-GPC" id="faa-Kk-QTQ"/>
+                        <outlet property="theMainView" destination="qFL-e2-dRV" id="OSP-c2-W4Z"/>
                         <outlet property="theSearchTableView" destination="2eo-R3-Wmc" id="Tty-bg-DgM"/>
                         <outlet property="waitLabel" destination="JmU-5f-Qsn" id="jnW-Bj-QOy"/>
                         <outlet property="waitTimeView" destination="3ro-lR-Mk4" id="0Rw-Eq-AuP"/>
