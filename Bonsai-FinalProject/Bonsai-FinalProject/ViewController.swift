@@ -305,7 +305,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         navigationItem.setRightBarButton(nil, animated: true)
         navigationItem.setLeftBarButton(nil, animated: true)
         mainView.addSubview(blurView)
-        blurView.alpha = 0
+        if curAirportHasBonsai{
+            blurView.alpha = 0
+        }
+        else{
+            blurView.alpha = 1
+            requestBlurView.alpha = 0
+        }
+        
         UIView.animate(withDuration: 0.3, animations: {
             self.view.layoutIfNeeded()
             self.airportSearchBar.alpha = 1
@@ -324,6 +331,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
     func hideSearchBar() {
         navigationItem.setRightBarButton(searchBarButtonItem, animated: true)
         navigationItem.setLeftBarButton(curLocButtonItem, animated: true)
+        if curAirportHasBonsai{
+            blurView.alpha = 0
+            requestBlurView.alpha = 1
+        }
         UIView.animate(withDuration: 0.3, animations: {
             self.navigationItem.titleView = nil
             self.searchTableView.isHidden = true
