@@ -94,7 +94,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuF-CC-YIW" customClass="BonsaiButton" customModule="Bonsai_FinalProject" customModuleProvider="target">
-                                                <rect key="frame" x="21" y="336" width="332" height="50"/>
+                                                <rect key="frame" x="21.5" y="336" width="332" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="ZMe-40-Ggv"/>
                                                     <constraint firstAttribute="width" constant="332" id="uhl-ZO-zd4"/>
@@ -135,7 +135,7 @@
                                         <rect key="frame" x="0.0" y="28" width="376" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="arl-y2-hXh" id="pdc-sd-vZL">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGE-lQ-aIy">
@@ -218,7 +218,7 @@
                         <outlet property="requestView" destination="h7b-pg-Zbe" id="iOv-Np-ePI"/>
                         <outlet property="requestViewYConstraint" destination="xrh-jg-rKZ" id="EjY-xX-rAP"/>
                         <outlet property="searchButton" destination="WJZ-eb-GPC" id="faa-Kk-QTQ"/>
-                        <outlet property="searchTableView" destination="2eo-R3-Wmc" id="iVC-U2-3Lg"/>
+                        <outlet property="theSearchTableView" destination="2eo-R3-Wmc" id="Tty-bg-DgM"/>
                         <outlet property="waitLabel" destination="JmU-5f-Qsn" id="jnW-Bj-QOy"/>
                         <outlet property="waitTimeView" destination="3ro-lR-Mk4" id="0Rw-Eq-AuP"/>
                         <outlet property="waitTimeViewYConstraint" destination="JZW-8Q-Pct" id="xgP-MT-VKe"/>
