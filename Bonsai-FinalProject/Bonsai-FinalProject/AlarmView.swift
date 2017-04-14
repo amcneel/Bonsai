@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+//the view controller that displays the alarm stuff
+//all global variables found in GlobalVariables.swift
 class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate{
     
     
