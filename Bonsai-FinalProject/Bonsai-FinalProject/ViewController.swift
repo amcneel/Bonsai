@@ -108,19 +108,11 @@ class ViewController: BonsaiViewController {
     }
     
     override func hideSearchBar() {
-        navigationItem.setRightBarButton(searchBarButtonItem, animated: true)
-        navigationItem.setLeftBarButton(curLocButtonItem, animated: true)
-        if curAirportHasBonsai{
+        if !curAirportHasBonsai{
             blurView.alpha = 0
             requestBlurView.alpha = 1
         }
-        UIView.animate(withDuration: 0.3, animations: {
-            self.navigationItem.titleView = nil
-            self.searchTableView.isHidden = true
-            self.blurView.alpha = 0
-        }, completion: { finished in
-            self.blurView.removeFromSuperview()
-        })
+        super.hideSearchBar()
     }
     
     func updateFadeIn(){
@@ -140,7 +132,6 @@ class ViewController: BonsaiViewController {
     
     //this function moves the request installation button onto the screen if bonsai is not installed and off the screen if bonsai is installed
     func bonsaiInstallationCheck(){
-        print("Check")
         if curAirportHasBonsai{
             UIView.animate(withDuration: 0.6, animations: {
                 self.waitTimeView.alpha = 1

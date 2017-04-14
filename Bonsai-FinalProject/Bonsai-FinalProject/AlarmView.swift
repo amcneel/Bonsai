@@ -10,7 +10,8 @@ import UIKit
 
 class AlarmView: UIViewController, UITextFieldDelegate, UIPickerViewDelegate{
     
-    
+    @IBOutlet weak var theSearchTableView: UITableView!
+    @IBOutlet weak var theMainView: UIView!
     
     @IBOutlet weak var alarmTime: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!

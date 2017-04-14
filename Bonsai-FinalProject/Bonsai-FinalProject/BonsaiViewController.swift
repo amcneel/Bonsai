@@ -258,7 +258,15 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
     }
     
     func hideSearchBar() {
-        preconditionFailure("function 'hideSearchBar' must be overridden")
+        navigationItem.setRightBarButton(searchBarButtonItem, animated: true)
+        navigationItem.setLeftBarButton(curLocButtonItem, animated: true)
+        UIView.animate(withDuration: 0.3, animations: {
+            self.navigationItem.titleView = nil
+            self.searchTableView.isHidden = true
+            self.blurView.alpha = 0
+        }, completion: { finished in
+            self.blurView.removeFromSuperview()
+        })
     }
     
     
