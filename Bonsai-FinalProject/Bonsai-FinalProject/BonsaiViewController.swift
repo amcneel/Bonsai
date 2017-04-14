@@ -10,16 +10,6 @@
 import UIKit
 import CoreLocation
 
-enum AirportType{
-    case location
-    case searchbar
-}
-
-var curAirport:Airport?
-var curAirportHasBonsai:Bool = true     //used to see whether to show install button or wait time
-var prevAirportHasBonsai:Bool = true    //used for transitions between airports
-var airportType:AirportType = .location //used in update, determines which function to use when determining the wait times
-
 //the base class for the views that utilize the searchbar
 class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
 

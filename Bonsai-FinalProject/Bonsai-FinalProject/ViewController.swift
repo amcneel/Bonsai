@@ -9,7 +9,8 @@
 import UIKit
 import CoreLocation
 
-
+//the view that displays the wait time
+//uses global variables stored in globalvariables.swift
 class ViewController: BonsaiViewController {
     
     //these buttons need outlets because they need to be disabled while the app is searching it's own location or the app messes up
