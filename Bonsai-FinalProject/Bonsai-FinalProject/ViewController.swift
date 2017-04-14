@@ -369,9 +369,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         else{
             //doesnt have bonsai, load the request button
             
+            
+            
             //we have to move everything onto the screen if the previous airport did have bonsai
             if prevAirportHasBonsai == true{
-                
+                self.requestAirportNameLabel.text = curAirport?.getName()
                 if airportType == .searchbar{
                     requestBlurView.alpha = 1
                 }
@@ -391,6 +393,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
             }
             else{
                 //stuff to do if you load an airport that doesn't have bonsai from an airport that did have bonsai
+                
+                
+                
+                UIView.animate(withDuration: 0.4, animations: {
+                    self.requestAirportNameLabel.alpha = 0
+                }, completion: { finished in
+                    self.requestAirportNameLabel.text = self.curAirport?.getName()
+                    UIView.animate(withDuration: 0.4, animations: {
+                        self.requestAirportNameLabel.alpha = 1
+                    })
+                })
+ 
             }
             
         }
@@ -442,9 +456,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
             airportLabel.text = curAirport?.getCode()
             
             bezierBorder?.setValue(v:CGFloat(Int(waitTime.expected)))
-        }
-        else{
-            self.requestAirportNameLabel.text = curAirport?.getName()
         }
         
         
