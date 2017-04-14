@@ -14,8 +14,8 @@ import CoreLocation
 class ViewController: BonsaiViewController {
     
     //these buttons need outlets because they need to be disabled while the app is searching it's own location or the app messes up
-    @IBOutlet weak var locationButton: UIButton!
-    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var theLocationButton: UIButton!
+    @IBOutlet weak var theSearchButton: UIButton!
     
     
     //this view is shown when the airport does not have bonsai installed
@@ -56,6 +56,9 @@ class ViewController: BonsaiViewController {
     
     override func viewDidLoad() {
         
+        //sets the superclasses, navbar buttons and searchviews to allow for it to work
+        locationButton = theLocationButton
+        searchButton = theSearchButton
         mainView = theMainView
         searchTableView = theSearchTableView
         
@@ -246,19 +249,7 @@ class ViewController: BonsaiViewController {
         
     }
     
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        hideSearchBar()
-    }
     
-    @IBAction func searchButtonPressed(_ sender: Any) {
-        showSearchBar()
-    }
-    
-    @IBAction func useCurrentLocationButtonPressed(_ sender: UIButton) {
-        curAirport = nil
-        airportType = .location
-        update()
-    }
     
 }
 

@@ -190,9 +190,6 @@
                                 <rect key="frame" x="16" y="9" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Marker Filled-25.png"/>
-                                <connections>
-                                    <action selector="useCurrentLocationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rh2-Gx-Gi4"/>
-                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" id="nZV-2D-ojo">
@@ -210,7 +207,6 @@
                     <connections>
                         <outlet property="activityIndicator" destination="sbv-n1-g11" id="AVZ-pg-A77"/>
                         <outlet property="airportLabel" destination="HbG-73-nHF" id="kMV-pw-7co"/>
-                        <outlet property="locationButton" destination="CeH-2O-SpL" id="pz8-Js-Opj"/>
                         <outlet property="minsLabel" destination="yKZ-bw-g2q" id="TNV-UR-PXK"/>
                         <outlet property="requestAirportNameLabel" destination="oed-p2-kWK" id="kYd-ul-kfj"/>
                         <outlet property="requestBlurView" destination="1VN-Kb-thn" id="ymI-SC-A0H"/>
@@ -218,7 +214,9 @@
                         <outlet property="requestView" destination="h7b-pg-Zbe" id="iOv-Np-ePI"/>
                         <outlet property="requestViewYConstraint" destination="xrh-jg-rKZ" id="EjY-xX-rAP"/>
                         <outlet property="searchButton" destination="WJZ-eb-GPC" id="faa-Kk-QTQ"/>
+                        <outlet property="theLocationButton" destination="CeH-2O-SpL" id="Fcy-v7-3s9"/>
                         <outlet property="theMainView" destination="qFL-e2-dRV" id="OSP-c2-W4Z"/>
+                        <outlet property="theSearchButton" destination="WJZ-eb-GPC" id="WY4-hf-1qN"/>
                         <outlet property="theSearchTableView" destination="2eo-R3-Wmc" id="Tty-bg-DgM"/>
                         <outlet property="waitLabel" destination="JmU-5f-Qsn" id="jnW-Bj-QOy"/>
                         <outlet property="waitTimeView" destination="3ro-lR-Mk4" id="0Rw-Eq-AuP"/>
@@ -660,11 +658,28 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Alarm" image="Alarm Clock Filled-25.png" id="c1V-gg-hkm"/>
-                    <navigationItem key="navigationItem" id="Vel-Js-1gl"/>
+                    <navigationItem key="navigationItem" id="Vel-Js-1gl">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="w50-uC-jPZ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2PL-fV-ftE">
+                                <rect key="frame" x="16" y="9" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Marker Filled-25.png"/>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" id="4W5-DA-sJb">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eKE-bH-U1i">
+                                <rect key="frame" x="334" y="9" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Search.png"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="alarmTime" destination="wvG-Kj-tX9" id="NGo-5u-S6i"/>
                         <outlet property="datePicker" destination="5Xc-g4-PqA" id="baa-e2-dv6"/>
+                        <outlet property="theLocationButton" destination="2PL-fV-ftE" id="VQx-cm-ltl"/>
                         <outlet property="theMainView" destination="zdT-c7-P8i" id="crl-0j-UA2"/>
+                        <outlet property="theSearchButton" destination="eKE-bH-U1i" id="xE4-j6-8tK"/>
                         <outlet property="theSearchTableView" destination="t1J-2D-oMr" id="hjN-NA-iEf"/>
                     </connections>
                 </viewController>

@@ -8,7 +8,11 @@
 
 import UIKit
 
-class AlarmView: UIViewController, UITextFieldDelegate, UIPickerViewDelegate{
+class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate{
+    
+    
+    @IBOutlet weak var theLocationButton: UIButton!
+    @IBOutlet weak var theSearchButton: UIButton!
     
     @IBOutlet weak var theSearchTableView: UITableView!
     @IBOutlet weak var theMainView: UIView!
@@ -18,6 +22,13 @@ class AlarmView: UIViewController, UITextFieldDelegate, UIPickerViewDelegate{
     
     @IBOutlet weak var date: UITextField!
     override func viewDidLoad(){
+        
+        //sets the superclasses, navbar buttons and searchviews to allow for it to work
+        locationButton = theLocationButton
+        searchButton = theSearchButton
+        mainView = theMainView
+        searchTableView = theSearchTableView
+        
         super.viewDidLoad()
         
         datePicker.minimumDate = Date()
@@ -51,6 +62,8 @@ class AlarmView: UIViewController, UITextFieldDelegate, UIPickerViewDelegate{
         // Dispose of any resources that can be recreated.
     }
     
-    
+    override func update(){
+        print("DO STUFF NOW.  Probably want to update an airport label or something.  Look in 'update' method in AlarmView.swift")
+    }
     
 }

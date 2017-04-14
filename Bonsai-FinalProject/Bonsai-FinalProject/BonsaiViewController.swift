@@ -18,6 +18,9 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
     let locationManager = CLLocationManager()
     var airports:[Airport] = []
     
+    @IBOutlet weak var locationButton: UIButton!
+    @IBOutlet weak var searchButton: UIButton!
+    
     var airportSearchBar = UISearchBar()
     @IBOutlet weak var searchTableView: UITableView!
      
@@ -59,6 +62,10 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
 
         //add a blur view - used in show search bar and hide search bar
         blurView.frame = self.view.bounds
+        
+        //add the navbar functions to the search and location buttons
+        searchButton.addTarget(self, action: #selector(searchButtonPressed), for: .touchUpInside)
+        locationButton.addTarget(self, action: #selector(useCurrentLocationButtonPressed), for: .touchUpInside)
         
         update()
     }
@@ -264,6 +271,18 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
         preconditionFailure("function 'update' must be overridden")
     }
 
+    @IBAction func searchButtonPressed(_ sender: Any) {
+        showSearchBar()
+    }
+    
+    @IBAction func useCurrentLocationButtonPressed(_ sender: UIButton) {
+        curAirport = nil
+        airportType = .location
+        update()
+    }
     
     
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        hideSearchBar()
+    }
 }
