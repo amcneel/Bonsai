@@ -25,7 +25,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qFL-e2-dRV">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="621"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1VN-Kb-thn" customClass="UIVisualEffectView">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1VN-Kb-thn" customClass="UIVisualEffectView">
                                         <rect key="frame" x="-1" y="0.0" width="376" height="621"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
@@ -76,7 +76,7 @@
                                             <constraint firstItem="JmU-5f-Qsn" firstAttribute="centerY" secondItem="3ro-lR-Mk4" secondAttribute="centerY" id="ekr-aQ-dAQ"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h7b-pg-Zbe">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7b-pg-Zbe">
                                         <rect key="frame" x="-1" y="0.0" width="376" height="621"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bonsai is not currently installed at" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tzb-qq-B5g">
@@ -94,7 +94,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuF-CC-YIW" customClass="BonsaiButton" customModule="Bonsai_FinalProject" customModuleProvider="target">
-                                                <rect key="frame" x="21.5" y="336" width="332" height="50"/>
+                                                <rect key="frame" x="21" y="336" width="332" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="ZMe-40-Ggv"/>
                                                     <constraint firstAttribute="width" constant="332" id="uhl-ZO-zd4"/>
@@ -104,7 +104,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="tuF-CC-YIW" firstAttribute="centerX" secondItem="h7b-pg-Zbe" secondAttribute="centerX" id="dYl-Vw-2uc"/>
+                                            <constraint firstItem="tuF-CC-YIW" firstAttribute="centerX" secondItem="h7b-pg-Zbe" secondAttribute="centerX" constant="-1" id="dYl-Vw-2uc"/>
                                             <constraint firstAttribute="bottom" secondItem="tuF-CC-YIW" secondAttribute="bottom" constant="235" id="fep-kt-huo"/>
                                         </constraints>
                                     </view>
@@ -113,12 +113,12 @@
                                 <constraints>
                                     <constraint firstItem="3ro-lR-Mk4" firstAttribute="height" secondItem="qFL-e2-dRV" secondAttribute="height" id="4Z4-Qh-wud"/>
                                     <constraint firstItem="sbv-n1-g11" firstAttribute="centerY" secondItem="qFL-e2-dRV" secondAttribute="centerY" constant="1" id="C7j-hU-13e"/>
-                                    <constraint firstItem="1VN-Kb-thn" firstAttribute="width" secondItem="qFL-e2-dRV" secondAttribute="width" id="FhZ-zH-kMn"/>
+                                    <constraint firstItem="1VN-Kb-thn" firstAttribute="width" secondItem="qFL-e2-dRV" secondAttribute="width" constant="1" id="FhZ-zH-kMn"/>
                                     <constraint firstItem="sbv-n1-g11" firstAttribute="centerX" secondItem="qFL-e2-dRV" secondAttribute="centerX" constant="1" id="J91-WJ-byj"/>
                                     <constraint firstItem="3ro-lR-Mk4" firstAttribute="centerY" secondItem="qFL-e2-dRV" secondAttribute="centerY" id="JZW-8Q-Pct"/>
                                     <constraint firstItem="1VN-Kb-thn" firstAttribute="height" secondItem="qFL-e2-dRV" secondAttribute="height" id="Mzb-TJ-mRq"/>
                                     <constraint firstItem="1VN-Kb-thn" firstAttribute="centerX" secondItem="qFL-e2-dRV" secondAttribute="centerX" id="Ye3-aH-hnZ"/>
-                                    <constraint firstItem="h7b-pg-Zbe" firstAttribute="width" secondItem="qFL-e2-dRV" secondAttribute="width" id="bvW-0q-gRh"/>
+                                    <constraint firstItem="h7b-pg-Zbe" firstAttribute="width" secondItem="qFL-e2-dRV" secondAttribute="width" constant="1" id="bvW-0q-gRh"/>
                                     <constraint firstItem="1VN-Kb-thn" firstAttribute="centerY" secondItem="qFL-e2-dRV" secondAttribute="centerY" id="mPN-Wc-gCg"/>
                                     <constraint firstItem="3ro-lR-Mk4" firstAttribute="width" secondItem="qFL-e2-dRV" secondAttribute="width" constant="1" id="pEM-Lr-JNT"/>
                                     <constraint firstItem="h7b-pg-Zbe" firstAttribute="centerX" secondItem="qFL-e2-dRV" secondAttribute="centerX" id="r12-g8-Hho"/>
@@ -185,7 +185,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZDy-rn-dH5">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="3D0-BA-kUo">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="3D0-BA-kUo">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CeH-2O-SpL">
                                 <rect key="frame" x="16" y="9" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -195,10 +195,11 @@
                                 </connections>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="nZV-2D-ojo">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="nZV-2D-ojo">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WJZ-eb-GPC">
                                 <rect key="frame" x="334" y="9" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                 <state key="normal" title="Button" image="Search.png"/>
                                 <connections>
                                     <action selector="searchButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="utj-af-5gE"/>
