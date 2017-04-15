@@ -13,6 +13,8 @@ import CoreLocation
 //uses global variables stored in globalvariables.swift
 class ViewController: BonsaiViewController {
     
+    @IBOutlet weak var infoButton: UIButton!
+    
     //these buttons need outlets because they need to be disabled while the app is searching it's own location or the app messes up
     @IBOutlet weak var theLocationButton: UIButton!
     @IBOutlet weak var theSearchButton: UIButton!
@@ -249,6 +251,15 @@ class ViewController: BonsaiViewController {
         
     }
     
+    @IBAction func infoButtonPressed(_ sender: Any) {
+        let infoVC = self.storyboard?.instantiateViewController(withIdentifier: "InfoViewController") as? InfoViewController
+        let transition = CATransition()
+        transition.duration = 0.3
+        transition.type = "flip"
+        transition.subtype = kCATransitionFromLeft
+        self.navigationController?.view.layer.add(transition, forKey: kCATransition)
+        self.navigationController?.pushViewController(infoVC!, animated: false)
+    }
     
     
 }

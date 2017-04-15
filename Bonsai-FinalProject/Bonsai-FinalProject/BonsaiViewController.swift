@@ -246,7 +246,7 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
         }, completion: { finished in
             self.airportSearchBar.becomeFirstResponder()
             self.searchTableView.isHidden = false
-            
+            self.airportSearchBar.placeholder="Search airports"
             //add a blur over the original image
             
             

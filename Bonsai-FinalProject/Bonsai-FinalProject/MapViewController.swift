@@ -36,6 +36,7 @@ class MapViewController: BonsaiViewController{
         // Dispose of any resources that can be recreated.
     }
     
+    //this method is called once the airport is updated, either through search bar or location button
     override func update(){
         print("DO STUFF NOW.  Probably want to update an airport label or something.  Look in 'update' method in MapViewController.swift")
     }
