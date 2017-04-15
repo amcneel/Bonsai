@@ -76,12 +76,9 @@ class ViewController: BonsaiViewController {
         waitLabel.alpha = 0
         minsLabel.alpha = 0
         
-        //set the border to surround the wait label
-        bezierBorder = BezierBorder(s: 10, r: waitLabel.frame)
-        borderBackground = bezierBorder?.backgroundLayer
-        borderFront = bezierBorder?.frontLayer
-        waitTimeView.layer.addSublayer(borderBackground!)
-        waitTimeView.layer.addSublayer(borderFront!)
+        
+        
+        
         
         //move the request installation button to off the screen
         self.requestView.alpha = 0
@@ -94,6 +91,8 @@ class ViewController: BonsaiViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         
+        //we can't set the bezierborder here because the constraints don't update until after viewdidload
+        //we set bezierborder in updateWaitTimeDisplay
         
     }
     
@@ -228,6 +227,15 @@ class ViewController: BonsaiViewController {
     
     func updateWaitTimeAndDisplay(){
         
+        if bezierBorder == nil{
+            //set the border to surround the wait label
+            bezierBorder = BezierBorder(s: 10, r: waitLabel.frame)
+            borderBackground = bezierBorder?.backgroundLayer
+            borderFront = bezierBorder?.frontLayer
+            waitTimeView.layer.addSublayer(borderBackground!)
+            waitTimeView.layer.addSublayer(borderFront!)
+        }
+        
         if curAirportHasBonsai{
             let waitTime = getWaitTime(airport: curAirport!)
             let waitTimeString = String(Int(waitTime.expected))
@@ -244,11 +252,14 @@ class ViewController: BonsaiViewController {
             airportLabel.text = curAirport?.getCode()
             
             bezierBorder?.setValue(v:CGFloat(Int(waitTime.expected)))
+            print(waitLabel.frame)
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        
-        
-        
+        let touchPoint = (touches.first)!.location(in: mainView) as CGPoint
+        print(touchPoint)
     }
     
     @IBAction func infoButtonPressed(_ sender: Any) {
