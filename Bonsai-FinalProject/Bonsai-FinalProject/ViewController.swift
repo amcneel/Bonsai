@@ -254,6 +254,7 @@ class ViewController: BonsaiViewController {
             bezierBorder?.setValue(v:CGFloat(Int(waitTime.expected)))
             print(waitLabel.frame)
         }
+        getTravelTime()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
