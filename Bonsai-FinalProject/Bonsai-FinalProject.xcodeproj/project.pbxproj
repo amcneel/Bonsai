@@ -24,6 +24,8 @@
 		6886A5E01E95A1BC00A57868 /* airports.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6886A5DF1E95A1BC00A57868 /* airports.csv */; };
 		6886A5E21E95A6AD00A57868 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886A5E11E95A6AD00A57868 /* SwiftyJSON.swift */; };
 		6886A5E41E95A77500A57868 /* WaitTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886A5E31E95A77500A57868 /* WaitTime.swift */; };
+		688D23DD1EA283D4008C44F3 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688D23DC1EA283D4008C44F3 /* AccountController.swift */; };
+		688D23DF1EA284E3008C44F3 /* fb.png in Resources */ = {isa = PBXBuildFile; fileRef = 688D23DE1EA284E3008C44F3 /* fb.png */; };
 		689EAF4F1EA1743E009DE2C7 /* BonsaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689EAF4E1EA1743E009DE2C7 /* BonsaiViewController.swift */; };
 		689EAF511EA1802D009DE2C7 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689EAF501EA1802D009DE2C7 /* GlobalVariables.swift */; };
 		689EAF531EA1871D009DE2C7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689EAF521EA1871D009DE2C7 /* MapViewController.swift */; };
@@ -85,6 +87,8 @@
 		6886A5DF1E95A1BC00A57868 /* airports.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = airports.csv; sourceTree = "<group>"; };
 		6886A5E11E95A6AD00A57868 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		6886A5E31E95A77500A57868 /* WaitTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitTime.swift; sourceTree = "<group>"; };
+		688D23DC1EA283D4008C44F3 /* AccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
+		688D23DE1EA284E3008C44F3 /* fb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fb.png; sourceTree = "<group>"; };
 		689EAF4E1EA1743E009DE2C7 /* BonsaiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BonsaiViewController.swift; sourceTree = "<group>"; };
 		689EAF501EA1802D009DE2C7 /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		689EAF521EA1871D009DE2C7 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +159,7 @@
 			children = (
 				EF815DAE1EA01AF30055C3BE /* Tree4.png */,
 				EF815DAC1EA0174E0055C3BE /* User Filled-25.png */,
+				688D23DE1EA284E3008C44F3 /* fb.png */,
 				EF815DAA1EA012570055C3BE /* Tree3.png */,
 				EF815DA61EA005420055C3BE /* Tree2.png */,
 				EF815DA41EA004F60055C3BE /* Tree.png */,
@@ -181,6 +186,7 @@
 				6886A5741E95885C00A57868 /* LaunchScreen.storyboard */,
 				6886A5771E95885C00A57868 /* Info.plist */,
 				6886A5DF1E95A1BC00A57868 /* airports.csv */,
+				688D23DC1EA283D4008C44F3 /* AccountController.swift */,
 				EF7845051E98218A00DC82D3 /* Icons */,
 			);
 			path = "Bonsai-FinalProject";
@@ -337,6 +343,7 @@
 				EF7845001E98209500DC82D3 /* Alarm Clock Filled-25.png in Resources */,
 				EF7844FE1E98208000DC82D3 /* Airport Filled-25.png in Resources */,
 				EF7845041E98217A00DC82D3 /* Map Filled-25.png in Resources */,
+				688D23DF1EA284E3008C44F3 /* fb.png in Resources */,
 				EF815DAB1EA012570055C3BE /* Tree3.png in Resources */,
 				6886A5711E95885C00A57868 /* Main.storyboard in Resources */,
 				6849EC251E9845240026DA65 /* Marker Filled-25.png in Resources */,
@@ -379,6 +386,7 @@
 				EF7844FC1E98108500DC82D3 /* Airport.swift in Sources */,
 				EF815DA91EA010200055C3BE /* SignInController.swift in Sources */,
 				6886A5DE1E95A14500A57868 /* csvparser.swift in Sources */,
+				688D23DD1EA283D4008C44F3 /* AccountController.swift in Sources */,
 				6886A5E41E95A77500A57868 /* WaitTime.swift in Sources */,
 				689EAF531EA1871D009DE2C7 /* MapViewController.swift in Sources */,
 			);
