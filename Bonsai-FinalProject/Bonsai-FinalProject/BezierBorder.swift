@@ -37,6 +37,8 @@ class BezierBorder {
         size = s
         radius = max(r.width, r.height)/1.9+CGFloat(size)
         center = CGPoint(x: r.midX, y: r.midY)
+        print(center)
+        print(r)
         
         backgroundLayer.path = UIBezierPath(arcCenter: center, radius: radius, startAngle: CGFloat(-1*M_PI/2), endAngle: CGFloat(M_PI*3/2), clockwise: true).cgPath
         backgroundLayer.fillColor = UIColor.clear.cgColor
