@@ -39,8 +39,11 @@ class MapViewController: BonsaiViewController{
     
     //this method is called once the airport is updated, either through search bar or location button
     override func update(){
-       let airport = curAirport?.getName()
-        
+        let airport = curAirport?.getCode()
+        //airport = airport + "-"
+        //let charset = CharacterSet(charactersIn: airport)
+        let imageURL = Bundle.main.url(forResource: airport, withExtension: "png")
+        print(imageURL)
     }
     
 }

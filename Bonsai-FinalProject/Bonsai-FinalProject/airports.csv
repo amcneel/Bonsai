@@ -1,47 +1,42 @@
 IATA,Airport Name,Long,Lat,# terminals,Names of terminals
-ATL,Hartsfield Jackson Atlanta International ,-84.388,33.749,2,"Domestic Terminal and the Maynard H. Jackson, Jr. International Terminal"
-ORD,Chicago O’Hare International ,-87.9073,41.9742,4,"Terminal 1, Terminal 2, Terminal 3, Terminal 5 (International)"
-LAX,Los Angeles International ,-118.4085,33.9416,9,"Terminal 1, Terminal 2, Terminal 3, Terminal 5, Terminal 6, Terminal 7, Terminal 8, Tom Bradley International Terminal"
-DFW,Dallas Fort Worth International ,-97.0403,32.8998,6,"Terminal A, Terminal B, Terminal C, Terminal D (International), Terminal E, Terminal F (Future)"
-DEN,Denver International ,-104.6737,39.8561,1,Jeppesen Terminal
-JFK,John F Kennedy International ,-73.7781,40.6413,6,"Terminal 1, Terminal 2, Terminal 4, Terminal 5, Terminal 7, Terminal 8"
-SFO,San Francisco International ,-122.4194,37.7749,4,"Terminal 1, Terminal 2, Terminal 3, international Terminal"
-CLT,Charlotte Douglas International ,-80.9473,35.2144,1,Main terminal
-LAS,McCarran International ,-115.1537,36.084,3,"terminal 1, Terminal 3, former terminal 2"
-PHX,Phoenix Sky Harbor International ,-112.074,33.4484,3,"Terminal 2, terminal 3, Terminal 4 (Barry M. Goldwater Terminal)"
-IAH,George Bush Intercontinental Houston ,-95.3368,29.9902,5,"Terminal A, Terminal B, Terminal C, Terminal D, Terminal E"
-MIA,Miami International ,-80.287,25.7959,3,"North terminal, Central terminal, South terminal"
-MCO,Orlando International ,-81.3081,28.4312,2,"Terminal A, terminal B"
-EWR,Newark Liberty International ,-74.1745,40.6895,3,"Terminal A, Terminal B, terminal C"
-SEA,Seattle Tacoma International Airport,-122.3088,47.4502,2,"Domestic Terminal, Maynard Holbrook Jackson Jr. International Terminal"
-MSP,Minneapolis Saint Paul International,-93.2223,44.8848,2,"Terminal 1-Lindbergh, Terminal 2-Humphrey"
-DTW,Detroit Metropolitan Wayne County Airport,-83.3554,42.2162,2,"Edward H. McNamara Terminal , North terminal"
-PHL,Philadelphia International Airport,-75.2424,39.8744,6,"Terminal A East, Terminals B and C, Terminal D, Terminal E, Terminal F (Concourses 1, 2, and 3)"
+ATL,Hartsfield Jackson Atlanta International ,-84.388,33.749,2,"Concourse A, Concourse B, Concourse C, Concourse D, Concourse E, Concourse F, Concourse T"
+AUS,AustinÐBergstrom International,-97.6663,30.1974,,Terminal
+BNA,Nashville International,-86.6774,36.1263,1,"Main Terminal, Concourse A, Concourse B, Concourse C, Concourse D"
 BOS,Boston Logan International Airport,-71.0096,42.3656,4,"Terminal A, Terminal B, Terminal C, Terminal E"
-LGA,LaGuardia Airport ,-73.874,40.7769,4,"Terminal A, Terminal B, terminal C, Terminal D"
-FLL,Fort Lauderdale–Hollywood International,-80.1506,26.0742,4,"Terminal 1 – New Terminal (yellow)
-Terminal 2 – ""Delta"" Terminal (red)
-Terminal 3 – Main Terminal (purple )
-Terminal 4 – International Terminal (green) 
-"
-BWI,Baltimore/Washington International Thurgood Marshall Airport,-76.6684,39.1774,5 Concourses,"Concourses A, B, C, D, E"
-IAD,Washington Dulles International,-77.4565,38.9531,3,main terminal and two midfield terminal buildings
-SLC,Salt Lake City International,-111.9791,40.7899,3,"Terminal 1,2, International terminal"
-DCA,Ronald Reagan Washington National ,-77.0402,38.8512,4,"Terminal, A, B, C,  North Concourse and Secure National Hall Project"
-MDW,Chicago Midway International,-87.7522,41.7868,3 concourses,"concourses (A, B, and C)"
-HNL,Honolulu International,-157.9251,21.3245,3," Overseas Terminal, Inter-island Terminal,  Commuter Terminal "
-SAN,San Diego International,-117.1933,32.7338,2,"Terminal 1,2"
-TPA,Tampa International,-82.5371,27.9835,Landside Terminal is surrounded by four Airside satellites where airliner embarkment and disembarkment occur,"airsides (A, C, E and F)"
-PIE,St. Pete–Clearwater International,-82.6917,27.9068,1,
-PDX,Portland International,-122.5951,45.5898,"1 passenger terminal in the airport, with five concourses",
-STL,St. Louis Lambert International,-45.5898,38.7518,2,"Terminal 1,2"
-HOU,William P. Hobby Airport international ,-95.2773,29.6453,1,Central Concourse
-OAK,Oakland International,-122.2197,37.7126,2,"Terminal 1,2"
-MCI,Kansas City International,-94.7126,39.3006,3,"terminal A, B, C"
-BNA,Nashville International,-86.6774,36.1263,1,Robert C. H. Mathews Jr. Terminal
-AUS,Austin–Bergstrom International,-97.6663,30.1974,,
-RDU,Raleigh–Durham International Airport,-78.788,35.8801,,
-SMF,Sacramento International,-121.5901,38.6951,,
-SNA,John Wayne Airport,-117.8675,33.6762,,
-CLE,Cleveland Hopkins International,-81.848,41.4124,,
-,,,,,
+BWI,Baltimore/Washington International Thurgood Marshall Airport,-76.6684,39.1774,5 Concourses,Terminal
+CLE,Cleveland Hopkins International,-81.848,41.4124,,"Concourse A, Concourse B, Concourse C, Concourse D, Main Terminal"
+CLT,Charlotte Douglas International ,-80.9473,35.2144,1,"Concourse A, Concourse B, Concourse C, Concourse D, Concourse E, Main Terminal"
+DCA,Ronald Reagan Washington National ,-77.0402,38.8512,4,Main Terminal
+DEN,Denver International ,-104.6737,39.8561,1,Main Terminal
+DFW,Dallas Fort Worth International ,-97.0403,32.8998,6,"Terminal A, Terminal B, Terminal C, Terminal D , Terminal E, Terminal F"
+DTW,Detroit Metropolitan Wayne County Airport,-83.3554,42.2162,2,"Main Terminal, North Terminal"
+EWR,Newark Liberty International ,-74.1745,40.6895,3,"Terminal A, Terminal B, Terminal C"
+FLL,Fort LauderdaleÐHollywood International,-80.1506,26.0742,4,"Terminal 1, Terminal 2, Terminal 3"
+HNL,Honolulu International,-157.9251,21.3245,3,"Central Concourse, Diamond Head Concourse, EWA Concourse, Interisland Terminal,  Commuter Terminal, Main Terminal"
+HOU,William P. Hobby Airport international ,-95.2773,29.6453,1,"Central Concourse, Main Terminal"
+IAD,Washington Dulles International,-77.4565,38.9531,3,"Concourse A, Concourse B, Concourse C, Concourse D, Concourse Z, Main Terminal"
+IAH,George Bush Intercontinental Houston ,-95.3368,29.9902,5,"Terminal A, Terminal B, Terminal C, Terminal D, Terminal E"
+JFK,John F Kennedy International ,-73.7781,40.6413,6,"Terminal 1, Terminal 2, Terminal 4, Terminal 5, Terminal 7, Terminal 8"
+LAS,McCarran International ,-115.1537,36.084,3,"Concourse A, Concourse B, Concourse C, Concourse D, Concourse E, Main Terminal"
+LAX,Los Angeles International ,-118.4085,33.9416,9,"Terminal 1, Terminal 2, Terminal 3, Terminal 4, Terminal 6, Terminal 7, Terminal 8"
+LGA,LaGuardia Airport ,-73.874,40.7769,4,"Terminal A, Terminal B, Terminal C, Terminal D"
+MCI,Kansas City International,-94.7126,39.3006,3,"Concourse A, Concourse B, Concourse C"
+MCO,Orlando International ,-81.3081,28.4312,2,"Airside 1, Airside 2, Airside 3, Airside 4, Main Terminal"
+MDW,Chicago Midway International,-87.7522,41.7868,3 concourses,"Concourse A, Concourse B, Concourse C, Main Terminal"
+MIA,Miami International ,-80.287,25.7959,3,"Concourse D, Concourse E, Concourse F, Concourse G, Concourse H, Concourse J"
+MSP,Minneapolis Saint Paul International,-93.2223,44.8848,2,"Concourse A, Concourse B, Concourse C, Concourse D, Concourse E, Concourse F, Concourse G, Concourse H, Main Terminal"
+OAK,Oakland International,-122.2197,37.7126,2,"Terminal 1, Terminal 2"
+ORD,Chicago OÕHare International ,-87.9073,41.9742,4,"Terminal 1, Terminal 2, Terminal 3, Terminal 5, Main Terminal"
+PDX,Portland International,-122.5951,45.5898,"1 passenger terminal in the airport, with five concourses","Concourse A, Concourse B, Concourse C, Concourse D, Concourse E, Main Terminal"
+PHL,Philadelphia International Airport,-75.2424,39.8744,6,"Terminal A, Terminal B, Terminal C, Terminal D, Terminal E, Terminal F"
+PHX,Phoenix Sky Harbor International ,-112.074,33.4484,3,"Concourse A, Concourse B, Concourse C, Concourse D, Terminal 2, Terminal 3, Terminal 4"
+PIE,St. PeteÐClearwater International,-82.6917,27.9068,1,Main Terminal
+RDU,RaleighÐDurham International Airport,-78.788,35.8801,,"Terminal 1, Terminal 2"
+SAN,San Diego International,-117.1933,32.7338,2,Main Terminal
+SEA,Seattle Tacoma International Airport,-122.3088,47.4502,2,"Concourse A, Concourse B, Concourse C, Concourse D, South Satellite Terminal, Main and Central Terminals, North Satellite Terminal"
+SFO,San Francisco International ,-122.4194,37.7749,4,"Terminal 1, Terminal 2, Terminal 3, International Terminal"
+SLC,Salt Lake City International,-111.9791,40.7899,3,"Terminal 1, Terminal 2, International Terminal, Concourse A, Concourse B, Concourse C, Concourse D, Concourse E"
+SMF,Sacramento International,-121.5901,38.6951,,"Terminal A, Terminal B"
+SNA,John Wayne Airport,-117.8675,33.6762,,"Terminal A, Terminal B, Terminal C"
+STL,St. Louis Lambert International,-45.5898,38.7518,2,"Terminal 1, Terminal 2"
+TPA,Tampa International,-82.5371,27.9835,,"Airside A, Airside B, Airside C, Airside E, Airside F, Landside Terminal"
