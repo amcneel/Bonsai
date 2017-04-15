@@ -1,41 +1,0 @@
-IATA,Airport Name,Long,Lat,# terminals,Names of terminals
-ATL,Hartsfield Jackson Atlanta International ,84° 25_ 41_,33° 38_ 12_,2,"Domestic Terminal and the Maynard H. Jackson, Jr. International Terminal"
-ORD,Chicago O’Hare International ,87° 54_ 17_ W,41° 58_ 43_ N,4,"Terminal 1, Terminal 2, Terminal 3, Terminal 5 (International)"
-LAX,Los Angeles International ,118° 24_ 29_ W,33° 56_ 33_ N,9,"Terminal 1, Terminal 2, Terminal 3, Terminal 5, Terminal 6, Terminal 7, Terminal 8, Tom Bradley International Terminal"
-DFW,Dallas Fort Worth International ,97° 2_ 17_ W,32° 53_ 49_ N,6,"Terminal A, Terminal B, Terminal C, Terminal D (International), Terminal E, Terminal F (Future)"
-DEN,Denver International ,104° 40_ 23_ W,39° 51_ 42_ N,1,Jeppesen Terminal
-JFK,John F Kennedy International ,73° 46_ 44_ W,40° 38_ 23_ N,6,"Terminal 1, Terminal 2, Terminal 4, Terminal 5, Terminal 7, Terminal 8"
-SFO,San Francisco International ,122° 22_ 30_ W,37° 37_ 8_ N,4,"Terminal 1, Terminal 2, Terminal 3, international Terminal"
-CLT,Charlotte Douglas International ,80° 56_ 35_ W,35° 12_ 50_ N,1,Main terminal
-LAS,McCarran International ,115° 9_ 8_ W,36° 4_ 48_ N,3,"terminal 1, Terminal 3, former terminal 2"
-PHX,Phoenix Sky Harbor International ,112° 0_ 42_ W,33° 26_ 3_ N,3,"Terminal 2, terminal 3, Terminal 4 (Barry M. Goldwater Terminal)"
-IAH,George Bush Intercontinental Houston ,95° 20_ 29_ W,29° 59_ 4_ N,5,"Terminal A, Terminal B, Terminal C, Terminal D, Terminal E"
-MIA,Miami International ,80° 17_ 26_ W,25° 47_ 36_ N,3,"North terminal, Central terminal, South terminal"
-MCO,Orlando International ,81° 18_ 32_ W,28° 25_ 46_ N,2,"Terminal A, terminal B"
-EWR,Newark Liberty International ,74° 10_ 7_ W,40° 41_ 33_ N,3,"Terminal A, Terminal B, terminal C"
-SEA,Hartsfield Jackson Atlanta International ,84° 25_ 41_ W,33° 38_ 12_ N,2,"Domestic Terminal, Maynard Holbrook Jackson Jr. International Terminal"
-MSP,Minneapolis–Saint Paul International,93° 13_ 18_ W,44° 52_ 55_ N,2,"Terminal 1-Lindbergh, Terminal 2-Humphrey"
-DTW,Detroit Metropolitan Wayne County Airport,83° 21_ 12_ W,42° 12_ 45_ N,2,"Edward H. McNamara Terminal , North terminal"
-PHL,Philadelphia International Airport,75° 14_ 28_ W,39° 52_ 19_ N,6,"Terminal A East, Terminals B and C, Terminal D, Terminal E, Terminal F (Concourses 1, 2, and 3)"
-BOS,Boston Logan International Airport,71° 0_ 23_ W,42° 21_ 47_ N,4,"Terminal A, Terminal B, Terminal C, Terminal E"
-LGA,LaGuardia Airport ,73° 52_ 21.4_ W,40° 46_ 38.1_ N,4,"Terminal A, Terminal B, terminal C, Terminal D"
-FLL,Fort Lauderdale–Hollywood International,80° 9_ 10_ W,26° 4_ 21_ N,4,"Terminal 1 – New Terminal (yellow)Terminal 2 – ""Delta"" Terminal (red)Terminal 3 – Main Terminal (purple )Terminal 4 – International Terminal (green) "
-BWI,Baltimore/Washington International Thurgood Marshall Airport,76° 40_ 6_ W,39° 10_ 31_ N,5 Concourses,"Concourses A, B, C, D, E"
-IAD,Washington Dulles International,77° 27_ 21_ W,38° 56_ 40_ N,3,main terminal and two midfield terminal buildings
-SLC,Salt Lake City International,111° 58_ 40_ W,40° 47_ 18_ N,3,"Terminal 1,2, International terminal"
-DCA,Ronald Reagan Washington National ,77° 2_ 16_ W,38° 51_ 8_ N,4,"Terminal, A, B, C,  North Concourse and Secure National Hall Project"
-MDW,Chicago Midway International,87° 45_ 9_ W,41° 47_ 10_ N,3 concourses,"concourses (A, B, and C)"
-HNL,Honolulu International,157° 55_ 21_ W,21° 19_ 7_ N,3," Overseas Terminal, Inter-island Terminal,  Commuter Terminal "
-SAN,San Diego International,117° 11_ 23_ W,32° 44_ 1_ N,2,"Terminal 1,2"
-TPA,Tampa International,82° 32_ 0_ W,27° 58_ 32_ N,Landside Terminal is surrounded by four Airside satellites where airliner embarkment and disembarkment occur,"airsides (A, C, E and F)"
-CLE,St. Pete–Clearwater International,82° 41_ 15_ W,27° 54_ 36_ N,1,
-PDX,Portland International,122° 35_ 51_ W,45° 35_ 19_ N,"1 passenger terminal in the airport, with five concourses",
-STL,St. Louis Lambert International,90° 21_ 41_ W,38° 44_ 50_ N,2,"Terminal 1,2"
-HOU,William P. Hobby Airport international ,95° 16_ 44_ W,29° 38_ 44_ N,1,Central Concourse
-OAK,Oakland International,,,2,"Terminal 1,2"
-MCI,Kansas City International,,,3,"terminal A, B, C"
-BNA,Nashville International,,,1,Robert C. H. Mathews Jr. Terminal
-AUS,McCarran International ,,,,
-RDU,Phoenix Sky Harbor International ,,,,
-SMF,George Bush Intercontinental Houston ,,,,
-SNA,Miami International ,,,,

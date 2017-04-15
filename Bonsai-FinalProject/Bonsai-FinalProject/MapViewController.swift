@@ -13,6 +13,7 @@ import UIKit
 class MapViewController: BonsaiViewController{
     
     
+    @IBOutlet weak var mapImage: UIImageView!
     @IBOutlet weak var theLocationButton: UIButton!
     @IBOutlet weak var theSearchButton: UIButton!
     @IBOutlet weak var theSearchTableView: UITableView!
@@ -38,7 +39,8 @@ class MapViewController: BonsaiViewController{
     
     //this method is called once the airport is updated, either through search bar or location button
     override func update(){
-        print("DO STUFF NOW.  Probably want to update an airport label or something.  Look in 'update' method in MapViewController.swift")
+       let airport = curAirport?.getName()
+        
     }
     
 }
