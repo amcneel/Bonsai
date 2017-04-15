@@ -26,6 +26,7 @@
 		6886A5E41E95A77500A57868 /* WaitTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886A5E31E95A77500A57868 /* WaitTime.swift */; };
 		688D23DD1EA283D4008C44F3 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688D23DC1EA283D4008C44F3 /* AccountController.swift */; };
 		688D23DF1EA284E3008C44F3 /* fb.png in Resources */ = {isa = PBXBuildFile; fileRef = 688D23DE1EA284E3008C44F3 /* fb.png */; };
+		688D23E11EA28D96008C44F3 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 688D23E01EA28D96008C44F3 /* twitter.png */; };
 		689EAF4F1EA1743E009DE2C7 /* BonsaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689EAF4E1EA1743E009DE2C7 /* BonsaiViewController.swift */; };
 		689EAF511EA1802D009DE2C7 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689EAF501EA1802D009DE2C7 /* GlobalVariables.swift */; };
 		689EAF531EA1871D009DE2C7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689EAF521EA1871D009DE2C7 /* MapViewController.swift */; };
@@ -89,6 +90,7 @@
 		6886A5E31E95A77500A57868 /* WaitTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitTime.swift; sourceTree = "<group>"; };
 		688D23DC1EA283D4008C44F3 /* AccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
 		688D23DE1EA284E3008C44F3 /* fb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fb.png; sourceTree = "<group>"; };
+		688D23E01EA28D96008C44F3 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
 		689EAF4E1EA1743E009DE2C7 /* BonsaiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BonsaiViewController.swift; sourceTree = "<group>"; };
 		689EAF501EA1802D009DE2C7 /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		689EAF521EA1871D009DE2C7 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			children = (
 				EF815DAE1EA01AF30055C3BE /* Tree4.png */,
 				EF815DAC1EA0174E0055C3BE /* User Filled-25.png */,
+				688D23E01EA28D96008C44F3 /* twitter.png */,
 				688D23DE1EA284E3008C44F3 /* fb.png */,
 				EF815DAA1EA012570055C3BE /* Tree3.png */,
 				EF815DA61EA005420055C3BE /* Tree2.png */,
@@ -345,6 +348,7 @@
 				EF7845041E98217A00DC82D3 /* Map Filled-25.png in Resources */,
 				688D23DF1EA284E3008C44F3 /* fb.png in Resources */,
 				EF815DAB1EA012570055C3BE /* Tree3.png in Resources */,
+				688D23E11EA28D96008C44F3 /* twitter.png in Resources */,
 				6886A5711E95885C00A57868 /* Main.storyboard in Resources */,
 				6849EC251E9845240026DA65 /* Marker Filled-25.png in Resources */,
 			);

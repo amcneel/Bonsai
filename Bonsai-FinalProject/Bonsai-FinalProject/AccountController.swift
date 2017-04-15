@@ -13,6 +13,7 @@ import UIKit
 //set up logout button so that it disconnects you from the SQL database, not just segways you back to the main page
 class AccountController: UIViewController{
     
+    //when fbButton is Clicked
     @IBAction func fbButtonClicked(_ sender: Any) {
         if(SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook)) {
             let socialController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
@@ -40,4 +41,36 @@ class AccountController: UIViewController{
             self.present(alertController, animated: true, completion: nil)
         }
     }
+    
+    //when twitter button is Clicked
+    @IBAction func twitterButtonClicked(_ sender: Any) {
+        if(SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter)) {
+            let socialController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            
+            //TODO FIXME
+            //add estimated time of wait later
+            // either make additional json call or ask jesse how to get the number?
+            
+            socialController?.setInitialText("There's a 30 minute wait at the STL Airport! Find your wait with #Bonsai")
+            
+            //this line will be the link to the app store to get the bonsai app
+            //socialController.addURL(someNSURLInstance)
+            
+            self.present(socialController!, animated: true, completion: nil)
+            
+        }
+            //Case in that the iOS device doesnt have Facebook installed
+            
+        else{
+            let alertController = UIAlertController(title: "Twitter Not Found", message:
+                "Please install Twitter", preferredStyle: UIAlertControllerStyle.alert)
+            
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+
+    }
+    
+
 }
