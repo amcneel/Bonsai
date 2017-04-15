@@ -9,6 +9,7 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
 //the base class for the views that utilize the searchbar
 class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
@@ -134,6 +135,7 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
         //this is our location, i think
         //on the mac labs it says we're in california, but it's always consitent
         let someLocation = locations[0]
+        curLocation = someLocation
         //print("Your location is \(someLocation)")
         curAirport = getClosestAirport(location: someLocation)
         
@@ -266,6 +268,38 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
         })
     }
     
+    
+    //get the travel time in seconds (TimeInterval is really just a double)
+    func getTravelTime() -> TimeInterval?{
+        let request: MKDirectionsRequest = MKDirectionsRequest()
+        let sourceCoord = curLocation?.coordinate
+        let sourcePlacemark:MKPlacemark = MKPlacemark(coordinate: sourceCoord!)
+        request.source = MKMapItem(placemark: sourcePlacemark)
+        let destCoord = curAirport?.getLoc().coordinate
+        let destPlacemark:MKPlacemark = MKPlacemark(coordinate: destCoord!)
+        request.destination = MKMapItem(placemark: destPlacemark)
+        
+        request.requestsAlternateRoutes = true
+        request.transportType = .automobile
+        let directions = MKDirections(request: request)
+        
+        var eta:TimeInterval? = nil
+        
+        directions.calculate(completionHandler: {(response, error) in
+            
+            if let routeResponse = response?.routes {
+                let quickestRouteForSegment: MKRoute =
+                    routeResponse.sorted(by: {$0.expectedTravelTime <
+                        $1.expectedTravelTime})[0]
+                eta = quickestRouteForSegment.expectedTravelTime
+            } else if let _ = error {
+                print(error.debugDescription)
+            }
+        })
+        
+        return eta
+        
+    }
     
     func update(){
         preconditionFailure("function 'update' must be overridden")
