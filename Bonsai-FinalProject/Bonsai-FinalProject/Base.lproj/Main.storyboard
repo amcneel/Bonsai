@@ -578,6 +578,14 @@
                                     <action selector="fbButtonClicked:" destination="0vn-RD-Jpo" eventType="touchUpInside" id="vmM-pe-IZo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TP7-nq-4em">
+                                <rect key="frame" x="140" y="143" width="105" height="109"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="twitter.png"/>
+                                <connections>
+                                    <action selector="twitterButtonClicked:" destination="0vn-RD-Jpo" eventType="touchUpInside" id="Pr8-Er-dDd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.16664263469999999" green="0.55679242230000003" blue="0.28377072170000001" alpha="0.65831316019999997" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -914,6 +922,7 @@
         <image name="Tree2.png" width="316" height="528"/>
         <image name="User Filled-25.png" width="25" height="25"/>
         <image name="fb.png" width="325" height="325"/>
+        <image name="twitter.png" width="192" height="192"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wNX-Ri-HB5"/>
