@@ -39,7 +39,12 @@ class MapViewController: BonsaiViewController{
     
     //this method is called once the airport is updated, either through search bar or location button
     override func update(){
-       let airport = curAirport?.getName()
+        let airport = curAirport?.getName()
+        let fileManager = FileManager.default
+        let files = fileManager.enumerator(atPath: fileManager.currentDirectoryPath)
+        while let pic = files?.nextObject() as? String {
+            print(pic)
+        }
         
     }
     
