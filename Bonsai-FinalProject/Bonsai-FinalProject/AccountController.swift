@@ -129,6 +129,35 @@ class AccountController: UIViewController, MFMessageComposeViewControllerDelegat
         controller.dismiss(animated: true, completion: nil)
         
     }
+    
+    //action for loading messages into WhatsApp
+    //found on stack overflow at 
+    // http://stackoverflow.com/questions/32042702/sending-message-to-whatsapp-from-your-app-using-swift
+    @IBAction func whatsAppTouched(_ sender: Any) {
+        let urlString = "There's a 30 minute wait at the STL Airport! Find your wait with Bonsai"
+        if let urlStringEncoded = urlString.addingPercentEncoding(withAllowedCharacters:.urlQueryAllowed){
+            let url  = NSURL(string: "whatsapp://send?text=\(urlStringEncoded)")
+            
+            if UIApplication.shared.canOpenURL(url! as URL) {
+                UIApplication.shared.openURL(url! as URL)
+            }
+            else{
+                whatsAppError()
+            }
+        }
+        else{
+            whatsAppError()
+            
+        }
+        
+
+    }
+    func whatsAppError(){
+        let whatsAppError = UIAlertView(title: "Could Not Open WhatsApp", message: "Your device could not open WhatsApp.  Please check WhatsApp configuration or install the App. ", delegate: self, cancelButtonTitle: "OK")
+        whatsAppError .show()
+
+    }
+    
 
 }
 
