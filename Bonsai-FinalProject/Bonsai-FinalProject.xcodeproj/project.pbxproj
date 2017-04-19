@@ -12,6 +12,8 @@
 		6849EC251E9845240026DA65 /* Marker Filled-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 6849EC241E9845240026DA65 /* Marker Filled-25.png */; };
 		6849EC611E9AD6530026DA65 /* AlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6849EC601E9AD6530026DA65 /* AlarmView.swift */; };
 		6849EC631E9AE82E0026DA65 /* AirportSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6849EC621E9AE82E0026DA65 /* AirportSearchCell.swift */; };
+		685AE4961EA6EFA600DB71F2 /* Messages.png in Resources */ = {isa = PBXBuildFile; fileRef = 685AE4951EA6EFA600DB71F2 /* Messages.png */; };
+		685AE4981EA6FE3700DB71F2 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 685AE4971EA6FE3700DB71F2 /* mail.png */; };
 		686113EE1E981C3C00729FD1 /* BackgroundImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686113ED1E981C3C00729FD1 /* BackgroundImageHandler.swift */; };
 		6886A56C1E95885C00A57868 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886A56B1E95885C00A57868 /* AppDelegate.swift */; };
 		6886A56E1E95885C00A57868 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886A56D1E95885C00A57868 /* ViewController.swift */; };
@@ -419,6 +421,8 @@
 		6849EC241E9845240026DA65 /* Marker Filled-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marker Filled-25.png"; sourceTree = "<group>"; };
 		6849EC601E9AD6530026DA65 /* AlarmView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmView.swift; sourceTree = "<group>"; };
 		6849EC621E9AE82E0026DA65 /* AirportSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportSearchCell.swift; sourceTree = "<group>"; };
+		685AE4951EA6EFA600DB71F2 /* Messages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Messages.png; sourceTree = "<group>"; };
+		685AE4971EA6FE3700DB71F2 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
 		686113ED1E981C3C00729FD1 /* BackgroundImageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundImageHandler.swift; sourceTree = "<group>"; };
 		6886A5681E95885C00A57868 /* Bonsai-FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bonsai-FinalProject.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6886A56B1E95885C00A57868 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -2672,9 +2676,11 @@
 				EF815DAE1EA01AF30055C3BE /* Tree4.png */,
 				EF815DAC1EA0174E0055C3BE /* User Filled-25.png */,
 				688D23E01EA28D96008C44F3 /* twitter.png */,
+				685AE4971EA6FE3700DB71F2 /* mail.png */,
 				688D23DE1EA284E3008C44F3 /* fb.png */,
 				EF815DAA1EA012570055C3BE /* Tree3.png */,
 				EF815DA61EA005420055C3BE /* Tree2.png */,
+				685AE4951EA6EFA600DB71F2 /* Messages.png */,
 				EF815DA41EA004F60055C3BE /* Tree.png */,
 				EF7845061E9822E900DC82D3 /* Bonsai.png */,
 			);
@@ -3024,6 +3030,7 @@
 				688D29FF1EA2C49A008C44F3 /* STL-Terminal-2.jpg in Resources */,
 				688D2A6B1EA2C49A008C44F3 /* PDX-Main-Terminal.jpg in Resources */,
 				688D2A551EA2C49A008C44F3 /* PHX-Concourse-B.jpg in Resources */,
+				685AE4981EA6FE3700DB71F2 /* mail.png in Resources */,
 				688D29D41EA2C499008C44F3 /* Contents.json in Resources */,
 				688D2A161EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D2A0A1EA2C49A008C44F3 /* Contents.json in Resources */,
@@ -3115,6 +3122,7 @@
 				688D29AF1EA2C499008C44F3 /* FLL-Terminal-3.jpg in Resources */,
 				688D2A241EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D2A511EA2C49A008C44F3 /* PIE-Main-Terminal.jpg in Resources */,
+				685AE4961EA6EFA600DB71F2 /* Messages.png in Resources */,
 				688D29F81EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D29E91EA2C49A008C44F3 /* MSP-Concourse-F.jpg in Resources */,
 				688D2A9C1EA2C49A008C44F3 /* Contents.json in Resources */,

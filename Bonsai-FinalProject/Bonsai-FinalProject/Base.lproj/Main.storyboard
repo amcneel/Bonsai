@@ -146,7 +146,7 @@
                                         <rect key="frame" x="0.0" y="28" width="376" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="arl-y2-hXh" id="pdc-sd-vZL">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGE-lQ-aIy">
@@ -560,8 +560,15 @@
                             <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tree2.png" translatesAutoresizingMaskIntoConstraints="NO" id="MbA-5y-SxE">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w36-cT-jaA">
+                                <rect key="frame" x="271" y="192" width="70" height="73"/>
+                                <state key="normal" image="Messages.png"/>
+                                <connections>
+                                    <action selector="messagesClicked:" destination="0vn-RD-Jpo" eventType="touchUpInside" id="PdL-AH-pej"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2H-mp-tXs" customClass="TitleButton" customModule="Bonsai_FinalProject" customModuleProvider="target">
-                                <rect key="frame" x="130" y="294" width="115" height="30"/>
+                                <rect key="frame" x="125" y="537" width="115" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="115" id="bM7-mJ-YkI"/>
@@ -573,31 +580,51 @@
                                     <segue destination="qLp-DW-D8K" kind="show" id="Noj-da-Q9r"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SrJ-6T-Z3n">
-                                <rect key="frame" x="148" y="370" width="82" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SrJ-6T-Z3n">
+                                <rect key="frame" x="150" y="192" width="74" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="xUe-dJ-gyy"/>
+                                </constraints>
                                 <state key="normal" title="Facebook" image="fb.png"/>
                                 <connections>
                                     <action selector="fbButtonClicked:" destination="0vn-RD-Jpo" eventType="touchUpInside" id="vmM-pe-IZo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TP7-nq-4em">
-                                <rect key="frame" x="140" y="143" width="105" height="109"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TP7-nq-4em">
+                                <rect key="frame" x="40" y="192" width="70" height="73"/>
                                 <state key="normal" image="twitter.png"/>
                                 <connections>
                                     <action selector="twitterButtonClicked:" destination="0vn-RD-Jpo" eventType="touchUpInside" id="Pr8-Er-dDd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWw-bp-hUY">
+                                <rect key="frame" x="40" y="297" width="70" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="mail.png"/>
+                                <connections>
+                                    <action selector="emailButton:" destination="0vn-RD-Jpo" eventType="touchUpInside" id="tAm-6V-TBG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.16664263469999999" green="0.55679242230000003" blue="0.28377072170000001" alpha="0.65831316019999997" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="TP7-nq-4em" firstAttribute="leading" secondItem="faY-zF-rXj" secondAttribute="leadingMargin" constant="24" id="2OM-Rx-T9U"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="w36-cT-jaA" secondAttribute="trailing" constant="18" id="3X2-Jp-N4U"/>
+                            <constraint firstItem="w36-cT-jaA" firstAttribute="top" secondItem="eqs-HL-yfY" secondAttribute="bottom" constant="172" id="63N-du-3ni"/>
                             <constraint firstItem="MbA-5y-SxE" firstAttribute="bottom" secondItem="g6N-Z5-S7w" secondAttribute="top" id="8kE-NQ-oaT"/>
-                            <constraint firstItem="MbA-5y-SxE" firstAttribute="centerX" secondItem="j2H-mp-tXs" secondAttribute="centerX" id="GFS-kg-c0t"/>
-                            <constraint firstItem="MbA-5y-SxE" firstAttribute="centerY" secondItem="j2H-mp-tXs" secondAttribute="centerY" id="NZR-gA-sKq"/>
+                            <constraint firstItem="SrJ-6T-Z3n" firstAttribute="leading" secondItem="faY-zF-rXj" secondAttribute="leading" constant="150" id="BwH-Zw-FCa"/>
+                            <constraint firstItem="MbA-5y-SxE" firstAttribute="centerX" secondItem="j2H-mp-tXs" secondAttribute="centerX" constant="5" id="GFS-kg-c0t"/>
+                            <constraint firstItem="w36-cT-jaA" firstAttribute="bottom" secondItem="SrJ-6T-Z3n" secondAttribute="bottom" id="Juv-eD-sNA"/>
+                            <constraint firstItem="MbA-5y-SxE" firstAttribute="centerY" secondItem="j2H-mp-tXs" secondAttribute="centerY" constant="-243" id="NZR-gA-sKq"/>
+                            <constraint firstItem="w36-cT-jaA" firstAttribute="top" secondItem="TP7-nq-4em" secondAttribute="top" id="NZU-aA-TrM"/>
+                            <constraint firstItem="SrJ-6T-Z3n" firstAttribute="leading" secondItem="TP7-nq-4em" secondAttribute="trailing" constant="40" id="OsU-6Q-2DE"/>
+                            <constraint firstItem="SrJ-6T-Z3n" firstAttribute="top" secondItem="j2H-mp-tXs" secondAttribute="bottom" constant="-375" id="SlI-11-v66"/>
                             <constraint firstItem="MbA-5y-SxE" firstAttribute="leading" secondItem="faY-zF-rXj" secondAttribute="leading" id="UwM-wY-als"/>
+                            <constraint firstItem="g6N-Z5-S7w" firstAttribute="top" secondItem="SrJ-6T-Z3n" secondAttribute="bottom" constant="353" id="bdL-ik-AGb"/>
                             <constraint firstItem="MbA-5y-SxE" firstAttribute="top" secondItem="faY-zF-rXj" secondAttribute="top" id="fcy-IZ-jbM"/>
                             <constraint firstAttribute="trailing" secondItem="MbA-5y-SxE" secondAttribute="trailing" id="kI0-5n-G3M"/>
+                            <constraint firstItem="w36-cT-jaA" firstAttribute="bottom" secondItem="TP7-nq-4em" secondAttribute="bottom" id="oBN-Kb-BqZ"/>
+                            <constraint firstItem="w36-cT-jaA" firstAttribute="leading" secondItem="SrJ-6T-Z3n" secondAttribute="trailing" constant="47" id="p5k-YR-1N2"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" image="User Filled-25.png" id="vsf-GG-2QE"/>
@@ -693,7 +720,7 @@
                                         <rect key="frame" x="0.0" y="28" width="376" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3eU-gY-tJb" id="ysw-dp-jGJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5y-uX-SUn">
@@ -835,7 +862,7 @@
                                         <rect key="frame" x="0.0" y="28" width="376" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Aa-GM-ZcR" id="W0R-Db-Zbi">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhT-bK-tYE">
@@ -934,10 +961,12 @@
         <image name="Alarm Clock Filled-25.png" width="25" height="25"/>
         <image name="Map Filled-25.png" width="25" height="25"/>
         <image name="Marker Filled-25.png" width="25" height="25"/>
+        <image name="Messages.png" width="1024" height="1024"/>
         <image name="Search.png" width="25" height="25"/>
         <image name="Tree2.png" width="316" height="528"/>
         <image name="User Filled-25.png" width="25" height="25"/>
         <image name="fb.png" width="325" height="325"/>
+        <image name="mail.png" width="512" height="512"/>
         <image name="twitter.png" width="192" height="192"/>
     </resources>
     <inferredMetricsTieBreakers>
