@@ -14,6 +14,7 @@
 		6849EC631E9AE82E0026DA65 /* AirportSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6849EC621E9AE82E0026DA65 /* AirportSearchCell.swift */; };
 		685AE4961EA6EFA600DB71F2 /* Messages.png in Resources */ = {isa = PBXBuildFile; fileRef = 685AE4951EA6EFA600DB71F2 /* Messages.png */; };
 		685AE4981EA6FE3700DB71F2 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 685AE4971EA6FE3700DB71F2 /* mail.png */; };
+		685AE49C1EA7031D00DB71F2 /* whatsapp.png in Resources */ = {isa = PBXBuildFile; fileRef = 685AE49B1EA7031D00DB71F2 /* whatsapp.png */; };
 		686113EE1E981C3C00729FD1 /* BackgroundImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686113ED1E981C3C00729FD1 /* BackgroundImageHandler.swift */; };
 		6886A56C1E95885C00A57868 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886A56B1E95885C00A57868 /* AppDelegate.swift */; };
 		6886A56E1E95885C00A57868 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886A56D1E95885C00A57868 /* ViewController.swift */; };
@@ -423,6 +424,7 @@
 		6849EC621E9AE82E0026DA65 /* AirportSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportSearchCell.swift; sourceTree = "<group>"; };
 		685AE4951EA6EFA600DB71F2 /* Messages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Messages.png; sourceTree = "<group>"; };
 		685AE4971EA6FE3700DB71F2 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
+		685AE49B1EA7031D00DB71F2 /* whatsapp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whatsapp.png; sourceTree = "<group>"; };
 		686113ED1E981C3C00729FD1 /* BackgroundImageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundImageHandler.swift; sourceTree = "<group>"; };
 		6886A5681E95885C00A57868 /* Bonsai-FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bonsai-FinalProject.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6886A56B1E95885C00A57868 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -861,7 +863,7 @@
 		6886A56A1E95885C00A57868 /* Bonsai-FinalProject */ = {
 			isa = PBXGroup;
 			children = (
-				EFBA4D871EA2A81100087A4E /* backgroundImages */,
+				EFBA4D871EA2A81100087A4E /* backgroundImagesAndLogos */,
 				EF7844FB1E98108500DC82D3 /* Airport.swift */,
 				6849EC621E9AE82E0026DA65 /* AirportSearchCell.swift */,
 				688D274B1EA2C499008C44F3 /* airportpics */,
@@ -2670,10 +2672,11 @@
 			name = Icons;
 			sourceTree = "<group>";
 		};
-		EFBA4D871EA2A81100087A4E /* backgroundImages */ = {
+		EFBA4D871EA2A81100087A4E /* backgroundImagesAndLogos */ = {
 			isa = PBXGroup;
 			children = (
 				EF815DAE1EA01AF30055C3BE /* Tree4.png */,
+				685AE49B1EA7031D00DB71F2 /* whatsapp.png */,
 				EF815DAC1EA0174E0055C3BE /* User Filled-25.png */,
 				688D23E01EA28D96008C44F3 /* twitter.png */,
 				685AE4971EA6FE3700DB71F2 /* mail.png */,
@@ -2684,7 +2687,7 @@
 				EF815DA41EA004F60055C3BE /* Tree.png */,
 				EF7845061E9822E900DC82D3 /* Bonsai.png */,
 			);
-			name = backgroundImages;
+			name = backgroundImagesAndLogos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2933,6 +2936,7 @@
 				688D29991EA2C499008C44F3 /* DFW-Terminal-A.jpg in Resources */,
 				EF815DA51EA004F60055C3BE /* Tree.png in Resources */,
 				688D2A7B1EA2C49A008C44F3 /* SLC-Concourse-D.jpg in Resources */,
+				685AE49C1EA7031D00DB71F2 /* whatsapp.png in Resources */,
 				688D2A8F1EA2C49A008C44F3 /* SEA-Concourse-B.jpg in Resources */,
 				688D29851EA2C499008C44F3 /* Contents.json in Resources */,
 				688D2A751EA2C49A008C44F3 /* SLC-Concourse-B.jpg in Resources */,

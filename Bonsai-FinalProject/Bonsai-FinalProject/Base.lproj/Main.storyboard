@@ -560,6 +560,13 @@
                             <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tree2.png" translatesAutoresizingMaskIntoConstraints="NO" id="MbA-5y-SxE">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWw-bp-hUY">
+                                <rect key="frame" x="40" y="297" width="70" height="73"/>
+                                <state key="normal" image="mail.png"/>
+                                <connections>
+                                    <action selector="emailButton:" destination="0vn-RD-Jpo" eventType="touchUpInside" id="tAm-6V-TBG"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w36-cT-jaA">
                                 <rect key="frame" x="271" y="192" width="70" height="73"/>
                                 <state key="normal" image="Messages.png"/>
@@ -597,12 +604,14 @@
                                     <action selector="twitterButtonClicked:" destination="0vn-RD-Jpo" eventType="touchUpInside" id="Pr8-Er-dDd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWw-bp-hUY">
-                                <rect key="frame" x="40" y="297" width="70" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="mail.png"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Axc-Ft-O6M">
+                                <rect key="frame" x="152" y="297" width="70" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="LeV-ik-8lJ"/>
+                                </constraints>
+                                <state key="normal" image="whatsapp.png"/>
                                 <connections>
-                                    <action selector="emailButton:" destination="0vn-RD-Jpo" eventType="touchUpInside" id="tAm-6V-TBG"/>
+                                    <action selector="whatsAppTouched:" destination="0vn-RD-Jpo" eventType="touchUpInside" id="KtW-cf-eo5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -613,18 +622,25 @@
                             <constraint firstItem="w36-cT-jaA" firstAttribute="top" secondItem="eqs-HL-yfY" secondAttribute="bottom" constant="172" id="63N-du-3ni"/>
                             <constraint firstItem="MbA-5y-SxE" firstAttribute="bottom" secondItem="g6N-Z5-S7w" secondAttribute="top" id="8kE-NQ-oaT"/>
                             <constraint firstItem="SrJ-6T-Z3n" firstAttribute="leading" secondItem="faY-zF-rXj" secondAttribute="leading" constant="150" id="BwH-Zw-FCa"/>
+                            <constraint firstItem="zWw-bp-hUY" firstAttribute="leading" secondItem="TP7-nq-4em" secondAttribute="leading" id="C8H-99-x5F"/>
                             <constraint firstItem="MbA-5y-SxE" firstAttribute="centerX" secondItem="j2H-mp-tXs" secondAttribute="centerX" constant="5" id="GFS-kg-c0t"/>
                             <constraint firstItem="w36-cT-jaA" firstAttribute="bottom" secondItem="SrJ-6T-Z3n" secondAttribute="bottom" id="Juv-eD-sNA"/>
                             <constraint firstItem="MbA-5y-SxE" firstAttribute="centerY" secondItem="j2H-mp-tXs" secondAttribute="centerY" constant="-243" id="NZR-gA-sKq"/>
                             <constraint firstItem="w36-cT-jaA" firstAttribute="top" secondItem="TP7-nq-4em" secondAttribute="top" id="NZU-aA-TrM"/>
                             <constraint firstItem="SrJ-6T-Z3n" firstAttribute="leading" secondItem="TP7-nq-4em" secondAttribute="trailing" constant="40" id="OsU-6Q-2DE"/>
+                            <constraint firstItem="Axc-Ft-O6M" firstAttribute="centerY" secondItem="faY-zF-rXj" secondAttribute="centerY" id="SLP-od-Tls"/>
                             <constraint firstItem="SrJ-6T-Z3n" firstAttribute="top" secondItem="j2H-mp-tXs" secondAttribute="bottom" constant="-375" id="SlI-11-v66"/>
                             <constraint firstItem="MbA-5y-SxE" firstAttribute="leading" secondItem="faY-zF-rXj" secondAttribute="leading" id="UwM-wY-als"/>
+                            <constraint firstItem="zWw-bp-hUY" firstAttribute="top" secondItem="Axc-Ft-O6M" secondAttribute="top" id="VKk-ja-E5o"/>
+                            <constraint firstItem="Axc-Ft-O6M" firstAttribute="centerX" secondItem="SrJ-6T-Z3n" secondAttribute="centerX" id="WX2-fE-oMa"/>
                             <constraint firstItem="g6N-Z5-S7w" firstAttribute="top" secondItem="SrJ-6T-Z3n" secondAttribute="bottom" constant="353" id="bdL-ik-AGb"/>
                             <constraint firstItem="MbA-5y-SxE" firstAttribute="top" secondItem="faY-zF-rXj" secondAttribute="top" id="fcy-IZ-jbM"/>
                             <constraint firstAttribute="trailing" secondItem="MbA-5y-SxE" secondAttribute="trailing" id="kI0-5n-G3M"/>
                             <constraint firstItem="w36-cT-jaA" firstAttribute="bottom" secondItem="TP7-nq-4em" secondAttribute="bottom" id="oBN-Kb-BqZ"/>
+                            <constraint firstItem="zWw-bp-hUY" firstAttribute="bottom" secondItem="Axc-Ft-O6M" secondAttribute="bottom" id="ouE-EZ-7r8"/>
                             <constraint firstItem="w36-cT-jaA" firstAttribute="leading" secondItem="SrJ-6T-Z3n" secondAttribute="trailing" constant="47" id="p5k-YR-1N2"/>
+                            <constraint firstItem="Axc-Ft-O6M" firstAttribute="top" secondItem="SrJ-6T-Z3n" secondAttribute="bottom" constant="32" id="s85-BU-32u"/>
+                            <constraint firstItem="zWw-bp-hUY" firstAttribute="trailing" secondItem="TP7-nq-4em" secondAttribute="trailing" id="x2J-sw-a7i"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" image="User Filled-25.png" id="vsf-GG-2QE"/>
@@ -968,6 +984,7 @@
         <image name="fb.png" width="325" height="325"/>
         <image name="mail.png" width="512" height="512"/>
         <image name="twitter.png" width="192" height="192"/>
+        <image name="whatsapp.png" width="1000" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wNX-Ri-HB5"/>
