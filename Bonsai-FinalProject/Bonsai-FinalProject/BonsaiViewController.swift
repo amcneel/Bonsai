@@ -87,7 +87,8 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
                 let alat:CLLocationDegrees = Double(csv[rowIndex][3])!
                 let along:CLLocationDegrees = Double(csv[rowIndex][2])!
                 let aloc = CLLocation(latitude: alat, longitude: along)
-                let a = Airport(n: aname, c: acode, l: aloc)
+                let aterm:String = csv[rowIndex][5]
+                let a = Airport(n: aname, c: acode, l: aloc, t: aterm)
                 airports.append(a)
             }
             

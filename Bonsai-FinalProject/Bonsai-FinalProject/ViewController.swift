@@ -220,8 +220,7 @@ class ViewController: BonsaiViewController {
                 self.updateFadeIn() //this doesn't affect anything if the components have already faded in
                 self.updateWaitTimeAndDisplay()
             }
-        }
-        
+        }        
         
     }
     
