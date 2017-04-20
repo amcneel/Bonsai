@@ -9,7 +9,35 @@
 /* Begin PBXBuildFile section */
 		062B749496BE8D116483AF85 /* Pods_Bonsai_FinalProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B0CE48A4BC63244ECEEDFE /* Pods_Bonsai_FinalProjectUITests.framework */; };
 		27ACE8F1C98924A129954ABB /* Pods_Bonsai_FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71AD84ADDA9ACCF5698948B3 /* Pods_Bonsai_FinalProject.framework */; };
+		680009E01EA8843300CEDCC8 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 680009C51EA8843300CEDCC8 /* Contents.json */; };
+		680009E11EA8843300CEDCC8 /* Icon-App-20x20@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680009C61EA8843300CEDCC8 /* Icon-App-20x20@1x.png */; };
+		680009E21EA8843300CEDCC8 /* Icon-App-20x20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680009C71EA8843300CEDCC8 /* Icon-App-20x20@2x.png */; };
+		680009E31EA8843300CEDCC8 /* Icon-App-20x20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680009C81EA8843300CEDCC8 /* Icon-App-20x20@3x.png */; };
+		680009E41EA8843300CEDCC8 /* Icon-App-29x29@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680009C91EA8843300CEDCC8 /* Icon-App-29x29@1x.png */; };
+		680009E51EA8843300CEDCC8 /* Icon-App-29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680009CA1EA8843300CEDCC8 /* Icon-App-29x29@2x.png */; };
+		680009E61EA8843300CEDCC8 /* Icon-App-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680009CB1EA8843300CEDCC8 /* Icon-App-29x29@3x.png */; };
+		680009E71EA8843300CEDCC8 /* Icon-App-40x40@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680009CC1EA8843300CEDCC8 /* Icon-App-40x40@1x.png */; };
+		680009E81EA8843300CEDCC8 /* Icon-App-40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680009CD1EA8843300CEDCC8 /* Icon-App-40x40@2x.png */; };
+		680009E91EA8843300CEDCC8 /* Icon-App-40x40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680009CE1EA8843300CEDCC8 /* Icon-App-40x40@3x.png */; };
+		680009EA1EA8843300CEDCC8 /* Icon-App-57x57@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680009CF1EA8843300CEDCC8 /* Icon-App-57x57@1x.png */; };
+		680009EB1EA8843300CEDCC8 /* Icon-App-57x57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680009D01EA8843300CEDCC8 /* Icon-App-57x57@2x.png */; };
+		680009EC1EA8843300CEDCC8 /* Icon-App-60x60@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680009D11EA8843300CEDCC8 /* Icon-App-60x60@1x.png */; };
+		680009ED1EA8843300CEDCC8 /* Icon-App-60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680009D21EA8843300CEDCC8 /* Icon-App-60x60@2x.png */; };
+		680009EE1EA8843300CEDCC8 /* Icon-App-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680009D31EA8843300CEDCC8 /* Icon-App-60x60@3x.png */; };
+		680009EF1EA8843300CEDCC8 /* Icon-App-72x72@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680009D41EA8843300CEDCC8 /* Icon-App-72x72@1x.png */; };
+		680009F01EA8843300CEDCC8 /* Icon-App-72x72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680009D51EA8843300CEDCC8 /* Icon-App-72x72@2x.png */; };
+		680009F11EA8843300CEDCC8 /* Icon-App-76x76@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680009D61EA8843300CEDCC8 /* Icon-App-76x76@1x.png */; };
+		680009F21EA8843300CEDCC8 /* Icon-App-76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680009D71EA8843300CEDCC8 /* Icon-App-76x76@2x.png */; };
+		680009F31EA8843300CEDCC8 /* Icon-App-76x76@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680009D81EA8843300CEDCC8 /* Icon-App-76x76@3x.png */; };
+		680009F41EA8843300CEDCC8 /* Icon-App-83.5x83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680009D91EA8843300CEDCC8 /* Icon-App-83.5x83.5@2x.png */; };
+		680009F51EA8843300CEDCC8 /* Icon-Small-50x50@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680009DA1EA8843300CEDCC8 /* Icon-Small-50x50@1x.png */; };
+		680009F61EA8843300CEDCC8 /* Icon-Small-50x50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680009DB1EA8843300CEDCC8 /* Icon-Small-50x50@2x.png */; };
+		680009F71EA8843300CEDCC8 /* iTunesArtwork@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680009DC1EA8843300CEDCC8 /* iTunesArtwork@1x.png */; };
+		680009F81EA8843300CEDCC8 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680009DD1EA8843300CEDCC8 /* iTunesArtwork@2x.png */; };
+		680009F91EA8843300CEDCC8 /* iTunesArtwork@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680009DE1EA8843300CEDCC8 /* iTunesArtwork@3x.png */; };
+		680009FA1EA8843300CEDCC8 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 680009DF1EA8843300CEDCC8 /* README.md */; };
 		681278461E9ED03F0090A6D1 /* BezierBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681278451E9ED03F0090A6D1 /* BezierBorder.swift */; };
+		6831A1CB1EA86F3F001216A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6831A1CA1EA86F3F001216A5 /* GoogleService-Info.plist */; };
 		6849EC231E983CDE0026DA65 /* Search.png in Resources */ = {isa = PBXBuildFile; fileRef = 6849EC221E983CDE0026DA65 /* Search.png */; };
 		6849EC251E9845240026DA65 /* Marker Filled-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 6849EC241E9845240026DA65 /* Marker Filled-25.png */; };
 		6849EC611E9AD6530026DA65 /* AlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6849EC601E9AD6530026DA65 /* AlarmView.swift */; };
@@ -386,7 +414,6 @@
 		689EAF531EA1871D009DE2C7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689EAF521EA1871D009DE2C7 /* MapViewController.swift */; };
 		689EAF551EA194F3009DE2C7 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689EAF541EA194F3009DE2C7 /* InfoViewController.swift */; };
 		68BC5C521EA03920005274FE /* BonsaiButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC5C511EA03920005274FE /* BonsaiButton.swift */; };
-		EF0E292E1EA852F300002C6C /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = EF0E292D1EA852F300002C6C /* GoogleService-Info (1).plist */; };
 		EF7844FC1E98108500DC82D3 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7844FB1E98108500DC82D3 /* Airport.swift */; };
 		EF7844FE1E98208000DC82D3 /* Airport Filled-25.png in Resources */ = {isa = PBXBuildFile; fileRef = EF7844FD1E98208000DC82D3 /* Airport Filled-25.png */; };
 		EF7845001E98209500DC82D3 /* Alarm Clock Filled-25.png in Resources */ = {isa = PBXBuildFile; fileRef = EF7844FF1E98209500DC82D3 /* Alarm Clock Filled-25.png */; };
@@ -423,7 +450,35 @@
 /* Begin PBXFileReference section */
 		336DFBF9B77DCB849C00AC0A /* Pods-Bonsai-FinalProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonsai-FinalProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bonsai-FinalProjectUITests/Pods-Bonsai-FinalProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		553517B4CF4B0FC46E481269 /* Pods-Bonsai-FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonsai-FinalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bonsai-FinalProject/Pods-Bonsai-FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
+		680009C51EA8843300CEDCC8 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		680009C61EA8843300CEDCC8 /* Icon-App-20x20@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@1x.png"; sourceTree = "<group>"; };
+		680009C71EA8843300CEDCC8 /* Icon-App-20x20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@2x.png"; sourceTree = "<group>"; };
+		680009C81EA8843300CEDCC8 /* Icon-App-20x20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@3x.png"; sourceTree = "<group>"; };
+		680009C91EA8843300CEDCC8 /* Icon-App-29x29@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@1x.png"; sourceTree = "<group>"; };
+		680009CA1EA8843300CEDCC8 /* Icon-App-29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@2x.png"; sourceTree = "<group>"; };
+		680009CB1EA8843300CEDCC8 /* Icon-App-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@3x.png"; sourceTree = "<group>"; };
+		680009CC1EA8843300CEDCC8 /* Icon-App-40x40@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@1x.png"; sourceTree = "<group>"; };
+		680009CD1EA8843300CEDCC8 /* Icon-App-40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@2x.png"; sourceTree = "<group>"; };
+		680009CE1EA8843300CEDCC8 /* Icon-App-40x40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@3x.png"; sourceTree = "<group>"; };
+		680009CF1EA8843300CEDCC8 /* Icon-App-57x57@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-57x57@1x.png"; sourceTree = "<group>"; };
+		680009D01EA8843300CEDCC8 /* Icon-App-57x57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-57x57@2x.png"; sourceTree = "<group>"; };
+		680009D11EA8843300CEDCC8 /* Icon-App-60x60@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@1x.png"; sourceTree = "<group>"; };
+		680009D21EA8843300CEDCC8 /* Icon-App-60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@2x.png"; sourceTree = "<group>"; };
+		680009D31EA8843300CEDCC8 /* Icon-App-60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@3x.png"; sourceTree = "<group>"; };
+		680009D41EA8843300CEDCC8 /* Icon-App-72x72@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-72x72@1x.png"; sourceTree = "<group>"; };
+		680009D51EA8843300CEDCC8 /* Icon-App-72x72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-72x72@2x.png"; sourceTree = "<group>"; };
+		680009D61EA8843300CEDCC8 /* Icon-App-76x76@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@1x.png"; sourceTree = "<group>"; };
+		680009D71EA8843300CEDCC8 /* Icon-App-76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@2x.png"; sourceTree = "<group>"; };
+		680009D81EA8843300CEDCC8 /* Icon-App-76x76@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@3x.png"; sourceTree = "<group>"; };
+		680009D91EA8843300CEDCC8 /* Icon-App-83.5x83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-83.5x83.5@2x.png"; sourceTree = "<group>"; };
+		680009DA1EA8843300CEDCC8 /* Icon-Small-50x50@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50x50@1x.png"; sourceTree = "<group>"; };
+		680009DB1EA8843300CEDCC8 /* Icon-Small-50x50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50x50@2x.png"; sourceTree = "<group>"; };
+		680009DC1EA8843300CEDCC8 /* iTunesArtwork@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@1x.png"; sourceTree = "<group>"; };
+		680009DD1EA8843300CEDCC8 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		680009DE1EA8843300CEDCC8 /* iTunesArtwork@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@3x.png"; sourceTree = "<group>"; };
+		680009DF1EA8843300CEDCC8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		681278451E9ED03F0090A6D1 /* BezierBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BezierBorder.swift; sourceTree = "<group>"; };
+		6831A1CA1EA86F3F001216A5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6849EC221E983CDE0026DA65 /* Search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Search.png; sourceTree = "<group>"; };
 		6849EC241E9845240026DA65 /* Marker Filled-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marker Filled-25.png"; sourceTree = "<group>"; };
 		6849EC601E9AD6530026DA65 /* AlarmView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmView.swift; sourceTree = "<group>"; };
@@ -812,7 +867,6 @@
 		B73BA172BD332930F8D6FA8F /* Pods-Bonsai-FinalProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonsai-FinalProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bonsai-FinalProjectUITests/Pods-Bonsai-FinalProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BEAF6C75D27636308ED39D02 /* Pods_Bonsai_FinalProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bonsai_FinalProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C90895D324CA9E7A58B7DAF2 /* Pods-Bonsai-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonsai-FinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bonsai-FinalProject/Pods-Bonsai-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
-		EF0E292D1EA852F300002C6C /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
 		EF0E292F1EA85AA300002C6C /* Bonsai-FinalProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Bonsai-FinalProject.entitlements"; sourceTree = "<group>"; };
 		EF7844FB1E98108500DC82D3 /* Airport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
 		EF7844FD1E98208000DC82D3 /* Airport Filled-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Airport Filled-25.png"; sourceTree = "<group>"; };
@@ -871,6 +925,48 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		680009C31EA8843300CEDCC8 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				680009C41EA8843300CEDCC8 /* AppIcon.appiconset */,
+				680009DC1EA8843300CEDCC8 /* iTunesArtwork@1x.png */,
+				680009DD1EA8843300CEDCC8 /* iTunesArtwork@2x.png */,
+				680009DE1EA8843300CEDCC8 /* iTunesArtwork@3x.png */,
+				680009DF1EA8843300CEDCC8 /* README.md */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		680009C41EA8843300CEDCC8 /* AppIcon.appiconset */ = {
+			isa = PBXGroup;
+			children = (
+				680009C51EA8843300CEDCC8 /* Contents.json */,
+				680009C61EA8843300CEDCC8 /* Icon-App-20x20@1x.png */,
+				680009C71EA8843300CEDCC8 /* Icon-App-20x20@2x.png */,
+				680009C81EA8843300CEDCC8 /* Icon-App-20x20@3x.png */,
+				680009C91EA8843300CEDCC8 /* Icon-App-29x29@1x.png */,
+				680009CA1EA8843300CEDCC8 /* Icon-App-29x29@2x.png */,
+				680009CB1EA8843300CEDCC8 /* Icon-App-29x29@3x.png */,
+				680009CC1EA8843300CEDCC8 /* Icon-App-40x40@1x.png */,
+				680009CD1EA8843300CEDCC8 /* Icon-App-40x40@2x.png */,
+				680009CE1EA8843300CEDCC8 /* Icon-App-40x40@3x.png */,
+				680009CF1EA8843300CEDCC8 /* Icon-App-57x57@1x.png */,
+				680009D01EA8843300CEDCC8 /* Icon-App-57x57@2x.png */,
+				680009D11EA8843300CEDCC8 /* Icon-App-60x60@1x.png */,
+				680009D21EA8843300CEDCC8 /* Icon-App-60x60@2x.png */,
+				680009D31EA8843300CEDCC8 /* Icon-App-60x60@3x.png */,
+				680009D41EA8843300CEDCC8 /* Icon-App-72x72@1x.png */,
+				680009D51EA8843300CEDCC8 /* Icon-App-72x72@2x.png */,
+				680009D61EA8843300CEDCC8 /* Icon-App-76x76@1x.png */,
+				680009D71EA8843300CEDCC8 /* Icon-App-76x76@2x.png */,
+				680009D81EA8843300CEDCC8 /* Icon-App-76x76@3x.png */,
+				680009D91EA8843300CEDCC8 /* Icon-App-83.5x83.5@2x.png */,
+				680009DA1EA8843300CEDCC8 /* Icon-Small-50x50@1x.png */,
+				680009DB1EA8843300CEDCC8 /* Icon-Small-50x50@2x.png */,
+			);
+			path = AppIcon.appiconset;
+			sourceTree = "<group>";
+		};
 		6886A55F1E95885C00A57868 = {
 			isa = PBXGroup;
 			children = (
@@ -918,8 +1014,9 @@
 				6886A56D1E95885C00A57868 /* ViewController.swift */,
 				6886A5E31E95A77500A57868 /* WaitTime.swift */,
 				6886A5721E95885C00A57868 /* Assets.xcassets */,
+				680009C31EA8843300CEDCC8 /* ios */,
 				6886A5741E95885C00A57868 /* LaunchScreen.storyboard */,
-				EF0E292D1EA852F300002C6C /* GoogleService-Info (1).plist */,
+				6831A1CA1EA86F3F001216A5 /* GoogleService-Info.plist */,
 				6886A5771E95885C00A57868 /* Info.plist */,
 				6886A5DF1E95A1BC00A57868 /* airports.csv */,
 				688D23DC1EA283D4008C44F3 /* AccountController.swift */,
@@ -2872,12 +2969,14 @@
 				688D29C01EA2C499008C44F3 /* Contents.json in Resources */,
 				688D29BA1EA2C499008C44F3 /* Contents.json in Resources */,
 				688D2A1D1EA2C49A008C44F3 /* MIA-Concourse-E.jpg in Resources */,
+				680009F31EA8843300CEDCC8 /* Icon-App-76x76@3x.png in Resources */,
 				688D29DA1EA2C499008C44F3 /* Contents.json in Resources */,
 				688D2A0E1EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D2AA31EA2C49A008C44F3 /* TPA-Airside-E.jpg in Resources */,
 				688D29A91EA2C499008C44F3 /* DTW-North-Terminal.jpg in Resources */,
 				688D297F1EA2C499008C44F3 /* Contents.json in Resources */,
 				688D2A191EA2C49A008C44F3 /* LAX-Terminal-8.jpg in Resources */,
+				680009F41EA8843300CEDCC8 /* Icon-App-83.5x83.5@2x.png in Resources */,
 				688D29971EA2C499008C44F3 /* Contents.json in Resources */,
 				688D29D71EA2C499008C44F3 /* PHL-Terminal-C.jpg in Resources */,
 				688D29841EA2C499008C44F3 /* ORD-Main-Terminal.jpg in Resources */,
@@ -2914,6 +3013,7 @@
 				688D2A691EA2C49A008C44F3 /* PDX-Concourse-E.jpg in Resources */,
 				688D2A7D1EA2C49A008C44F3 /* SLC-Concourse-E.jpg in Resources */,
 				688D2A331EA2C49A008C44F3 /* JFK-Terminal-2.jpg in Resources */,
+				680009EC1EA8843300CEDCC8 /* Icon-App-60x60@1x.png in Resources */,
 				688D29931EA2C499008C44F3 /* CLE-Concourse-D.jpg in Resources */,
 				688D2AA21EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D2A4F1EA2C49A008C44F3 /* MCO-Main-Terminal.jpg in Resources */,
@@ -2923,10 +3023,10 @@
 				688D2AA11EA2C49A008C44F3 /* TPA-Airside-C.jpg in Resources */,
 				688D299D1EA2C499008C44F3 /* DFW-Terminal-C.jpg in Resources */,
 				688D2A3B1EA2C49A008C44F3 /* JFK-Terminal-8.jpg in Resources */,
+				680009F91EA8843300CEDCC8 /* iTunesArtwork@3x.png in Resources */,
 				688D2A171EA2C49A008C44F3 /* LAX-Terminal-7.jpg in Resources */,
 				688D2A261EA2C49A008C44F3 /* BNA-Concourse-A.jpg in Resources */,
 				688D2A851EA2C49A008C44F3 /* SAN-Main-Terminal.png in Resources */,
-				EF0E292E1EA852F300002C6C /* GoogleService-Info (1).plist in Resources */,
 				688D295B1EA2C499008C44F3 /* ATL-Concourse-C.png in Resources */,
 				688D2A1F1EA2C49A008C44F3 /* MIA-Concourse-F.jpg in Resources */,
 				688D29AB1EA2C499008C44F3 /* FLL-Terminal-1.jpg in Resources */,
@@ -2951,6 +3051,7 @@
 				688D29681EA2C499008C44F3 /* Contents.json in Resources */,
 				688D2A7E1EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D2A9F1EA2C49A008C44F3 /* TPA-Airside-B.jpg in Resources */,
+				680009F61EA8843300CEDCC8 /* Icon-Small-50x50@2x.png in Resources */,
 				688D29E51EA2C499008C44F3 /* MSP-Concourse-D.jpg in Resources */,
 				688D2A941EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D2AB21EA2C49A008C44F3 /* Contents.json in Resources */,
@@ -2968,11 +3069,14 @@
 				688D29891EA2C499008C44F3 /* Contents.json in Resources */,
 				688D29C71EA2C499008C44F3 /* HOU-Main-Terminal.jpg in Resources */,
 				688D295E1EA2C499008C44F3 /* Contents.json in Resources */,
+				680009E81EA8843300CEDCC8 /* Icon-App-40x40@2x.png in Resources */,
+				680009E71EA8843300CEDCC8 /* Icon-App-40x40@1x.png in Resources */,
 				688D2A001EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D2A6F1EA2C49A008C44F3 /* RDU-Terminal-2.png in Resources */,
 				688D2AB01EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D2A3F1EA2C49A008C44F3 /* EWR-Terminal-B.jpg in Resources */,
 				688D29D11EA2C499008C44F3 /* IAH-Terminal-E.jpg in Resources */,
+				680009EA1EA8843300CEDCC8 /* Icon-App-57x57@1x.png in Resources */,
 				688D29BD1EA2C499008C44F3 /* HNL-Diamond-Head-Concourse.jpg in Resources */,
 				688D29E11EA2C499008C44F3 /* MSP-Concourse-B.jpg in Resources */,
 				688D29D81EA2C499008C44F3 /* Contents.json in Resources */,
@@ -3006,12 +3110,14 @@
 				688D29FE1EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D29961EA2C499008C44F3 /* Contents.json in Resources */,
 				688D29821EA2C499008C44F3 /* MDW-Main-Terminal.jpg in Resources */,
+				680009F01EA8843300CEDCC8 /* Icon-App-72x72@2x.png in Resources */,
 				688D29F31EA2C49A008C44F3 /* SNA-Terminal-B.jpg in Resources */,
 				688D2A801EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D2A811EA2C49A008C44F3 /* SLC-Terminal-1.jpg in Resources */,
 				688D2A821EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D298B1EA2C499008C44F3 /* Contents.json in Resources */,
 				688D2A381EA2C49A008C44F3 /* Contents.json in Resources */,
+				680009E11EA8843300CEDCC8 /* Icon-App-20x20@1x.png in Resources */,
 				688D29A41EA2C499008C44F3 /* Contents.json in Resources */,
 				688D2A591EA2C49A008C44F3 /* PHX-Concourse-D.jpg in Resources */,
 				688D2A7F1EA2C49A008C44F3 /* SLC-International-Terminal.jpg in Resources */,
@@ -3021,13 +3127,16 @@
 				688D2AAC1EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D29831EA2C499008C44F3 /* Contents.json in Resources */,
 				688D2A021EA2C49A008C44F3 /* Contents.json in Resources */,
+				680009E51EA8843300CEDCC8 /* Icon-App-29x29@2x.png in Resources */,
 				688D2A421EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D2A311EA2C49A008C44F3 /* JFK-Terminal-1.jpg in Resources */,
+				680009ED1EA8843300CEDCC8 /* Icon-App-60x60@2x.png in Resources */,
 				688D2A6A1EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D29F11EA2C49A008C44F3 /* SNA-Terminal-A.jpg in Resources */,
 				688D29D01EA2C499008C44F3 /* Contents.json in Resources */,
 				688D29791EA2C499008C44F3 /* CLT-Main-Terminal.jpg in Resources */,
 				688D2A111EA2C49A008C44F3 /* LAX-Terminal-3.jpg in Resources */,
+				680009F71EA8843300CEDCC8 /* iTunesArtwork@1x.png in Resources */,
 				688D2A2D1EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D2A981EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D2A5D1EA2C49A008C44F3 /* PHX-Terminal-3.jpg in Resources */,
@@ -3046,6 +3155,7 @@
 				688D2A881EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D29B01EA2C499008C44F3 /* Contents.json in Resources */,
 				688D297B1EA2C499008C44F3 /* Contents.json in Resources */,
+				680009EE1EA8843300CEDCC8 /* Icon-App-60x60@3x.png in Resources */,
 				688D2A911EA2C49A008C44F3 /* SEA-Concourse-C.jpg in Resources */,
 				688D2A771EA2C49A008C44F3 /* Salt-Lake-City-SLC-ConcourseA.jpg in Resources */,
 				688D29D61EA2C499008C44F3 /* Contents.json in Resources */,
@@ -3056,6 +3166,7 @@
 				688D29E71EA2C49A008C44F3 /* MSP-Concourse-E.jpg in Resources */,
 				688D29C31EA2C499008C44F3 /* HNL-Main-Terminal.jpg in Resources */,
 				688D2A8A1EA2C49A008C44F3 /* Contents.json in Resources */,
+				680009F81EA8843300CEDCC8 /* iTunesArtwork@2x.png in Resources */,
 				688D2A291EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D29EC1EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D2A221EA2C49A008C44F3 /* Contents.json in Resources */,
@@ -3081,6 +3192,7 @@
 				688D298E1EA2C499008C44F3 /* Contents.json in Resources */,
 				688D2A621EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D2A521EA2C49A008C44F3 /* Contents.json in Resources */,
+				6831A1CB1EA86F3F001216A5 /* GoogleService-Info.plist in Resources */,
 				688D2A361EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D295C1EA2C499008C44F3 /* Contents.json in Resources */,
 				688D29A81EA2C499008C44F3 /* Contents.json in Resources */,
@@ -3088,6 +3200,7 @@
 				688D29AC1EA2C499008C44F3 /* Contents.json in Resources */,
 				688D29661EA2C499008C44F3 /* Contents.json in Resources */,
 				688D2A431EA2C49A008C44F3 /* OAK-Terminal-1.jpg in Resources */,
+				680009E61EA8843300CEDCC8 /* Icon-App-29x29@3x.png in Resources */,
 				688D2A9E1EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D29E31EA2C499008C44F3 /* MSP-Concourse-C.jpg in Resources */,
 				688D299A1EA2C499008C44F3 /* Contents.json in Resources */,
@@ -3101,13 +3214,17 @@
 				688D2A0A1EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D29FA1EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D29771EA2C499008C44F3 /* CLT-Concourse-E.jpg in Resources */,
+				680009EF1EA8843300CEDCC8 /* Icon-App-72x72@1x.png in Resources */,
 				688D29A51EA2C499008C44F3 /* DEN-Main-Terminal.png in Resources */,
 				688D2A6C1EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D2A4A1EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D295F1EA2C499008C44F3 /* ATL-Concourse-E.png in Resources */,
 				688D2A9A1EA2C49A008C44F3 /* Contents.json in Resources */,
+				680009E21EA8843300CEDCC8 /* Icon-App-20x20@2x.png in Resources */,
+				680009E91EA8843300CEDCC8 /* Icon-App-40x40@3x.png in Resources */,
 				688D2A831EA2C49A008C44F3 /* SLC-Terminal-2.jpg in Resources */,
 				688D2A661EA2C49A008C44F3 /* Contents.json in Resources */,
+				680009E01EA8843300CEDCC8 /* Contents.json in Resources */,
 				688D2AA61EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D2A2A1EA2C49A008C44F3 /* BNA-Concourse-C.jpg in Resources */,
 				688D296D1EA2C499008C44F3 /* BWI-Terminal.png in Resources */,
@@ -3135,6 +3252,7 @@
 				688D2A611EA2C49A008C44F3 /* PDX-Concourse-A.jpg in Resources */,
 				688D29D51EA2C499008C44F3 /* PHL-Terminal-B.jpg in Resources */,
 				688D29D21EA2C499008C44F3 /* Contents.json in Resources */,
+				680009F51EA8843300CEDCC8 /* Icon-Small-50x50@1x.png in Resources */,
 				688D29B21EA2C499008C44F3 /* Contents.json in Resources */,
 				688D2A681EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D2AB31EA2C49A008C44F3 /* IAD-Main-Terminal.jpg in Resources */,
@@ -3147,6 +3265,7 @@
 				EF7845041E98217A00DC82D3 /* Map Filled-25.png in Resources */,
 				688D2A741EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D29BB1EA2C499008C44F3 /* HNL-Commuter-Terminal.jpg in Resources */,
+				680009E31EA8843300CEDCC8 /* Icon-App-20x20@3x.png in Resources */,
 				688D23DF1EA284E3008C44F3 /* fb.png in Resources */,
 				688D299E1EA2C499008C44F3 /* Contents.json in Resources */,
 				688D29B71EA2C499008C44F3 /* LGA-Terminal-D.jpg in Resources */,
@@ -3160,6 +3279,7 @@
 				688D2A141EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D2A641EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D29701EA2C499008C44F3 /* Contents.json in Resources */,
+				680009E41EA8843300CEDCC8 /* Icon-App-29x29@1x.png in Resources */,
 				688D2A6E1EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D29911EA2C499008C44F3 /* CLE-Concourse-C.jpg in Resources */,
 				688D2A921EA2C49A008C44F3 /* Contents.json in Resources */,
@@ -3203,9 +3323,11 @@
 				688D2A351EA2C49A008C44F3 /* JFK-Terminal-4.jpg in Resources */,
 				688D29EE1EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D2A2E1EA2C49A008C44F3 /* BNA-Main-Terminal.jpg in Resources */,
+				680009F21EA8843300CEDCC8 /* Icon-App-76x76@2x.png in Resources */,
 				688D29C81EA2C499008C44F3 /* Contents.json in Resources */,
 				688D297A1EA2C499008C44F3 /* Contents.json in Resources */,
 				688D29F41EA2C49A008C44F3 /* Contents.json in Resources */,
+				680009EB1EA8843300CEDCC8 /* Icon-App-57x57@2x.png in Resources */,
 				6849EC251E9845240026DA65 /* Marker Filled-25.png in Resources */,
 				688D29601EA2C499008C44F3 /* Contents.json in Resources */,
 				688D2A321EA2C49A008C44F3 /* Contents.json in Resources */,
@@ -3219,6 +3341,7 @@
 				688D2A031EA2C49A008C44F3 /* LAS-Terminal-B.jpg in Resources */,
 				688D29711EA2C499008C44F3 /* CLT-Concourse-B.jpg in Resources */,
 				688D2A391EA2C49A008C44F3 /* JFK-Terminal-7.jpg in Resources */,
+				680009F11EA8843300CEDCC8 /* Icon-App-76x76@1x.png in Resources */,
 				688D29E61EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D296A1EA2C499008C44F3 /* Contents.json in Resources */,
 				688D296E1EA2C499008C44F3 /* Contents.json in Resources */,
@@ -3403,6 +3526,7 @@
 				689EAF511EA1802D009DE2C7 /* GlobalVariables.swift in Sources */,
 				686113EE1E981C3C00729FD1 /* BackgroundImageHandler.swift in Sources */,
 				EF7844FC1E98108500DC82D3 /* Airport.swift in Sources */,
+				680009FA1EA8843300CEDCC8 /* README.md in Sources */,
 				EF815DA91EA010200055C3BE /* SignInController.swift in Sources */,
 				6886A5DE1E95A14500A57868 /* csvparser.swift in Sources */,
 				688D23DD1EA283D4008C44F3 /* AccountController.swift in Sources */,
