@@ -16,11 +16,13 @@ class Airport: NSObject{
     private var name:String
     private var code:String
     private var loc:CLLocation
+    private var term:String
     
-    init(n:String, c:String, l:CLLocation) {
+    init(n:String, c:String, l:CLLocation, t:String) {
         name = n
         code = c
         loc = l
+        term = t
     }
     
     func getName() -> String{
@@ -35,6 +37,9 @@ class Airport: NSObject{
         return loc
     }
     
+    func getTerm() -> String{
+        return term
+    }
     
     override var hash: Int {
         let myString = name+" "+code

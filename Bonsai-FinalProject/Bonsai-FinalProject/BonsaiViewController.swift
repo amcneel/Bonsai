@@ -13,7 +13,7 @@ import MapKit
 
 //the base class for the views that utilize the searchbar
 class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
-
+    
     @IBOutlet weak var mainView: UIView!
     
     let locationManager = CLLocationManager()
@@ -24,10 +24,10 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
     
     var airportSearchBar = UISearchBar()
     @IBOutlet weak var searchTableView: UITableView!
-     
+    
     var searchBarButtonItem: UIBarButtonItem?
     var curLocButtonItem: UIBarButtonItem?
-
+    
     var airportSearchArr:[Airport] = []    //the array of airports displayed when the search bar is in use
     
     
@@ -60,7 +60,7 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
         //set background image
         searchTableView.backgroundColor = .clear
         searchTableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
-
+        
         //add a blur view - used in show search bar and hide search bar
         blurView.frame = self.view.bounds
         
@@ -87,7 +87,8 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
                 let alat:CLLocationDegrees = Double(csv[rowIndex][3])!
                 let along:CLLocationDegrees = Double(csv[rowIndex][2])!
                 let aloc = CLLocation(latitude: alat, longitude: along)
-                let a = Airport(n: aname, c: acode, l: aloc)
+                let aterm:String = csv[rowIndex][5]
+                let a = Airport(n: aname, c: acode, l: aloc, t: aterm)
                 airports.append(a)
             }
             
@@ -304,7 +305,7 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
     func update(){
         preconditionFailure("function 'update' must be overridden")
     }
-
+    
     @IBAction func searchButtonPressed(_ sender: Any) {
         showSearchBar()
     }
