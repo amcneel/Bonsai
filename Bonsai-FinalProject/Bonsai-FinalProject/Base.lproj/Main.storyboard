@@ -299,7 +299,7 @@
         <!--Alarm-->
         <scene sceneID="Ypl-9Y-Cdv">
             <objects>
-                <navigationController storyboardIdentifier="Home" id="eBC-qQ-Qy4" sceneMemberID="viewController">
+                <navigationController id="eBC-qQ-Qy4" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Alarm" image="Alarm Clock Filled-25.png" id="Idv-jQ-wou"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QUR-Nt-Q5s">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -436,8 +436,8 @@
                     <connections>
                         <outlet property="EmailCreate" destination="Za7-Ku-WIh" id="gq3-8o-YIs"/>
                         <outlet property="PasswordCreate" destination="Mdb-Re-kqe" id="IWh-hE-x1B"/>
-                        <outlet property="PasswordSignin" destination="R58-ZX-IfM" id="IRq-u9-rON"/>
-                        <outlet property="UsernameSignin" destination="R58-ZX-IfM" id="5jE-e0-Xue"/>
+                        <outlet property="emailLogin" destination="qfZ-zb-mXc" id="AAv-eU-Tf2"/>
+                        <outlet property="passLogin" destination="R58-ZX-IfM" id="uOy-ev-E2j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yx6-Kd-V9V" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -515,7 +515,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="La3-JE-ND2">
             <objects>
-                <tabBarController id="jgV-LG-Nrf" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Home" id="jgV-LG-Nrf" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="tft-hi-0el"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Mb9-ix-SeH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
