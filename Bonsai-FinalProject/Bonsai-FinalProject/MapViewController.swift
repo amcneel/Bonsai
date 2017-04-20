@@ -29,10 +29,7 @@ class MapViewController: BonsaiViewController{
         searchButton = theSearchButton
         mainView = theMainView
         searchTableView = theSearchTableView
-        terms = curAirport?.getTerm()
-        let count = terms?.components(separatedBy: ",")
-        print(count!)
-        //pageControl.numberOfPages = count!
+        update()
         super.viewDidLoad()
     }
     
@@ -45,13 +42,22 @@ class MapViewController: BonsaiViewController{
     
     //this method is called once the airport is updated, either through search bar or location button
     override func update(){
-        //terms = curAirport?.getTerm()
-        //count = terms?.components(separatedBy: ",").count
-        
-        //airport = airport + "-"
-        //let charset = CharacterSet(charactersIn: airport)
-        //  let imageURL = Bundle.main.url(forResource: airport, withExtension: "png")
-        //     print(imageURL)
+        terms = curAirport?.getTerm()
+        let count = terms?.components(separatedBy: ",").count
+        pageControl.numberOfPages = count!
+        let termArray = terms?.components(separatedBy: ",")
+        let counter = 0
+        let spaceName = termArray?[counter]
+        let code = curAirport?.getCode()
+        var formattedName = ""
+        if (code == "ATL" || code == "BWI" || code == "DEN" ||  code == "RDU" ||  code == "SAN"){
+            formattedName = (code! + "-" + (spaceName?.replacingOccurrences(of: " ", with: "-"))! + ".png")
+        }
+        else{
+            formattedName = (code! + "-" +  (spaceName?.replacingOccurrences(of: " ", with: "-"))!+".jpg")
+        }
+        let map = UIImage(named: formattedName)
+        mapImage.image = map
     }
     
 }
