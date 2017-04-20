@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'DF7268726CBA1A67FA74A16ACE8865E5'
+               BlueprintIdentifier = 'E2B68027360AD0AB306404E8FC41AD03'
                BlueprintName = 'Pods-Bonsai-FinalProject'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods-Bonsai-FinalProject.framework'>
