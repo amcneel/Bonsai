@@ -125,7 +125,7 @@ class AccountController: UIViewController, MFMessageComposeViewControllerDelegat
     
     // MARK: MFMailComposeViewControllerDelegate
     
-    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
         
     }
@@ -139,7 +139,16 @@ class AccountController: UIViewController, MFMessageComposeViewControllerDelegat
             let url  = NSURL(string: "whatsapp://send?text=\(urlStringEncoded)")
             
             if UIApplication.shared.canOpenURL(url! as URL) {
-                UIApplication.shared.openURL(url! as URL)
+                if #available(iOS 10, *) {
+                    UIApplication.shared.open(url as! URL, options: [:],
+                        completionHandler: {
+                            (success) in
+                            print("Open \(success)")
+                    })
+                } else {
+                    let success = UIApplication.shared.openURL(url as! URL)
+                    print("Open \(success)")
+                }
             }
             else{
                 whatsAppError()
