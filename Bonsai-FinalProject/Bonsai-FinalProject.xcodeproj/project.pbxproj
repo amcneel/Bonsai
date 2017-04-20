@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		062B749496BE8D116483AF85 /* Pods_Bonsai_FinalProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B0CE48A4BC63244ECEEDFE /* Pods_Bonsai_FinalProjectUITests.framework */; };
+		27ACE8F1C98924A129954ABB /* Pods_Bonsai_FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71AD84ADDA9ACCF5698948B3 /* Pods_Bonsai_FinalProject.framework */; };
 		681278461E9ED03F0090A6D1 /* BezierBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681278451E9ED03F0090A6D1 /* BezierBorder.swift */; };
 		6849EC231E983CDE0026DA65 /* Search.png in Resources */ = {isa = PBXBuildFile; fileRef = 6849EC221E983CDE0026DA65 /* Search.png */; };
 		6849EC251E9845240026DA65 /* Marker Filled-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 6849EC241E9845240026DA65 /* Marker Filled-25.png */; };
@@ -384,6 +386,7 @@
 		689EAF531EA1871D009DE2C7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689EAF521EA1871D009DE2C7 /* MapViewController.swift */; };
 		689EAF551EA194F3009DE2C7 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689EAF541EA194F3009DE2C7 /* InfoViewController.swift */; };
 		68BC5C521EA03920005274FE /* BonsaiButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC5C511EA03920005274FE /* BonsaiButton.swift */; };
+		EF0E292E1EA852F300002C6C /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = EF0E292D1EA852F300002C6C /* GoogleService-Info (1).plist */; };
 		EF7844FC1E98108500DC82D3 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7844FB1E98108500DC82D3 /* Airport.swift */; };
 		EF7844FE1E98208000DC82D3 /* Airport Filled-25.png in Resources */ = {isa = PBXBuildFile; fileRef = EF7844FD1E98208000DC82D3 /* Airport Filled-25.png */; };
 		EF7845001E98209500DC82D3 /* Alarm Clock Filled-25.png in Resources */ = {isa = PBXBuildFile; fileRef = EF7844FF1E98209500DC82D3 /* Alarm Clock Filled-25.png */; };
@@ -397,6 +400,7 @@
 		EF815DAB1EA012570055C3BE /* Tree3.png in Resources */ = {isa = PBXBuildFile; fileRef = EF815DAA1EA012570055C3BE /* Tree3.png */; };
 		EF815DAD1EA0174E0055C3BE /* User Filled-25.png in Resources */ = {isa = PBXBuildFile; fileRef = EF815DAC1EA0174E0055C3BE /* User Filled-25.png */; };
 		EF815DAF1EA01AF30055C3BE /* Tree4.png in Resources */ = {isa = PBXBuildFile; fileRef = EF815DAE1EA01AF30055C3BE /* Tree4.png */; };
+		F7D4885512EE2A22F5DA22F4 /* Pods_Bonsai_FinalProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAF6C75D27636308ED39D02 /* Pods_Bonsai_FinalProjectTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -417,6 +421,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		336DFBF9B77DCB849C00AC0A /* Pods-Bonsai-FinalProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonsai-FinalProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bonsai-FinalProjectUITests/Pods-Bonsai-FinalProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		553517B4CF4B0FC46E481269 /* Pods-Bonsai-FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonsai-FinalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bonsai-FinalProject/Pods-Bonsai-FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
 		681278451E9ED03F0090A6D1 /* BezierBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BezierBorder.swift; sourceTree = "<group>"; };
 		6849EC221E983CDE0026DA65 /* Search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Search.png; sourceTree = "<group>"; };
 		6849EC241E9845240026DA65 /* Marker Filled-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marker Filled-25.png"; sourceTree = "<group>"; };
@@ -800,6 +806,13 @@
 		689EAF521EA1871D009DE2C7 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		689EAF541EA194F3009DE2C7 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		68BC5C511EA03920005274FE /* BonsaiButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BonsaiButton.swift; sourceTree = "<group>"; };
+		71AD84ADDA9ACCF5698948B3 /* Pods_Bonsai_FinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bonsai_FinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78CE4AF7CB4068750CD40193 /* Pods-Bonsai-FinalProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonsai-FinalProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bonsai-FinalProjectTests/Pods-Bonsai-FinalProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		897A56B2186448D4C4C58DB8 /* Pods-Bonsai-FinalProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonsai-FinalProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bonsai-FinalProjectTests/Pods-Bonsai-FinalProjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		B73BA172BD332930F8D6FA8F /* Pods-Bonsai-FinalProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonsai-FinalProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bonsai-FinalProjectUITests/Pods-Bonsai-FinalProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BEAF6C75D27636308ED39D02 /* Pods_Bonsai_FinalProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bonsai_FinalProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C90895D324CA9E7A58B7DAF2 /* Pods-Bonsai-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonsai-FinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bonsai-FinalProject/Pods-Bonsai-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
+		EF0E292D1EA852F300002C6C /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
 		EF7844FB1E98108500DC82D3 /* Airport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
 		EF7844FD1E98208000DC82D3 /* Airport Filled-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Airport Filled-25.png"; sourceTree = "<group>"; };
 		EF7844FF1E98209500DC82D3 /* Alarm Clock Filled-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Alarm Clock Filled-25.png"; sourceTree = "<group>"; };
@@ -813,6 +826,7 @@
 		EF815DAA1EA012570055C3BE /* Tree3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tree3.png; sourceTree = "<group>"; };
 		EF815DAC1EA0174E0055C3BE /* User Filled-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "User Filled-25.png"; sourceTree = "<group>"; };
 		EF815DAE1EA01AF30055C3BE /* Tree4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tree4.png; sourceTree = "<group>"; };
+		F6B0CE48A4BC63244ECEEDFE /* Pods_Bonsai_FinalProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bonsai_FinalProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -820,6 +834,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27ACE8F1C98924A129954ABB /* Pods_Bonsai_FinalProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -827,6 +842,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7D4885512EE2A22F5DA22F4 /* Pods_Bonsai_FinalProjectTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -834,12 +850,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				062B749496BE8D116483AF85 /* Pods_Bonsai_FinalProjectUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41FE3C837D9781E11F2FAF24 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				553517B4CF4B0FC46E481269 /* Pods-Bonsai-FinalProject.debug.xcconfig */,
+				C90895D324CA9E7A58B7DAF2 /* Pods-Bonsai-FinalProject.release.xcconfig */,
+				78CE4AF7CB4068750CD40193 /* Pods-Bonsai-FinalProjectTests.debug.xcconfig */,
+				897A56B2186448D4C4C58DB8 /* Pods-Bonsai-FinalProjectTests.release.xcconfig */,
+				336DFBF9B77DCB849C00AC0A /* Pods-Bonsai-FinalProjectUITests.debug.xcconfig */,
+				B73BA172BD332930F8D6FA8F /* Pods-Bonsai-FinalProjectUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6886A55F1E95885C00A57868 = {
 			isa = PBXGroup;
 			children = (
@@ -847,6 +877,8 @@
 				6886A57F1E95885D00A57868 /* Bonsai-FinalProjectTests */,
 				6886A58A1E95885D00A57868 /* Bonsai-FinalProjectUITests */,
 				6886A5691E95885C00A57868 /* Products */,
+				41FE3C837D9781E11F2FAF24 /* Pods */,
+				9B2858D6FCA7CCA9CECCEF69 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -885,6 +917,7 @@
 				6886A5E31E95A77500A57868 /* WaitTime.swift */,
 				6886A5721E95885C00A57868 /* Assets.xcassets */,
 				6886A5741E95885C00A57868 /* LaunchScreen.storyboard */,
+				EF0E292D1EA852F300002C6C /* GoogleService-Info (1).plist */,
 				6886A5771E95885C00A57868 /* Info.plist */,
 				6886A5DF1E95A1BC00A57868 /* airports.csv */,
 				688D23DC1EA283D4008C44F3 /* AccountController.swift */,
@@ -2659,6 +2692,16 @@
 			path = "Washington-Dulles-Airport-IAD-Main-Terminal.imageset";
 			sourceTree = "<group>";
 		};
+		9B2858D6FCA7CCA9CECCEF69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71AD84ADDA9ACCF5698948B3 /* Pods_Bonsai_FinalProject.framework */,
+				BEAF6C75D27636308ED39D02 /* Pods_Bonsai_FinalProjectTests.framework */,
+				F6B0CE48A4BC63244ECEEDFE /* Pods_Bonsai_FinalProjectUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EF7845051E98218A00DC82D3 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -2697,9 +2740,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6886A5901E95885D00A57868 /* Build configuration list for PBXNativeTarget "Bonsai-FinalProject" */;
 			buildPhases = (
+				C6EC5DE82C0F4AA3C854A4DD /* [CP] Check Pods Manifest.lock */,
 				6886A5641E95885C00A57868 /* Sources */,
 				6886A5651E95885C00A57868 /* Frameworks */,
 				6886A5661E95885C00A57868 /* Resources */,
+				67D09C45845A9608BE5370D8 /* [CP] Embed Pods Frameworks */,
+				3D5950D14A25B87676004D62 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2714,9 +2760,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6886A5931E95885D00A57868 /* Build configuration list for PBXNativeTarget "Bonsai-FinalProjectTests" */;
 			buildPhases = (
+				4896BA7BD266CB0CF26A2AF4 /* [CP] Check Pods Manifest.lock */,
 				6886A5781E95885D00A57868 /* Sources */,
 				6886A5791E95885D00A57868 /* Frameworks */,
 				6886A57A1E95885D00A57868 /* Resources */,
+				CA27F791D8F7FF395FC129E4 /* [CP] Embed Pods Frameworks */,
+				E889A6A96C561056AEE396DF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2732,9 +2781,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6886A5961E95885D00A57868 /* Build configuration list for PBXNativeTarget "Bonsai-FinalProjectUITests" */;
 			buildPhases = (
+				4F82116B5687A6B6A6A7936C /* [CP] Check Pods Manifest.lock */,
 				6886A5831E95885D00A57868 /* Sources */,
 				6886A5841E95885D00A57868 /* Frameworks */,
 				6886A5851E95885D00A57868 /* Resources */,
+				AC13814A8E7134F6E497EFCD /* [CP] Embed Pods Frameworks */,
+				D33AD4AA835967324922896B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2866,6 +2918,7 @@
 				688D2A171EA2C49A008C44F3 /* LAX-Terminal-7.jpg in Resources */,
 				688D2A261EA2C49A008C44F3 /* BNA-Concourse-A.jpg in Resources */,
 				688D2A851EA2C49A008C44F3 /* SAN-Main-Terminal.png in Resources */,
+				EF0E292E1EA852F300002C6C /* GoogleService-Info (1).plist in Resources */,
 				688D295B1EA2C499008C44F3 /* ATL-Concourse-C.png in Resources */,
 				688D2A1F1EA2C49A008C44F3 /* MIA-Concourse-F.jpg in Resources */,
 				688D29AB1EA2C499008C44F3 /* FLL-Terminal-1.jpg in Resources */,
@@ -3186,6 +3239,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3D5950D14A25B87676004D62 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bonsai-FinalProject/Pods-Bonsai-FinalProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4896BA7BD266CB0CF26A2AF4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4F82116B5687A6B6A6A7936C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		67D09C45845A9608BE5370D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bonsai-FinalProject/Pods-Bonsai-FinalProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC13814A8E7134F6E497EFCD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bonsai-FinalProjectUITests/Pods-Bonsai-FinalProjectUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6EC5DE82C0F4AA3C854A4DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CA27F791D8F7FF395FC129E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bonsai-FinalProjectTests/Pods-Bonsai-FinalProjectTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D33AD4AA835967324922896B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bonsai-FinalProjectUITests/Pods-Bonsai-FinalProjectUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E889A6A96C561056AEE396DF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bonsai-FinalProjectTests/Pods-Bonsai-FinalProjectTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6886A5641E95885C00A57868 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -3356,6 +3547,7 @@
 		};
 		6886A5911E95885D00A57868 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 553517B4CF4B0FC46E481269 /* Pods-Bonsai-FinalProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Bonsai-FinalProject/Info.plist";
@@ -3368,6 +3560,7 @@
 		};
 		6886A5921E95885D00A57868 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C90895D324CA9E7A58B7DAF2 /* Pods-Bonsai-FinalProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Bonsai-FinalProject/Info.plist";
@@ -3380,6 +3573,7 @@
 		};
 		6886A5941E95885D00A57868 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78CE4AF7CB4068750CD40193 /* Pods-Bonsai-FinalProjectTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -3394,6 +3588,7 @@
 		};
 		6886A5951E95885D00A57868 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 897A56B2186448D4C4C58DB8 /* Pods-Bonsai-FinalProjectTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -3408,6 +3603,7 @@
 		};
 		6886A5971E95885D00A57868 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 336DFBF9B77DCB849C00AC0A /* Pods-Bonsai-FinalProjectUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "Bonsai-FinalProjectUITests/Info.plist";
@@ -3421,6 +3617,7 @@
 		};
 		6886A5981E95885D00A57868 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B73BA172BD332930F8D6FA8F /* Pods-Bonsai-FinalProjectUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "Bonsai-FinalProjectUITests/Info.plist";
