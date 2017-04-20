@@ -828,9 +828,14 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ATL-Concourse-A.png" translatesAutoresizingMaskIntoConstraints="NO" id="O6y-cp-JKM">
                                         <rect key="frame" x="8" y="70" width="359" height="466"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="466" id="gJ4-W8-Ml6"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="sL0-CV-fwt" appends="YES" id="Dnj-r3-izj"/>
+                                            <outletCollection property="gestureRecognizers" destination="LMe-6d-CD0" appends="YES" id="FaM-fT-XFR"/>
+                                        </connections>
                                     </imageView>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Be5-LC-y3T">
                                         <rect key="frame" x="8" y="544" width="359" height="37"/>
@@ -893,6 +898,7 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="6Q6-Lf-yri" firstAttribute="centerY" secondItem="w0r-vE-0aY" secondAttribute="centerY" constant="-24.5" id="8nn-qX-OVw"/>
                             <constraint firstItem="6Q6-Lf-yri" firstAttribute="width" secondItem="w0r-vE-0aY" secondAttribute="width" id="d6y-6X-8jE"/>
@@ -927,6 +933,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0C4-L7-nGH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="sL0-CV-fwt">
+                    <connections>
+                        <action selector="rightSwipe:" destination="jAU-Fl-QQb" id="xfb-0X-a1l"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="LMe-6d-CD0">
+                    <connections>
+                        <action selector="leftSwipe:" destination="jAU-Fl-QQb" id="EdS-2I-ijn"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2728.8000000000002" y="955.77211394302856"/>
         </scene>

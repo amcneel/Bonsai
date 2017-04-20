@@ -40,6 +40,15 @@ class MapViewController: BonsaiViewController{
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
+    @IBAction func rightSwipe(_ sender: UISwipeGestureRecognizer) {
+    }
+    
+    
+    @IBAction func leftSwipe(_ sender: UISwipeGestureRecognizer) {
+    }
+    
     //this method is called once the airport is updated, either through search bar or location button
     override func update(){
         terms = curAirport?.getTerm()
