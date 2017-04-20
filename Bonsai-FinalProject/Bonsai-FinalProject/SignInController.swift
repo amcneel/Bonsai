@@ -17,7 +17,7 @@ class SignInController: UIViewController{
     //for creating account
     @IBOutlet weak var EmailCreate: UITextField!
     
-    //@IBOutlet weak var UsernameCreate: UITextField!
+    @IBOutlet weak var UsernameCreate: UITextField!
     
     @IBOutlet weak var PasswordCreate: UITextField!
     

@@ -10,6 +10,7 @@
 		062B749496BE8D116483AF85 /* Pods_Bonsai_FinalProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B0CE48A4BC63244ECEEDFE /* Pods_Bonsai_FinalProjectUITests.framework */; };
 		27ACE8F1C98924A129954ABB /* Pods_Bonsai_FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71AD84ADDA9ACCF5698948B3 /* Pods_Bonsai_FinalProject.framework */; };
 		681278461E9ED03F0090A6D1 /* BezierBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681278451E9ED03F0090A6D1 /* BezierBorder.swift */; };
+		6831A1CB1EA86F3F001216A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6831A1CA1EA86F3F001216A5 /* GoogleService-Info.plist */; };
 		6849EC231E983CDE0026DA65 /* Search.png in Resources */ = {isa = PBXBuildFile; fileRef = 6849EC221E983CDE0026DA65 /* Search.png */; };
 		6849EC251E9845240026DA65 /* Marker Filled-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 6849EC241E9845240026DA65 /* Marker Filled-25.png */; };
 		6849EC611E9AD6530026DA65 /* AlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6849EC601E9AD6530026DA65 /* AlarmView.swift */; };
@@ -386,7 +387,6 @@
 		689EAF531EA1871D009DE2C7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689EAF521EA1871D009DE2C7 /* MapViewController.swift */; };
 		689EAF551EA194F3009DE2C7 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689EAF541EA194F3009DE2C7 /* InfoViewController.swift */; };
 		68BC5C521EA03920005274FE /* BonsaiButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC5C511EA03920005274FE /* BonsaiButton.swift */; };
-		EF0E292E1EA852F300002C6C /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = EF0E292D1EA852F300002C6C /* GoogleService-Info (1).plist */; };
 		EF7844FC1E98108500DC82D3 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7844FB1E98108500DC82D3 /* Airport.swift */; };
 		EF7844FE1E98208000DC82D3 /* Airport Filled-25.png in Resources */ = {isa = PBXBuildFile; fileRef = EF7844FD1E98208000DC82D3 /* Airport Filled-25.png */; };
 		EF7845001E98209500DC82D3 /* Alarm Clock Filled-25.png in Resources */ = {isa = PBXBuildFile; fileRef = EF7844FF1E98209500DC82D3 /* Alarm Clock Filled-25.png */; };
@@ -424,6 +424,7 @@
 		336DFBF9B77DCB849C00AC0A /* Pods-Bonsai-FinalProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonsai-FinalProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bonsai-FinalProjectUITests/Pods-Bonsai-FinalProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		553517B4CF4B0FC46E481269 /* Pods-Bonsai-FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonsai-FinalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bonsai-FinalProject/Pods-Bonsai-FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
 		681278451E9ED03F0090A6D1 /* BezierBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BezierBorder.swift; sourceTree = "<group>"; };
+		6831A1CA1EA86F3F001216A5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6849EC221E983CDE0026DA65 /* Search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Search.png; sourceTree = "<group>"; };
 		6849EC241E9845240026DA65 /* Marker Filled-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marker Filled-25.png"; sourceTree = "<group>"; };
 		6849EC601E9AD6530026DA65 /* AlarmView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmView.swift; sourceTree = "<group>"; };
@@ -812,7 +813,6 @@
 		B73BA172BD332930F8D6FA8F /* Pods-Bonsai-FinalProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonsai-FinalProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bonsai-FinalProjectUITests/Pods-Bonsai-FinalProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BEAF6C75D27636308ED39D02 /* Pods_Bonsai_FinalProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bonsai_FinalProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C90895D324CA9E7A58B7DAF2 /* Pods-Bonsai-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonsai-FinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bonsai-FinalProject/Pods-Bonsai-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
-		EF0E292D1EA852F300002C6C /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
 		EF0E292F1EA85AA300002C6C /* Bonsai-FinalProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Bonsai-FinalProject.entitlements"; sourceTree = "<group>"; };
 		EF7844FB1E98108500DC82D3 /* Airport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
 		EF7844FD1E98208000DC82D3 /* Airport Filled-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Airport Filled-25.png"; sourceTree = "<group>"; };
@@ -919,7 +919,7 @@
 				6886A5E31E95A77500A57868 /* WaitTime.swift */,
 				6886A5721E95885C00A57868 /* Assets.xcassets */,
 				6886A5741E95885C00A57868 /* LaunchScreen.storyboard */,
-				EF0E292D1EA852F300002C6C /* GoogleService-Info (1).plist */,
+				6831A1CA1EA86F3F001216A5 /* GoogleService-Info.plist */,
 				6886A5771E95885C00A57868 /* Info.plist */,
 				6886A5DF1E95A1BC00A57868 /* airports.csv */,
 				688D23DC1EA283D4008C44F3 /* AccountController.swift */,
@@ -2926,7 +2926,6 @@
 				688D2A171EA2C49A008C44F3 /* LAX-Terminal-7.jpg in Resources */,
 				688D2A261EA2C49A008C44F3 /* BNA-Concourse-A.jpg in Resources */,
 				688D2A851EA2C49A008C44F3 /* SAN-Main-Terminal.png in Resources */,
-				EF0E292E1EA852F300002C6C /* GoogleService-Info (1).plist in Resources */,
 				688D295B1EA2C499008C44F3 /* ATL-Concourse-C.png in Resources */,
 				688D2A1F1EA2C49A008C44F3 /* MIA-Concourse-F.jpg in Resources */,
 				688D29AB1EA2C499008C44F3 /* FLL-Terminal-1.jpg in Resources */,
@@ -3081,6 +3080,7 @@
 				688D298E1EA2C499008C44F3 /* Contents.json in Resources */,
 				688D2A621EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D2A521EA2C49A008C44F3 /* Contents.json in Resources */,
+				6831A1CB1EA86F3F001216A5 /* GoogleService-Info.plist in Resources */,
 				688D2A361EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D295C1EA2C499008C44F3 /* Contents.json in Resources */,
 				688D29A81EA2C499008C44F3 /* Contents.json in Resources */,
