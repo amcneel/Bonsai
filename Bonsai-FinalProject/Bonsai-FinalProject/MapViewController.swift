@@ -13,11 +13,14 @@ import UIKit
 class MapViewController: BonsaiViewController{
     
     
+    @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var mapImage: UIImageView!
     @IBOutlet weak var theLocationButton: UIButton!
     @IBOutlet weak var theSearchButton: UIButton!
     @IBOutlet weak var theSearchTableView: UITableView!
     @IBOutlet weak var theMainView: UIView!
+    
+    var terms = curAirport?.getTerm()
     
     override func viewDidLoad(){
         
@@ -26,7 +29,10 @@ class MapViewController: BonsaiViewController{
         searchButton = theSearchButton
         mainView = theMainView
         searchTableView = theSearchTableView
-        
+        terms = curAirport?.getTerm()
+        let count = terms?.components(separatedBy: ",")
+        print(count!)
+        //pageControl.numberOfPages = count!
         super.viewDidLoad()
     }
     
@@ -39,11 +45,13 @@ class MapViewController: BonsaiViewController{
     
     //this method is called once the airport is updated, either through search bar or location button
     override func update(){
-        let airport = curAirport?.getCode()
+        //terms = curAirport?.getTerm()
+        //count = terms?.components(separatedBy: ",").count
+        
         //airport = airport + "-"
         //let charset = CharacterSet(charactersIn: airport)
-        let imageURL = Bundle.main.url(forResource: airport, withExtension: "png")
-        print(imageURL)
+        //  let imageURL = Bundle.main.url(forResource: airport, withExtension: "png")
+        //     print(imageURL)
     }
     
 }
