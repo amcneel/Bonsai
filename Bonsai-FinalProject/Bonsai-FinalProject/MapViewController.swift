@@ -30,9 +30,11 @@ class MapViewController: BonsaiViewController{
         mainView = theMainView
         searchTableView = theSearchTableView
         terms = curAirport?.getTerm()
-        let count = terms?.components(separatedBy: ",")
-        print(count!)
-        //pageControl.numberOfPages = count!
+        let count = terms?.components(separatedBy: ",").count
+        let termArray = terms?.components(separatedBy: ",")
+        pageControl.numberOfPages = count!
+        
+        
         super.viewDidLoad()
     }
     
