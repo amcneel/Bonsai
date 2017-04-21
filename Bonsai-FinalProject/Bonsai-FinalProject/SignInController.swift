@@ -8,10 +8,46 @@
 
 import UIKit
 import FirebaseAuth
-class SignInController: UIViewController{
+import FBSDKLoginKit
+
+class SignInController: UIViewController, FBSDKLoginButtonDelegate{
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        let loginButton = FBSDKLoginButton()
+            loginButton.delegate = self
+            loginButton.center = view.center
+            view.addSubview(loginButton)
         
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        if FBSDKAccessToken.current() != nil{
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+            self.present(vc!, animated: true, completion: nil)
+            }
+        }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        return
+    }
+    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        if ((error) != nil){
+            print(error.localizedDescription)
+        }
+        else{
+            let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+            FIRAuth.auth()?.signIn(with: credential) { (user, error) in
+            if error != nil {
+            print(error!)
+            return
+            }
+            else{
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+                self.present(vc!, animated: true, completion: nil)
+            }
+        }
+        }
     }
     
     //for creating account
@@ -39,7 +75,7 @@ class SignInController: UIViewController{
             FIRAuth.auth()?.createUser(withEmail: EmailCreate.text!, password: PasswordCreate.text!) { (user, error) in
                 
                 if error == nil {
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "Account")
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
                     self.present(vc!, animated: true, completion: nil)
                     
                 } else {
