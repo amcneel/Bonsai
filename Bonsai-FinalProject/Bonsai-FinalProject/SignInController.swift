@@ -9,9 +9,12 @@
 import CoreLocation
 import UIKit
 import FirebaseAuth
-class SignInController: UIViewController{
+import FBSDKLoginKit
+
+class SignInController: UIViewController, FBSDKLoginButtonDelegate{
     
     override func viewDidLoad() {
+<<<<<<< HEAD
         //loads the airports from the csv into the var airports
         super.viewDidLoad()
         print("test")
@@ -19,6 +22,13 @@ class SignInController: UIViewController{
     }
     
     func loadAirportsFromCSV(){
+=======
+        super.viewDidLoad()
+        let loginButton = FBSDKLoginButton()
+            loginButton.delegate = self
+            loginButton.center = view.center
+            view.addSubview(loginButton)
+>>>>>>> origin/master
         
         //make sure you have a file called "airports.csv" in the same main directory, not the assets folder
         
@@ -43,6 +53,35 @@ class SignInController: UIViewController{
             print(error)
         }
         print(airports)
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        if FBSDKAccessToken.current() != nil{
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+            self.present(vc!, animated: true, completion: nil)
+            }
+        }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        return
+    }
+    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        if ((error) != nil){
+            print(error.localizedDescription)
+        }
+        else{
+            let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+            FIRAuth.auth()?.signIn(with: credential) { (user, error) in
+            if error != nil {
+            print(error!)
+            return
+            }
+            else{
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+                self.present(vc!, animated: true, completion: nil)
+            }
+        }
+        }
     }
     
     //for creating account
@@ -70,7 +109,7 @@ class SignInController: UIViewController{
             FIRAuth.auth()?.createUser(withEmail: EmailCreate.text!, password: PasswordCreate.text!) { (user, error) in
                 
                 if error == nil {
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "Account")
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
                     self.present(vc!, animated: true, completion: nil)
                     
                 } else {
