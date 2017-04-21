@@ -21,6 +21,8 @@ class MapViewController: BonsaiViewController{
     @IBOutlet weak var theMainView: UIView!
     
     var terms = curAirport?.getTerm()
+    var counter = 0
+    
     
     override func viewDidLoad(){
         
@@ -43,10 +45,18 @@ class MapViewController: BonsaiViewController{
     
     
     @IBAction func rightSwipe(_ sender: UISwipeGestureRecognizer) {
+        //if(counter < pageControl.numberOfPages - 1){
+        
+        //}
+        
     }
     
     
     @IBAction func leftSwipe(_ sender: UISwipeGestureRecognizer) {
+        counter+=1
+       // pageControl.pag = counter
+        print("MAX")
+        update()
     }
     
     //this method is called once the airport is updated, either through search bar or location button
@@ -54,8 +64,8 @@ class MapViewController: BonsaiViewController{
         terms = curAirport?.getTerm()
         let count = terms?.components(separatedBy: ",").count
         pageControl.numberOfPages = count!
+        pageControl.currentPage = 2
         let termArray = terms?.components(separatedBy: ",")
-        let counter = 0
         let spaceName = termArray?[counter]
         let code = curAirport?.getCode()
         var formattedName = ""
