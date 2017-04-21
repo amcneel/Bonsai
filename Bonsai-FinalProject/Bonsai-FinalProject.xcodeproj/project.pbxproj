@@ -46,6 +46,7 @@
 		6849EC251E9845240026DA65 /* Marker Filled-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 6849EC241E9845240026DA65 /* Marker Filled-25.png */; };
 		6849EC611E9AD6530026DA65 /* AlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6849EC601E9AD6530026DA65 /* AlarmView.swift */; };
 		6849EC631E9AE82E0026DA65 /* AirportSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6849EC621E9AE82E0026DA65 /* AirportSearchCell.swift */; };
+		6851BEB51EA9A6D500B39832 /* ICS.png in Resources */ = {isa = PBXBuildFile; fileRef = 6851BEB41EA9A6D500B39832 /* ICS.png */; };
 		685AE4961EA6EFA600DB71F2 /* Messages.png in Resources */ = {isa = PBXBuildFile; fileRef = 685AE4951EA6EFA600DB71F2 /* Messages.png */; };
 		685AE4981EA6FE3700DB71F2 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 685AE4971EA6FE3700DB71F2 /* mail.png */; };
 		685AE49C1EA7031D00DB71F2 /* whatsapp.png in Resources */ = {isa = PBXBuildFile; fileRef = 685AE49B1EA7031D00DB71F2 /* whatsapp.png */; };
@@ -491,6 +492,7 @@
 		6849EC241E9845240026DA65 /* Marker Filled-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marker Filled-25.png"; sourceTree = "<group>"; };
 		6849EC601E9AD6530026DA65 /* AlarmView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmView.swift; sourceTree = "<group>"; };
 		6849EC621E9AE82E0026DA65 /* AirportSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportSearchCell.swift; sourceTree = "<group>"; };
+		6851BEB41EA9A6D500B39832 /* ICS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ICS.png; path = ../ICS.png; sourceTree = "<group>"; };
 		685AE4951EA6EFA600DB71F2 /* Messages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Messages.png; sourceTree = "<group>"; };
 		685AE4971EA6FE3700DB71F2 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
 		685AE49B1EA7031D00DB71F2 /* whatsapp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whatsapp.png; sourceTree = "<group>"; };
@@ -1058,6 +1060,7 @@
 		688D274B1EA2C499008C44F3 /* airportpics */ = {
 			isa = PBXGroup;
 			children = (
+				6851BEB41EA9A6D500B39832 /* ICS.png */,
 				688D274C1EA2C499008C44F3 /* ATL-concourseA.imageset */,
 				688D274F1EA2C499008C44F3 /* ATL-concourseB.imageset */,
 				688D27521EA2C499008C44F3 /* ATL-concourseC.imageset */,
@@ -3285,6 +3288,7 @@
 				688D23DF1EA284E3008C44F3 /* fb.png in Resources */,
 				688D299E1EA2C499008C44F3 /* Contents.json in Resources */,
 				688D29B71EA2C499008C44F3 /* LGA-Terminal-D.jpg in Resources */,
+				6851BEB51EA9A6D500B39832 /* ICS.png in Resources */,
 				688D2A101EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D29E21EA2C499008C44F3 /* Contents.json in Resources */,
 				688D29B41EA2C499008C44F3 /* Contents.json in Resources */,
