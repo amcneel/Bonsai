@@ -7,12 +7,32 @@
 //
 
 import Foundation
+import FirebaseAuth
 import Social
 import UIKit
 import MessageUI
+import FBSDKLoginKit
 
 //set up logout button so that it disconnects you from the SQL database, not just segways you back to the main page
 class AccountController: UIViewController, MFMessageComposeViewControllerDelegate, MFMailComposeViewControllerDelegate{
+    
+    override func viewDidLoad() {
+        let loginButton = FBSDKLoginButton()
+        let newCenter = CGPoint(x: self.view.frame.width / 2 - 10, y: self.view.frame.height - 70)
+        loginButton.center = newCenter
+        view.addSubview(loginButton)
+    }
+    
+    @IBAction func logoutBtn(_ sender: UIButton) {
+        let firebaseAuth = FIRAuth.auth()
+        do {
+            try firebaseAuth?.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "Initial")
+        self.present(vc!, animated: true, completion: nil)
+    }
     
     //when fbButton is Clicked
     @IBAction func fbButtonClicked(_ sender: Any) {

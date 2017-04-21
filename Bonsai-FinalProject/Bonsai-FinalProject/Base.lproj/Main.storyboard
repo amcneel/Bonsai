@@ -392,7 +392,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NyM-q5-U2t">
-                                <rect key="frame" x="145" y="28" width="84" height="38"/>
+                                <rect key="frame" x="145" y="58" width="84" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="ViK-C8-gyv"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -414,22 +417,21 @@
                             <constraint firstItem="c2H-1w-eV3" firstAttribute="trailing" secondItem="1te-t0-RF7" secondAttribute="trailing" id="Jyg-6L-nFh"/>
                             <constraint firstItem="qfZ-zb-mXc" firstAttribute="leading" secondItem="R58-ZX-IfM" secondAttribute="leading" id="K4f-Lk-pXc"/>
                             <constraint firstItem="Za7-Ku-WIh" firstAttribute="leading" secondItem="Mdb-Re-kqe" secondAttribute="leading" id="KXY-wi-yHO"/>
-                            <constraint firstItem="NyM-q5-U2t" firstAttribute="top" secondItem="gti-fd-VS2" secondAttribute="top" id="TtY-ma-JrL"/>
                             <constraint firstItem="Za7-Ku-WIh" firstAttribute="top" secondItem="2a6-Ql-BqZ" secondAttribute="bottom" constant="30" id="U8C-or-y08"/>
                             <constraint firstItem="qfZ-zb-mXc" firstAttribute="top" secondItem="gti-fd-VS2" secondAttribute="bottom" constant="52" id="VkB-ad-2ut"/>
                             <constraint firstItem="Za7-Ku-WIh" firstAttribute="trailing" secondItem="Mdb-Re-kqe" secondAttribute="trailing" id="WOy-dN-KB8"/>
                             <constraint firstItem="c2H-1w-eV3" firstAttribute="leading" secondItem="ZSD-4R-e3O" secondAttribute="leadingMargin" constant="97" id="X1f-iU-mPn"/>
                             <constraint firstItem="R58-ZX-IfM" firstAttribute="top" secondItem="qfZ-zb-mXc" secondAttribute="bottom" constant="19" id="YuN-rA-rAS"/>
                             <constraint firstAttribute="trailing" secondItem="E2V-Jt-M1u" secondAttribute="trailing" id="d44-jN-f7H"/>
-                            <constraint firstItem="NyM-q5-U2t" firstAttribute="centerX" secondItem="qfZ-zb-mXc" secondAttribute="centerX" id="d83-SC-Arr"/>
                             <constraint firstItem="E2V-Jt-M1u" firstAttribute="centerX" secondItem="1te-t0-RF7" secondAttribute="centerX" id="fOq-Wl-lbq"/>
-                            <constraint firstItem="NyM-q5-U2t" firstAttribute="leading" secondItem="gti-fd-VS2" secondAttribute="trailing" constant="61" id="fvv-te-XVV"/>
-                            <constraint firstItem="qfZ-zb-mXc" firstAttribute="top" secondItem="NyM-q5-U2t" secondAttribute="bottom" constant="44" id="lMC-Rj-vgW"/>
+                            <constraint firstItem="NyM-q5-U2t" firstAttribute="centerX" secondItem="qfZ-zb-mXc" secondAttribute="centerX" id="inn-7t-i6G"/>
                             <constraint firstItem="Gjj-AB-y2W" firstAttribute="top" secondItem="1te-t0-RF7" secondAttribute="bottom" constant="53" id="neG-dJ-RL9"/>
                             <constraint firstItem="c2H-1w-eV3" firstAttribute="leading" secondItem="1te-t0-RF7" secondAttribute="leading" id="oCp-e2-45h"/>
                             <constraint firstItem="Mdb-Re-kqe" firstAttribute="top" secondItem="Za7-Ku-WIh" secondAttribute="bottom" constant="23" id="riX-5l-6eH"/>
+                            <constraint firstItem="NyM-q5-U2t" firstAttribute="top" secondItem="r3J-2Z-ufM" secondAttribute="bottom" constant="38" id="rrn-4D-Kf2"/>
                             <constraint firstItem="c2H-1w-eV3" firstAttribute="top" secondItem="R58-ZX-IfM" secondAttribute="bottom" constant="20" id="v4G-61-qe3"/>
                             <constraint firstItem="2a6-Ql-BqZ" firstAttribute="leading" secondItem="Za7-Ku-WIh" secondAttribute="leading" id="wYy-T8-FOA"/>
+                            <constraint firstItem="qfZ-zb-mXc" firstAttribute="top" secondItem="NyM-q5-U2t" secondAttribute="bottom" constant="14" id="zDu-RP-OZx"/>
                             <constraint firstItem="E2V-Jt-M1u" firstAttribute="bottom" secondItem="Gjj-AB-y2W" secondAttribute="top" id="zf7-Fe-XOl"/>
                         </constraints>
                     </view>
@@ -447,7 +449,7 @@
         <!--View Controller-->
         <scene sceneID="16r-fS-xOS">
             <objects>
-                <viewController id="qLp-DW-D8K" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Initial" id="qLp-DW-D8K" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8BH-pv-01G"/>
                         <viewControllerLayoutGuide type="bottom" id="C8F-nL-Gsf"/>
@@ -572,7 +574,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="qLp-DW-D8K" kind="show" id="Noj-da-Q9r"/>
+                                    <action selector="logoutBtn:" destination="0vn-RD-Jpo" eventType="touchUpInside" id="kYH-AK-jkf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SrJ-6T-Z3n">
@@ -1007,7 +1009,4 @@
         <image name="twitter.png" width="192" height="192"/>
         <image name="whatsapp.png" width="1000" height="1000"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="zfy-7Q-riq"/>
-    </inferredMetricsTieBreakers>
 </document>
