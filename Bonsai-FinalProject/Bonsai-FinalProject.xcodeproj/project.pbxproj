@@ -877,7 +877,7 @@
 		B73BA172BD332930F8D6FA8F /* Pods-Bonsai-FinalProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonsai-FinalProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bonsai-FinalProjectUITests/Pods-Bonsai-FinalProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BEAF6C75D27636308ED39D02 /* Pods_Bonsai_FinalProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bonsai_FinalProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C90895D324CA9E7A58B7DAF2 /* Pods-Bonsai-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonsai-FinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bonsai-FinalProject/Pods-Bonsai-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
-		EF0E292F1EA85AA300002C6C /* Bonsai-FinalProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Bonsai-FinalProject.entitlements"; sourceTree = "<group>"; };
+		EF0E292F1EA85AA300002C6C /* Bonsai-FinalProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "Bonsai-FinalProject.entitlements"; path = "Bonsai-FinalProject/Bonsai-FinalProject.entitlements"; sourceTree = "<group>"; };
 		EF7844FB1E98108500DC82D3 /* Airport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
 		EF7844FD1E98208000DC82D3 /* Airport Filled-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Airport Filled-25.png"; sourceTree = "<group>"; };
 		EF7844FF1E98209500DC82D3 /* Alarm Clock Filled-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Alarm Clock Filled-25.png"; sourceTree = "<group>"; };
@@ -985,6 +985,7 @@
 			isa = PBXGroup;
 			children = (
 				6886A56A1E95885C00A57868 /* Bonsai-FinalProject */,
+				EF0E292F1EA85AA300002C6C /* Bonsai-FinalProject.entitlements */,
 				6886A57F1E95885D00A57868 /* Bonsai-FinalProjectTests */,
 				6886A58A1E95885D00A57868 /* Bonsai-FinalProjectUITests */,
 				6886A5691E95885C00A57868 /* Products */,
@@ -1006,11 +1007,12 @@
 		6886A56A1E95885C00A57868 /* Bonsai-FinalProject */ = {
 			isa = PBXGroup;
 			children = (
-				EF0E292F1EA85AA300002C6C /* Bonsai-FinalProject.entitlements */,
-				EFBA4D871EA2A81100087A4E /* backgroundImagesAndLogos */,
+				6831A1CA1EA86F3F001216A5 /* GoogleService-Info.plist */,
+				6886A5771E95885C00A57868 /* Info.plist */,
+				6886A5DF1E95A1BC00A57868 /* airports.csv */,
+				688D23DC1EA283D4008C44F3 /* AccountController.swift */,
 				EF7844FB1E98108500DC82D3 /* Airport.swift */,
 				6849EC621E9AE82E0026DA65 /* AirportSearchCell.swift */,
-				688D274B1EA2C499008C44F3 /* airportpics */,
 				6849EC601E9AD6530026DA65 /* AlarmView.swift */,
 				6886A56B1E95885C00A57868 /* AppDelegate.swift */,
 				686113ED1E981C3C00729FD1 /* BackgroundImageHandler.swift */,
@@ -1020,6 +1022,7 @@
 				6886A5DD1E95A14500A57868 /* csvparser.swift */,
 				689EAF501EA1802D009DE2C7 /* GlobalVariables.swift */,
 				689EAF541EA194F3009DE2C7 /* InfoViewController.swift */,
+				6886A5741E95885C00A57868 /* LaunchScreen.storyboard */,
 				6886A56F1E95885C00A57868 /* Main.storyboard */,
 				689EAF521EA1871D009DE2C7 /* MapViewController.swift */,
 				6886A5E11E95A6AD00A57868 /* SwiftyJSON.swift */,
@@ -1028,13 +1031,10 @@
 				6886A56D1E95885C00A57868 /* ViewController.swift */,
 				6886A5E31E95A77500A57868 /* WaitTime.swift */,
 				6886A5721E95885C00A57868 /* Assets.xcassets */,
-				680009C31EA8843300CEDCC8 /* ios */,
-				6886A5741E95885C00A57868 /* LaunchScreen.storyboard */,
-				6831A1CA1EA86F3F001216A5 /* GoogleService-Info.plist */,
-				6886A5771E95885C00A57868 /* Info.plist */,
-				6886A5DF1E95A1BC00A57868 /* airports.csv */,
-				688D23DC1EA283D4008C44F3 /* AccountController.swift */,
+				688D274B1EA2C499008C44F3 /* airportpics */,
+				EFBA4D871EA2A81100087A4E /* backgroundImagesAndLogos */,
 				EF7845051E98218A00DC82D3 /* Icons */,
+				680009C31EA8843300CEDCC8 /* ios */,
 			);
 			path = "Bonsai-FinalProject";
 			sourceTree = "<group>";
