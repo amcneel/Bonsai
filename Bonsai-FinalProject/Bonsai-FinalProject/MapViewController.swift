@@ -22,6 +22,8 @@ class MapViewController: BonsaiViewController{
     @IBOutlet weak var theMainView: UIView!
     
     var terms = curAirport?.getTerm()
+    var counter = 0
+    
     
     override func viewDidLoad(){
         
@@ -46,10 +48,21 @@ class MapViewController: BonsaiViewController{
     
     
     @IBAction func rightSwipe(_ sender: UISwipeGestureRecognizer) {
+        if (counter>0){
+            counter-=1
+            pageControl.currentPage = counter
+            update()
+        }
+        
     }
     
     
     @IBAction func leftSwipe(_ sender: UISwipeGestureRecognizer) {
+        if (counter<pageControl.numberOfPages-1){
+            counter+=1
+            pageControl.currentPage = counter
+            update()
+        }
     }
     
     //this method is called once the airport is updated, either through search bar or location button
@@ -58,8 +71,11 @@ class MapViewController: BonsaiViewController{
         terms = curAirport?.getTerm()
         let count = terms?.components(separatedBy: ",").count
         pageControl.numberOfPages = count!
+        if(counter>count!-1){
+            counter = 0
+            pageControl.currentPage = counter
+        }
         let termArray = terms?.components(separatedBy: ",")
-        let counter = 0
         let spaceName = termArray?[counter]
         let code = curAirport?.getCode()
         var formattedName = ""
@@ -73,7 +89,15 @@ class MapViewController: BonsaiViewController{
             formattedName = (code! + "-" +  (spaceName?.replacingOccurrences(of: " ", with: "-"))!+".jpg")
         }
         let map = UIImage(named: formattedName)
-        mapImage.image = map
+        UIView.transition(with: mapImage, duration: 1, options: .transitionCrossDissolve, animations: {
+            //http://300.dgljamaica.com/assets/images/unavailable_1.jpg
+            if map == nil{
+                self.mapImage.image = UIImage(named: "ICS.png")
+            }
+            else {
+                self.mapImage.image = map
+            }
+        }, completion: nil)
     }
     
 }

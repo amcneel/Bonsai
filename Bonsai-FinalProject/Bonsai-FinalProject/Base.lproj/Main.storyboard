@@ -146,7 +146,7 @@
                                         <rect key="frame" x="0.0" y="28" width="376" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="arl-y2-hXh" id="pdc-sd-vZL">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGE-lQ-aIy">
@@ -726,7 +726,7 @@
                                         <rect key="frame" x="0.0" y="28" width="376" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3eU-gY-tJb" id="ysw-dp-jGJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5y-uX-SUn">
@@ -841,10 +841,6 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ATL-Concourse-A.png" translatesAutoresizingMaskIntoConstraints="NO" id="O6y-cp-JKM">
                                         <rect key="frame" x="8" y="145" width="359" height="420"/>
                                         <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="sL0-CV-fwt" appends="YES" id="Dnj-r3-izj"/>
-                                            <outletCollection property="gestureRecognizers" destination="LMe-6d-CD0" appends="YES" id="FaM-fT-XFR"/>
-                                        </connections>
                                     </imageView>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Be5-LC-y3T">
                                         <rect key="frame" x="8" y="573" width="359" height="37"/>
@@ -880,12 +876,13 @@
                                 <rect key="frame" x="-1" y="55" width="376" height="557"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AirportSearchCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="AirportSearchCell" id="2Aa-GM-ZcR" customClass="AirportSearchCell" customModule="Bonsai_FinalProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="376" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Aa-GM-ZcR" id="W0R-Db-Zbi">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhT-bK-tYE">
@@ -930,6 +927,10 @@
                             <constraint firstItem="6Q6-Lf-yri" firstAttribute="centerX" secondItem="w0r-vE-0aY" secondAttribute="centerX" id="hIL-qm-LpT"/>
                             <constraint firstItem="6Q6-Lf-yri" firstAttribute="height" secondItem="w0r-vE-0aY" secondAttribute="height" constant="-49" id="wPf-C2-QDY"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="sL0-CV-fwt" appends="YES" id="Ncg-8a-zBg"/>
+                            <outletCollection property="gestureRecognizers" destination="LMe-6d-CD0" appends="YES" id="vSL-dp-Vq1"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Maps" image="Map Filled-25.png" id="ad4-4v-WL1"/>
                     <navigationItem key="navigationItem" id="Io4-SL-tgI">
