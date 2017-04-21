@@ -13,6 +13,7 @@ import UIKit
 class MapViewController: BonsaiViewController{
     
     
+    @IBOutlet weak var codeLabel: UILabel!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var mapImage: UIImageView!
     @IBOutlet weak var theLocationButton: UIButton!
@@ -33,7 +34,9 @@ class MapViewController: BonsaiViewController{
         super.viewDidLoad()
     }
     
-    
+    override func viewDidAppear(_ animated: Bool) {
+        update()
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -51,6 +54,7 @@ class MapViewController: BonsaiViewController{
     
     //this method is called once the airport is updated, either through search bar or location button
     override func update(){
+        codeLabel.text = curAirport?.getCode()
         terms = curAirport?.getTerm()
         let count = terms?.components(separatedBy: ",").count
         pageControl.numberOfPages = count!
@@ -61,6 +65,9 @@ class MapViewController: BonsaiViewController{
         var formattedName = ""
         if (code == "ATL" || code == "BWI" || code == "DEN" ||  code == "RDU" ||  code == "SAN"){
             formattedName = (code! + "-" + (spaceName?.replacingOccurrences(of: " ", with: "-"))! + ".png")
+        }
+        else if (code == "MCI"){
+            formattedName = ("Kansas-City-" + code! + "-" + (spaceName?.replacingOccurrences(of: " ", with: ""))! + ".jpg")
         }
         else{
             formattedName = (code! + "-" +  (spaceName?.replacingOccurrences(of: " ", with: "-"))!+".jpg")
