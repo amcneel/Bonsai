@@ -15,6 +15,7 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
     
     
     @IBOutlet weak var airportCode: UILabel!
+    @IBOutlet weak var theActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var theLocationButton: UIButton!
     @IBOutlet weak var theSearchButton: UIButton!
     
@@ -28,6 +29,7 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
     override func viewDidLoad(){
         
         //sets the superclasses, navbar buttons and searchviews to allow for it to work
+        activityIndicator = theActivityIndicator
         locationButton = theLocationButton
         searchButton = theSearchButton
         mainView = theMainView
@@ -71,9 +73,45 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
         // Dispose of any resources that can be recreated.
     }
     
+    func updateDisplay(){
+        self.airportCode.text = curAirport?.getCode()
+    }
+    
     //this method is called once the airport is updated, either through search bar or location button
     override func update(){
-        airportCode.text = curAirport?.getCode()
+        
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+        
+        DispatchQueue.global(qos: .userInitiated).async{
+            switch airportType{
+            case .location:
+                self.searchButton.isEnabled = false
+                self.locationButton.isEnabled = false
+                self.locationManager.requestLocation()
+                while curAirport == nil{
+                    sleep(1)
+                }
+                break
+            default:
+                break
+            }
+            
+            
+            
+            DispatchQueue.main.async {
+                isUpdating = false
+                self.activityIndicator.stopAnimating()
+                self.activityIndicator.isHidden = true
+                self.locationButton.isEnabled = true
+                self.searchButton.isEnabled = true
+                self.updateDisplay()
+            }
+        }
+
+        
+        
+        
     }
     
 }

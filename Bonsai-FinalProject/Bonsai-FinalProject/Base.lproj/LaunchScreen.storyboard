@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,8 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bonsai" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RE7-nh-1RN">
-                                <rect key="frame" x="63" y="259" width="248" height="149"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bonsai" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RE7-nh-1RN">
+                                <rect key="frame" x="82" y="259" width="210" height="149"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="70"/>
                                 <color key="textColor" red="0.16664263469999999" green="0.55679242230000003" blue="0.28377072170000001" alpha="0.65831316019999997" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -31,10 +30,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="RE7-nh-1RN" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="1B2-Wk-SAr"/>
-                            <constraint firstItem="RE7-nh-1RN" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="47" id="EqL-4M-KCg"/>
-                            <constraint firstItem="RE7-nh-1RN" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="UHA-SP-IP8"/>
-                            <constraint firstItem="RE7-nh-1RN" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="239" id="fvc-Or-jmB"/>
+                            <constraint firstItem="RE7-nh-1RN" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="mWp-tm-WSc"/>
+                            <constraint firstItem="RE7-nh-1RN" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="qCR-2R-FBA"/>
                         </constraints>
                     </view>
                 </viewController>

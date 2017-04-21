@@ -41,7 +41,7 @@ class ViewController: BonsaiViewController {
     @IBOutlet weak var requestInstallationButton: BonsaiButton!
     
     
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!  //the activity indicator in the top left that appears when an airport is updating
+    @IBOutlet weak var theActivityIndicator: UIActivityIndicatorView!  //the activity indicator in the top left that appears when an airport is updating
     
     @IBOutlet weak var initialActivityIndicator: UIActivityIndicatorView!   //the activity indicator that appears when the view first loads
     
@@ -61,6 +61,8 @@ class ViewController: BonsaiViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         if !isUpdating{
+            activityIndicator.isHidden = false
+            activityIndicator.startAnimating()
             updateFadeIn()
             bonsaiInstallationCheck()
             updateWaitTimeAndDisplay()
@@ -70,6 +72,7 @@ class ViewController: BonsaiViewController {
     
     override func viewDidLoad() {
         //sets the superclasses, navbar buttons and searchviews to allow for it to work
+        activityIndicator = theActivityIndicator
         locationButton = theLocationButton
         searchButton = theSearchButton
         mainView = theMainView
@@ -210,6 +213,11 @@ class ViewController: BonsaiViewController {
     override func update(){
         
         isUpdating = true
+        if !firstTimeLoading{
+            activityIndicator.isHidden = false
+            activityIndicator.startAnimating()
+        }
+        
         
         DispatchQueue.global(qos: .userInitiated).async{
             switch airportType{
@@ -225,11 +233,11 @@ class ViewController: BonsaiViewController {
                 break
             }
             
-            self.activityIndicator.isHidden = false
-            self.activityIndicator.startAnimating()
+            
             
             DispatchQueue.main.async {
                 isUpdating = false
+                self.firstTimeLoading = false
                 self.locationButton.isEnabled = true
                 self.searchButton.isEnabled = true
                 self.bonsaiInstallationCheck()
@@ -272,7 +280,7 @@ class ViewController: BonsaiViewController {
             
             bezierBorder?.setValue(v:CGFloat(Int(waitTime.expected)))
         }
-        getTravelTime()
+        //getTravelTime()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

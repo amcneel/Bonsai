@@ -18,6 +18,7 @@ class MapViewController: BonsaiViewController{
     @IBOutlet weak var mapImage: UIImageView!
     @IBOutlet weak var theLocationButton: UIButton!
     @IBOutlet weak var theSearchButton: UIButton!
+    @IBOutlet weak var theActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var theSearchTableView: UITableView!
     @IBOutlet weak var theMainView: UIView!
     
@@ -28,12 +29,17 @@ class MapViewController: BonsaiViewController{
     override func viewDidLoad(){
         
         //sets the superclasses, navbar buttons and searchviews to allow for it to work
+        
+        activityIndicator = theActivityIndicator
         locationButton = theLocationButton
         searchButton = theSearchButton
         mainView = theMainView
         searchTableView = theSearchTableView
-        update()
+        
         super.viewDidLoad()
+        
+        update()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -65,8 +71,7 @@ class MapViewController: BonsaiViewController{
         }
     }
     
-    //this method is called once the airport is updated, either through search bar or location button
-    override func update(){
+    func updateDisplay(){
         codeLabel.text = curAirport?.getCode()
         terms = curAirport?.getTerm()
         let count = terms?.components(separatedBy: ",").count
@@ -98,6 +103,39 @@ class MapViewController: BonsaiViewController{
                 self.mapImage.image = map
             }
         }, completion: nil)
+    }
+    
+    //this method is called once the airport is updated, either through search bar or location button
+    override func update(){
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+        
+        DispatchQueue.global(qos: .userInitiated).async{
+            switch airportType{
+            case .location:
+                self.searchButton.isEnabled = false
+                self.locationButton.isEnabled = false
+                self.locationManager.requestLocation()
+                //curAirport = airports[0]
+                while curAirport == nil{
+                    sleep(1)
+                }
+                break
+            default:
+                break
+            }
+            
+            
+            
+            DispatchQueue.main.async {
+                isUpdating = false
+                self.activityIndicator.stopAnimating()
+                self.activityIndicator.isHidden = true
+                self.locationButton.isEnabled = true
+                self.searchButton.isEnabled = true
+                self.updateDisplay()
+            }
+        }
     }
     
 }

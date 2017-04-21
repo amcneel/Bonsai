@@ -51,6 +51,7 @@
 		685AE4981EA6FE3700DB71F2 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 685AE4971EA6FE3700DB71F2 /* mail.png */; };
 		685AE49C1EA7031D00DB71F2 /* whatsapp.png in Resources */ = {isa = PBXBuildFile; fileRef = 685AE49B1EA7031D00DB71F2 /* whatsapp.png */; };
 		686113EE1E981C3C00729FD1 /* BackgroundImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686113ED1E981C3C00729FD1 /* BackgroundImageHandler.swift */; };
+		6877CC6B1EAA9F9F00CF97D3 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6877CC6A1EAA9F9F00CF97D3 /* InitialViewController.swift */; };
 		6886A56C1E95885C00A57868 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886A56B1E95885C00A57868 /* AppDelegate.swift */; };
 		6886A56E1E95885C00A57868 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886A56D1E95885C00A57868 /* ViewController.swift */; };
 		6886A5711E95885C00A57868 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6886A56F1E95885C00A57868 /* Main.storyboard */; };
@@ -497,6 +498,7 @@
 		685AE4971EA6FE3700DB71F2 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
 		685AE49B1EA7031D00DB71F2 /* whatsapp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whatsapp.png; sourceTree = "<group>"; };
 		686113ED1E981C3C00729FD1 /* BackgroundImageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundImageHandler.swift; sourceTree = "<group>"; };
+		6877CC6A1EAA9F9F00CF97D3 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		6886A5681E95885C00A57868 /* Bonsai-FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bonsai-FinalProject.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6886A56B1E95885C00A57868 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6886A56D1E95885C00A57868 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -1022,6 +1024,7 @@
 				6886A5DD1E95A14500A57868 /* csvparser.swift */,
 				689EAF501EA1802D009DE2C7 /* GlobalVariables.swift */,
 				689EAF541EA194F3009DE2C7 /* InfoViewController.swift */,
+				6877CC6A1EAA9F9F00CF97D3 /* InitialViewController.swift */,
 				6886A5741E95885C00A57868 /* LaunchScreen.storyboard */,
 				6886A56F1E95885C00A57868 /* Main.storyboard */,
 				689EAF521EA1871D009DE2C7 /* MapViewController.swift */,
@@ -3551,6 +3554,7 @@
 				EF7844FC1E98108500DC82D3 /* Airport.swift in Sources */,
 				680009FA1EA8843300CEDCC8 /* README.md in Sources */,
 				EF815DA91EA010200055C3BE /* SignInController.swift in Sources */,
+				6877CC6B1EAA9F9F00CF97D3 /* InitialViewController.swift in Sources */,
 				6886A5DE1E95A14500A57868 /* csvparser.swift in Sources */,
 				688D23DD1EA283D4008C44F3 /* AccountController.swift in Sources */,
 				6886A5E41E95A77500A57868 /* WaitTime.swift in Sources */,
