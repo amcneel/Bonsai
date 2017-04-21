@@ -54,7 +54,9 @@ class ViewController: BonsaiViewController {
     var bezierBorder:BezierBorder? = nil
     var borderBackground:CAShapeLayer? = nil
     var borderFront:CAShapeLayer? = nil
-
+    override func viewDidAppear(_ animated: Bool) {
+        update()
+    }
     
     override func viewDidLoad() {
         
