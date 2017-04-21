@@ -14,6 +14,7 @@ import UIKit
 class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate{
     
     
+    @IBOutlet weak var airportCode: UILabel!
     @IBOutlet weak var theLocationButton: UIButton!
     @IBOutlet weak var theSearchButton: UIButton!
     
@@ -38,8 +39,13 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
         //datePicker.setValue(UIColor.white, forKeyPath: "textColor")
         datePicker.datePickerMode = .countDownTimer
         datePicker.datePickerMode = .dateAndTime
+        datePicker.tintColor = UIColor.white
         datePicker.addTarget(self, action: #selector(AlarmView.datePickerValueChanged(sender:)), for: UIControlEvents.valueChanged)
         alarmTime.text = "Your alarm is not scheduled."
+        airportCode.text = curAirport?.getCode()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        update()
     }
     
     func datePickerValueChanged (sender: UIDatePicker) {
@@ -67,7 +73,7 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
     
     //this method is called once the airport is updated, either through search bar or location button
     override func update(){
-        print("DO STUFF NOW.  Probably want to update an airport label or something.  Look in 'update' method in AlarmView.swift")
+        airportCode.text = curAirport?.getCode()
     }
     
 }
