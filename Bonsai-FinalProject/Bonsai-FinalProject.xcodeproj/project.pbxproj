@@ -420,6 +420,7 @@
 		689EAF531EA1871D009DE2C7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689EAF521EA1871D009DE2C7 /* MapViewController.swift */; };
 		689EAF551EA194F3009DE2C7 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689EAF541EA194F3009DE2C7 /* InfoViewController.swift */; };
 		68BC5C521EA03920005274FE /* BonsaiButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC5C511EA03920005274FE /* BonsaiButton.swift */; };
+		EF0E29311EAAA9C200002C6C /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF0E29301EAAA9C200002C6C /* UserNotifications.framework */; };
 		EF7844FC1E98108500DC82D3 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7844FB1E98108500DC82D3 /* Airport.swift */; };
 		EF7844FE1E98208000DC82D3 /* Airport Filled-25.png in Resources */ = {isa = PBXBuildFile; fileRef = EF7844FD1E98208000DC82D3 /* Airport Filled-25.png */; };
 		EF7845001E98209500DC82D3 /* Alarm Clock Filled-25.png in Resources */ = {isa = PBXBuildFile; fileRef = EF7844FF1E98209500DC82D3 /* Alarm Clock Filled-25.png */; };
@@ -880,6 +881,7 @@
 		BEAF6C75D27636308ED39D02 /* Pods_Bonsai_FinalProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bonsai_FinalProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C90895D324CA9E7A58B7DAF2 /* Pods-Bonsai-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonsai-FinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bonsai-FinalProject/Pods-Bonsai-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
 		EF0E292F1EA85AA300002C6C /* Bonsai-FinalProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "Bonsai-FinalProject.entitlements"; path = "Bonsai-FinalProject/Bonsai-FinalProject.entitlements"; sourceTree = "<group>"; };
+		EF0E29301EAAA9C200002C6C /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		EF7844FB1E98108500DC82D3 /* Airport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
 		EF7844FD1E98208000DC82D3 /* Airport Filled-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Airport Filled-25.png"; sourceTree = "<group>"; };
 		EF7844FF1E98209500DC82D3 /* Alarm Clock Filled-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Alarm Clock Filled-25.png"; sourceTree = "<group>"; };
@@ -901,6 +903,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF0E29311EAAA9C200002C6C /* UserNotifications.framework in Frameworks */,
 				27ACE8F1C98924A129954ABB /* Pods_Bonsai_FinalProject.framework in Frameworks */,
 				6831A1CF1EA99819001216A5 /* FBSDKCoreKit.framework in Frameworks */,
 				6831A1D31EA99835001216A5 /* FBSDKShareKit.framework in Frameworks */,
@@ -2812,6 +2815,7 @@
 		9B2858D6FCA7CCA9CECCEF69 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EF0E29301EAAA9C200002C6C /* UserNotifications.framework */,
 				6831A1D21EA99835001216A5 /* FBSDKShareKit.framework */,
 				6831A1D01EA99828001216A5 /* FBSDKLoginKit.framework */,
 				6831A1CE1EA99819001216A5 /* FBSDKCoreKit.framework */,
