@@ -39,7 +39,11 @@ class ViewController: BonsaiViewController {
     var firstTimeLoading:Bool = true
     
     @IBOutlet weak var requestInstallationButton: BonsaiButton!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!  //the activity indicator in the top left that appears when an airport is updating
+    
+    @IBOutlet weak var initialActivityIndicator: UIActivityIndicatorView!   //the activity indicator that appears when the view first loads
     
     @IBOutlet weak var theMainView: UIView!
     
@@ -57,6 +61,7 @@ class ViewController: BonsaiViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         if !isUpdating{
+            updateFadeIn()
             bonsaiInstallationCheck()
             updateWaitTimeAndDisplay()
         }
@@ -77,13 +82,12 @@ class ViewController: BonsaiViewController {
         updateTimer = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(updateWaitTimeAndDisplay), userInfo: nil, repeats: true)
         
         //set the text fields to blank and start animating the activity indicator until the airport data is loaded
-        activityIndicator.startAnimating()
+        initialActivityIndicator.startAnimating()
         airportLabel.alpha = 0
         waitLabel.text = ""
         waitLabel.alpha = 0
         minsLabel.alpha = 0
-        
-        
+        activityIndicator.isHidden = true
         
         
         
@@ -129,14 +133,13 @@ class ViewController: BonsaiViewController {
     
     func updateFadeIn(){
         UIView.animate(withDuration: 0.3, animations: {
-            self.activityIndicator.alpha = 0
+            self.initialActivityIndicator.alpha = 0
             self.airportLabel.alpha = 1
             self.waitLabel.alpha = 1
             self.minsLabel.alpha = 1
         }, completion: { finished in
-            
-            self.activityIndicator.stopAnimating()
-            self.activityIndicator.isHidden = true
+            self.initialActivityIndicator.stopAnimating()
+            self.initialActivityIndicator.isHidden = true
             
         })
     }
@@ -222,12 +225,15 @@ class ViewController: BonsaiViewController {
                 break
             }
             
+            self.activityIndicator.isHidden = false
+            self.activityIndicator.startAnimating()
+            
             DispatchQueue.main.async {
                 isUpdating = false
                 self.locationButton.isEnabled = true
                 self.searchButton.isEnabled = true
                 self.bonsaiInstallationCheck()
-                self.updateFadeIn() //this doesn't affect anything if the components have already faded in
+                self.updateFadeIn()
                 self.updateWaitTimeAndDisplay()
             }
         }
@@ -236,6 +242,10 @@ class ViewController: BonsaiViewController {
     }
     
     func updateWaitTimeAndDisplay(){
+        
+        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
+        
         if bezierBorder == nil{
             //set the border to surround the wait label
             bezierBorder = BezierBorder(s: 10, r: waitLabel.frame)
