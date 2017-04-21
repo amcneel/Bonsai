@@ -2928,7 +2928,7 @@
 				TargetAttributes = {
 					6886A5671E95885C00A57868 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = BA39VS6HYB;
+						DevelopmentTeam = XN355SJ22T;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -3703,7 +3703,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Bonsai-FinalProject/Bonsai-FinalProject.entitlements";
-				DEVELOPMENT_TEAM = BA39VS6HYB;
+				DEVELOPMENT_TEAM = XN355SJ22T;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FacebookSDKs-iOS-4.22.0",
@@ -3722,7 +3722,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Bonsai-FinalProject/Bonsai-FinalProject.entitlements";
-				DEVELOPMENT_TEAM = BA39VS6HYB;
+				DEVELOPMENT_TEAM = XN355SJ22T;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FacebookSDKs-iOS-4.22.0",

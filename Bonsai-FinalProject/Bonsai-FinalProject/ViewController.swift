@@ -54,12 +54,16 @@ class ViewController: BonsaiViewController {
     var bezierBorder:BezierBorder? = nil
     var borderBackground:CAShapeLayer? = nil
     var borderFront:CAShapeLayer? = nil
+    
     override func viewDidAppear(_ animated: Bool) {
-        update()
+        if !isUpdating{
+            bonsaiInstallationCheck()
+            updateWaitTimeAndDisplay()
+        }
+        
     }
     
     override func viewDidLoad() {
-        
         //sets the superclasses, navbar buttons and searchviews to allow for it to work
         locationButton = theLocationButton
         searchButton = theSearchButton
@@ -75,6 +79,7 @@ class ViewController: BonsaiViewController {
         //set the text fields to blank and start animating the activity indicator until the airport data is loaded
         activityIndicator.startAnimating()
         airportLabel.alpha = 0
+        waitLabel.text = ""
         waitLabel.alpha = 0
         minsLabel.alpha = 0
         
@@ -201,6 +206,8 @@ class ViewController: BonsaiViewController {
     
     override func update(){
         
+        isUpdating = true
+        
         DispatchQueue.global(qos: .userInitiated).async{
             switch airportType{
             case .location:
@@ -216,6 +223,7 @@ class ViewController: BonsaiViewController {
             }
             
             DispatchQueue.main.async {
+                isUpdating = false
                 self.locationButton.isEnabled = true
                 self.searchButton.isEnabled = true
                 self.bonsaiInstallationCheck()
@@ -228,7 +236,6 @@ class ViewController: BonsaiViewController {
     }
     
     func updateWaitTimeAndDisplay(){
-        
         if bezierBorder == nil{
             //set the border to surround the wait label
             bezierBorder = BezierBorder(s: 10, r: waitLabel.frame)
@@ -254,7 +261,6 @@ class ViewController: BonsaiViewController {
             airportLabel.text = curAirport?.getCode()
             
             bezierBorder?.setValue(v:CGFloat(Int(waitTime.expected)))
-            print(waitLabel.frame)
         }
         getTravelTime()
     }

@@ -18,3 +18,4 @@ var airportType:AirportType = .location //used in update, determines which funct
 var curAirportHasBonsai:Bool = true     //used to show request button or wait-time info - currently only needed for animations on the wait time page
 var prevAirportHasBonsai:Bool = true    //used for transitions between airports, currently only needed for animations on the wait time page
 var curLocation:CLLocation? = nil
+var isUpdating:Bool = false //used to check if the curAirport is being updated, helpful for double loading the wait time and switching between tabs
