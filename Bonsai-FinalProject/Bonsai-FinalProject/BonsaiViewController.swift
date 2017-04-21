@@ -118,7 +118,7 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
         
         prevAirportHasBonsai = curAirportHasBonsai
         //THIS NEEDS TO CHANGE
-        if curAirport?.getCode() == "STL" || curAirport?.getCode() == "BOS"{
+        if curAirport?.getCode() == "MCI" || curAirport?.getCode() == "BOS"{
             curAirportHasBonsai = false
         }
         else{
@@ -126,9 +126,6 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
         }
         
     }
-    
-    
-    
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error){
         print(error)
@@ -196,7 +193,7 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
         
         prevAirportHasBonsai = curAirportHasBonsai
         //THIS NEEDS TO CHANGE
-        if curAirport?.getCode() == "STL" || curAirport?.getCode() == "BOS"{
+        if curAirport?.getCode() == "MCI" || curAirport?.getCode() == "BOS"{
             curAirportHasBonsai = false
         }
         else{
