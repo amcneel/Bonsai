@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qLp-DW-D8K">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qLp-DW-D8K">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -93,17 +93,17 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="OAK" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HbG-73-nHF">
-                                                <rect key="frame" x="18" y="69" width="82" height="52"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OAK" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HbG-73-nHF">
+                                                <rect key="frame" x="18" y="69" width="150" height="52"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="8YF-Vx-TKm"/>
-                                                    <constraint firstAttribute="width" constant="85" id="I2F-tq-fZb"/>
+                                                    <constraint firstAttribute="width" constant="150" id="I2F-tq-fZb"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="vfs-SB-Ja9">
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="vfs-SB-Ja9">
                                                 <rect key="frame" x="101" y="86" width="20" height="20"/>
                                             </activityIndicatorView>
                                         </subviews>
@@ -111,9 +111,9 @@
                                         <constraints>
                                             <constraint firstItem="HbG-73-nHF" firstAttribute="leading" secondItem="3ro-lR-Mk4" secondAttribute="leading" constant="18" id="EVb-jO-iJ7"/>
                                             <constraint firstItem="yKZ-bw-g2q" firstAttribute="top" secondItem="JmU-5f-Qsn" secondAttribute="bottom" id="FAa-Jf-MLW"/>
-                                            <constraint firstItem="vfs-SB-Ja9" firstAttribute="centerY" secondItem="HbG-73-nHF" secondAttribute="centerY" id="FZF-2N-YFl"/>
+                                            <constraint firstItem="vfs-SB-Ja9" firstAttribute="centerY" secondItem="HbG-73-nHF" secondAttribute="centerY" constant="1" id="FZF-2N-YFl"/>
                                             <constraint firstItem="yKZ-bw-g2q" firstAttribute="centerX" secondItem="3ro-lR-Mk4" secondAttribute="centerX" id="HKe-O0-ePk"/>
-                                            <constraint firstItem="vfs-SB-Ja9" firstAttribute="leading" secondItem="HbG-73-nHF" secondAttribute="trailing" id="Im0-Mo-6h2"/>
+                                            <constraint firstItem="vfs-SB-Ja9" firstAttribute="leading" secondItem="HbG-73-nHF" secondAttribute="trailing" constant="-67" id="Im0-Mo-6h2"/>
                                             <constraint firstItem="JmU-5f-Qsn" firstAttribute="centerX" secondItem="3ro-lR-Mk4" secondAttribute="centerX" id="U4t-jM-Wtg"/>
                                             <constraint firstItem="HbG-73-nHF" firstAttribute="top" secondItem="3ro-lR-Mk4" secondAttribute="top" constant="69" id="Z7b-c6-KZb"/>
                                             <constraint firstItem="JmU-5f-Qsn" firstAttribute="centerY" secondItem="3ro-lR-Mk4" secondAttribute="centerY" id="ekr-aQ-dAQ"/>
