@@ -41,8 +41,7 @@ class InitialViewController: UIViewController{
                 let along:CLLocationDegrees = Double(csv[rowIndex][2])!
                 let aloc = CLLocation(latitude: alat, longitude: along)
                 let aterm:String = csv[rowIndex][5]
-                let anumpic:Int = Int(csv[rowIndex][6])!
-                let a = Airport(n: aname, c: acode, l: aloc, t: aterm, p: anumpic)
+                let a = Airport(n: aname, c: acode, l: aloc, t: aterm)
                 airports.append(a)
             }
             

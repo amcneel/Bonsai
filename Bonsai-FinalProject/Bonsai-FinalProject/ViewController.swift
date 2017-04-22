@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Foundation
 import CoreLocation
 
 //the view that displays the wait time
@@ -17,7 +16,6 @@ class ViewController: BonsaiViewController {
     @IBOutlet weak var infoButton: UIButton!
     
     //these buttons need outlets because they need to be disabled while the app is searching it's own location or the app messes up
-    @IBOutlet weak var backImage: UIImageView!
     @IBOutlet weak var theLocationButton: UIButton!
     @IBOutlet weak var theSearchButton: UIButton!
     
@@ -79,6 +77,9 @@ class ViewController: BonsaiViewController {
         searchButton = theSearchButton
         mainView = theMainView
         searchTableView = theSearchTableView
+        
+        //set background image
+        mainView.backgroundColor = UIColor(patternImage: UIImage(named: "city_night")!)
         
         //set the timer to poll once a minute
         updateTimer = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(updateWaitTimeAndDisplay), userInfo: nil, repeats: true)
@@ -253,19 +254,6 @@ class ViewController: BonsaiViewController {
         activityIndicator.stopAnimating()
         activityIndicator.isHidden = true
         
-        //set background image
-        let airCode = curAirport?.getCode().lowercased()
-        let numPic = curAirport?.getNumPics()
-        let currBackNum = Int(arc4random_uniform(UInt32(numPic!)) + 1)
-        let imageName = airCode! + String(currBackNum) + ".jpg"
-        UIGraphicsBeginImageContext(mainView.frame.size)
-        UIImage(named: imageName)!.draw(in: mainView.bounds)
-        let image: UIImage! = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        mainView.backgroundColor = UIColor(patternImage: image)
-        
-        //mainView.backgroundColor = UIColor(patternImage: UIImage(named: airCode! + String(currBackNum) + ".jpg")!)
-        //mainView.contentMode = .scaleAspectFit
         if bezierBorder == nil{
             //set the border to surround the wait label
             bezierBorder = BezierBorder(s: 10, r: waitLabel.frame)
