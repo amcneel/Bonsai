@@ -343,4 +343,9 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         hideSearchBar()
     }
+    
+    
+
 }
+
+
