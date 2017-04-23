@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import FirebaseAuth
+import FBSDKLoginKit
 
 //the view controller that displays the alarm stuff
 //all global variables found in GlobalVariables.swift
@@ -37,6 +38,7 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
         
         super.viewDidLoad()
         
+        
         datePicker.minimumDate = Date()
         //datePicker.setValue(UIColor.white, forKeyPath: "textColor")
         datePicker.datePickerMode = .countDownTimer
@@ -51,6 +53,30 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
     override func viewWillAppear(_ animated: Bool) {
         mainView = theMainView
         mainView.backgroundColor = mainBackgroundColor
+        if FBSDKAccessToken.current() == nil && FIRAuth.auth()?.currentUser == nil{
+            self.view.backgroundColor = UIColor.clear
+            
+            let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
+            let blurEffectView = UIVisualEffectView(effect: blurEffect)
+            //always fill the view
+            blurEffectView.frame = self.view.bounds
+            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            blurEffectView.tag = 100
+            self.view.addSubview(blurEffectView)
+            addGrayedText()
+            addLoginBtn()
+        }
+        else{
+            if let viewWithTag = self.view.viewWithTag(100) {
+                viewWithTag.removeFromSuperview()
+            }
+            if let viewWithOtherTag = self.view.viewWithTag(99){
+                viewWithOtherTag.removeFromSuperview()
+            }
+            if let viewWithBtnTag = self.view.viewWithTag(98){
+                viewWithBtnTag.removeFromSuperview()
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -59,13 +85,15 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
             mainView.backgroundColor = mainBackgroundColor
             updateDisplay()
         }
+        
+        
     }
     
     func datePickerValueChanged (sender: UIDatePicker) {
         
         let dateFormatter = DateFormatter()
         
-
+        
         dateFormatter.dateStyle = DateFormatter.Style.medium
         dateFormatter.timeStyle = DateFormatter.Style.none
         var timeStr = dateFormatter.string(from: sender.date)
@@ -78,7 +106,7 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
     }
     
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -120,10 +148,33 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
                 self.updateDisplay()
             }
         }
-
+    }
+    
+    
+    func addGrayedText(){
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 600, height: 100))
+        label.font = UIFont(name: "Futura", size: 30)
+        label.center = CGPoint(x: view.frame.size.width/2, y: view.frame.size.height/2)
+        label.textColor = UIColor.white
+        label.textAlignment = .center
+        label.text = "login to use alarms"
+        label.tag = 99
+        self.view.addSubview(label)
+    }
+    
+    func addLoginBtn(){
+        let button = TitleButton(frame: CGRect(x: view.frame.size.width/2 - 69, y: view.frame.size.height/2 + 50, width: 137, height: 30))
+        button.backgroundColor = UIColor.black
+        button.setTitle("Login", for: .normal)
+        button.layer.cornerRadius = 10.0
+        button.tag = 98
+        button.addTarget(self, action: #selector(addedLoginBtnTapped), for: .touchUpInside)
         
-        
-        
+        self.view.addSubview(button)
+    }
+    func addedLoginBtnTapped(){
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "Initial")
+        self.present(vc!, animated: true, completion: nil)
     }
     
 }
