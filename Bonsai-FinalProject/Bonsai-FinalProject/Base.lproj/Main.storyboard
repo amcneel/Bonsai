@@ -326,7 +326,7 @@
         <!--Sign In Controller-->
         <scene sceneID="9A1-9n-FBr">
             <objects>
-                <viewController id="ubi-87-vxx" customClass="SignInController" customModule="Bonsai_FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Signin" id="ubi-87-vxx" customClass="SignInController" customModule="Bonsai_FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r3J-2Z-ufM"/>
                         <viewControllerLayoutGuide type="bottom" id="Gjj-AB-y2W"/>
@@ -336,7 +336,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tree2.png" translatesAutoresizingMaskIntoConstraints="NO" id="E2V-Jt-M1u">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qfZ-zb-mXc">
                                 <rect key="frame" x="55" y="110" width="265" height="30"/>
@@ -361,19 +361,19 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Za7-Ku-WIh">
-                                <rect key="frame" x="55" y="474" width="265" height="30"/>
+                                <rect key="frame" x="55" y="425" width="265" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mdb-Re-kqe">
-                                <rect key="frame" x="55" y="527" width="265" height="30"/>
+                                <rect key="frame" x="55" y="478" width="265" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1te-t0-RF7" customClass="TitleButton" customModule="Bonsai_FinalProject" customModuleProvider="target">
-                                <rect key="frame" x="113" y="584" width="149" height="30"/>
+                                <rect key="frame" x="113" y="535" width="149" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -396,7 +396,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account? Create an account below!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2a6-Ql-BqZ">
-                                <rect key="frame" x="55" y="392" width="253" height="52"/>
+                                <rect key="frame" x="55" y="343" width="253" height="52"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -407,8 +407,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tts-vs-fjH" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="113" y="298" width="149" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rza-fQ-jnm" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="113" y="281" width="149" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
@@ -452,7 +452,7 @@
                         <outlet property="EmailCreate" destination="Za7-Ku-WIh" id="gq3-8o-YIs"/>
                         <outlet property="PasswordCreate" destination="Mdb-Re-kqe" id="IWh-hE-x1B"/>
                         <outlet property="emailLogin" destination="qfZ-zb-mXc" id="AAv-eU-Tf2"/>
-                        <outlet property="loginButton" destination="tts-vs-fjH" id="RUN-Nc-3UJ"/>
+                        <outlet property="loginButton" destination="rza-fQ-jnm" id="Ip5-iQ-vhg"/>
                         <outlet property="passLogin" destination="R58-ZX-IfM" id="uOy-ev-E2j"/>
                     </connections>
                 </viewController>
@@ -583,7 +583,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="qLp-DW-D8K" kind="show" id="Noj-da-Q9r"/>
+                                    <action selector="logoutBtnClicked:" destination="0vn-RD-Jpo" eventType="touchUpInside" id="ZN4-7r-YT9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SrJ-6T-Z3n">
@@ -613,10 +613,20 @@
                                     <action selector="whatsAppTouched:" destination="0vn-RD-Jpo" eventType="touchUpInside" id="KtW-cf-eo5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBp-NH-vj3" customClass="FBSDKLoginButton">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBp-NH-vj3" customClass="FBSDKLoginButton">
                                 <rect key="frame" x="125" y="499" width="115" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGk-Br-bQ9" customClass="TitleButton" customModule="Bonsai_FinalProject" customModuleProvider="target">
+                                <rect key="frame" x="125" y="537" width="115" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Create Account">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ubi-87-vxx" kind="show" id="8TH-9A-IwX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWw-bp-hUY">
                                 <rect key="frame" x="88" y="297" width="70" height="73"/>
@@ -656,7 +666,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" image="User Filled-25.png" id="vsf-GG-2QE"/>
                     <connections>
+                        <outlet property="createAcctBtn" destination="BGk-Br-bQ9" id="049-Sl-tta"/>
                         <outlet property="loginButton" destination="aBp-NH-vj3" id="aDS-aO-Anc"/>
+                        <outlet property="logoutBtn" destination="j2H-mp-tXs" id="kpk-de-vAJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ok7-C3-LOS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1047,6 +1059,6 @@
         <image name="whatsapp.png" width="1000" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zfy-7Q-riq"/>
+        <segue reference="8TH-9A-IwX"/>
     </inferredMetricsTieBreakers>
 </document>

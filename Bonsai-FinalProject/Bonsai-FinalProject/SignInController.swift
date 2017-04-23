@@ -16,6 +16,7 @@ class SignInController: UIViewController, FBSDKLoginButtonDelegate{
 
     
     @IBOutlet var loginButton: FBSDKLoginButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loginButton.delegate = self
