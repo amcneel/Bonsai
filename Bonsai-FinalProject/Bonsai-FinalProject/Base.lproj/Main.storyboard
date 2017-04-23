@@ -628,7 +628,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ubi-87-vxx" kind="show" id="8TH-9A-IwX"/>
+                                    <action selector="createBtnTouched:" destination="0vn-RD-Jpo" eventType="touchUpInside" id="AXz-ui-EMf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWw-bp-hUY">
@@ -1065,7 +1065,4 @@
         <image name="twitter.png" width="192" height="192"/>
         <image name="whatsapp.png" width="1000" height="1000"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="8TH-9A-IwX"/>
-    </inferredMetricsTieBreakers>
 </document>
