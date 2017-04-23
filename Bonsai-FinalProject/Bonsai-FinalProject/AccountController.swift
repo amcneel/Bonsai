@@ -14,13 +14,46 @@ import MessageUI
 import FirebaseAuth
 
 //set up logout button so that it disconnects you from the SQL database, not just segways you back to the main page
-class AccountController: UIViewController, MFMessageComposeViewControllerDelegate, MFMailComposeViewControllerDelegate{
+class AccountController: UIViewController, MFMessageComposeViewControllerDelegate, MFMailComposeViewControllerDelegate, FBSDKLoginButtonDelegate{
+    let loggedAsFB = false
+    @IBOutlet var loginButton: FBSDKLoginButton!
     
     override func viewDidLoad() {
-        let loginButton = FBSDKLoginButton()
-        let newCenter = CGPoint(x: self.view.frame.width / 2 - 10, y: self.view.frame.height - 70)
-        loginButton.center = newCenter
-        view.addSubview(loginButton)
+        super.viewDidLoad()
+        let user = FIRAuth.auth()?.currentUser
+        if FBSDKAccessToken.current() != nil{
+            print(user?.displayName as Any)
+        }
+        else{
+            print(user?.email as Any)
+        }
+        loginButton.delegate = self
+    }
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        let firebaseAuth = FIRAuth.auth()
+        do {
+            try firebaseAuth?.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "Initial")
+        self.present(vc!, animated: true, completion: nil)
+        return
+    }
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        if ((error) != nil){
+            print(error.localizedDescription)
+        }
+        else{
+            let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+            FIRAuth.auth()?.signIn(with: credential) { (user, error) in
+                if error != nil {
+                    print(error!)
+                    return
+                }
+            }
+        }
     }
     
     @IBAction func logoutBtnClicked(_ sender: UIButton) {
@@ -33,6 +66,8 @@ class AccountController: UIViewController, MFMessageComposeViewControllerDelegat
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "Initial")
             self.present(vc!, animated: true, completion: nil)
     }
+    
+    
     
     
     //when fbButton is Clicked
