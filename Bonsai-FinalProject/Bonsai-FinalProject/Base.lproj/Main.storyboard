@@ -401,47 +401,54 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rza-fQ-jnm" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="113" y="281" width="149" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HUp-yM-qq9"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NyM-q5-U2t">
-                                <rect key="frame" x="145" y="28" width="84" height="38"/>
+                                <rect key="frame" x="145" y="56" width="84" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="h1b-XG-yUg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rza-fQ-jnm" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="113" y="281" width="149" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.16664263469999999" green="0.55679242230000003" blue="0.28377072170000001" alpha="0.65831316019999997" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gti-fd-VS2" firstAttribute="leading" secondItem="ZSD-4R-e3O" secondAttribute="leadingMargin" constant="18" id="3Yx-f3-r1R"/>
                             <constraint firstItem="E2V-Jt-M1u" firstAttribute="leading" secondItem="ZSD-4R-e3O" secondAttribute="leading" id="3va-Mt-OXq"/>
                             <constraint firstItem="R58-ZX-IfM" firstAttribute="centerX" secondItem="c2H-1w-eV3" secondAttribute="centerX" id="5Yc-jh-Bcc"/>
+                            <constraint firstItem="qfZ-zb-mXc" firstAttribute="top" secondItem="NyM-q5-U2t" secondAttribute="bottom" constant="16" id="5qY-kZ-bag"/>
                             <constraint firstItem="qfZ-zb-mXc" firstAttribute="trailing" secondItem="R58-ZX-IfM" secondAttribute="trailing" id="7xp-ol-pnl"/>
                             <constraint firstItem="E2V-Jt-M1u" firstAttribute="top" secondItem="ZSD-4R-e3O" secondAttribute="top" id="9hJ-Sd-Jdk"/>
+                            <constraint firstItem="NyM-q5-U2t" firstAttribute="centerX" secondItem="rza-fQ-jnm" secondAttribute="centerX" id="BmL-yL-TGQ"/>
                             <constraint firstItem="gti-fd-VS2" firstAttribute="top" secondItem="r3J-2Z-ufM" secondAttribute="bottom" constant="8" symbolic="YES" id="D5c-4p-oae"/>
                             <constraint firstItem="R58-ZX-IfM" firstAttribute="leading" secondItem="2a6-Ql-BqZ" secondAttribute="leading" id="Deb-FG-Vjh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2a6-Ql-BqZ" secondAttribute="trailing" constant="51" id="GDM-Iv-kl8"/>
+                            <constraint firstItem="NyM-q5-U2t" firstAttribute="top" secondItem="r3J-2Z-ufM" secondAttribute="bottom" constant="36" id="HCo-Qn-gYx"/>
                             <constraint firstItem="R58-ZX-IfM" firstAttribute="trailing" secondItem="Za7-Ku-WIh" secondAttribute="trailing" id="IWx-3h-ceQ"/>
                             <constraint firstItem="1te-t0-RF7" firstAttribute="top" secondItem="Mdb-Re-kqe" secondAttribute="bottom" constant="27" id="J2r-WA-lXf"/>
                             <constraint firstItem="qfZ-zb-mXc" firstAttribute="leading" secondItem="ZSD-4R-e3O" secondAttribute="leadingMargin" constant="39" id="JOq-03-zrg"/>
                             <constraint firstItem="c2H-1w-eV3" firstAttribute="trailing" secondItem="1te-t0-RF7" secondAttribute="trailing" id="Jyg-6L-nFh"/>
                             <constraint firstItem="qfZ-zb-mXc" firstAttribute="leading" secondItem="R58-ZX-IfM" secondAttribute="leading" id="K4f-Lk-pXc"/>
                             <constraint firstItem="Za7-Ku-WIh" firstAttribute="leading" secondItem="Mdb-Re-kqe" secondAttribute="leading" id="KXY-wi-yHO"/>
-                            <constraint firstItem="NyM-q5-U2t" firstAttribute="top" secondItem="gti-fd-VS2" secondAttribute="top" id="TtY-ma-JrL"/>
+                            <constraint firstItem="rza-fQ-jnm" firstAttribute="leading" secondItem="c2H-1w-eV3" secondAttribute="leading" id="SYp-Kx-0tP"/>
                             <constraint firstItem="Za7-Ku-WIh" firstAttribute="top" secondItem="2a6-Ql-BqZ" secondAttribute="bottom" constant="30" id="U8C-or-y08"/>
                             <constraint firstItem="qfZ-zb-mXc" firstAttribute="top" secondItem="gti-fd-VS2" secondAttribute="bottom" constant="52" id="VkB-ad-2ut"/>
                             <constraint firstItem="Za7-Ku-WIh" firstAttribute="trailing" secondItem="Mdb-Re-kqe" secondAttribute="trailing" id="WOy-dN-KB8"/>
                             <constraint firstItem="c2H-1w-eV3" firstAttribute="leading" secondItem="ZSD-4R-e3O" secondAttribute="leadingMargin" constant="97" id="X1f-iU-mPn"/>
                             <constraint firstItem="R58-ZX-IfM" firstAttribute="top" secondItem="qfZ-zb-mXc" secondAttribute="bottom" constant="19" id="YuN-rA-rAS"/>
                             <constraint firstAttribute="trailing" secondItem="E2V-Jt-M1u" secondAttribute="trailing" id="d44-jN-f7H"/>
-                            <constraint firstItem="NyM-q5-U2t" firstAttribute="centerX" secondItem="qfZ-zb-mXc" secondAttribute="centerX" id="d83-SC-Arr"/>
                             <constraint firstItem="E2V-Jt-M1u" firstAttribute="centerX" secondItem="1te-t0-RF7" secondAttribute="centerX" id="fOq-Wl-lbq"/>
-                            <constraint firstItem="NyM-q5-U2t" firstAttribute="leading" secondItem="gti-fd-VS2" secondAttribute="trailing" constant="61" id="fvv-te-XVV"/>
-                            <constraint firstItem="qfZ-zb-mXc" firstAttribute="top" secondItem="NyM-q5-U2t" secondAttribute="bottom" constant="44" id="lMC-Rj-vgW"/>
+                            <constraint firstItem="2a6-Ql-BqZ" firstAttribute="top" secondItem="rza-fQ-jnm" secondAttribute="bottom" constant="32" id="gcB-cW-zOu"/>
                             <constraint firstItem="Gjj-AB-y2W" firstAttribute="top" secondItem="1te-t0-RF7" secondAttribute="bottom" constant="53" id="neG-dJ-RL9"/>
                             <constraint firstItem="c2H-1w-eV3" firstAttribute="leading" secondItem="1te-t0-RF7" secondAttribute="leading" id="oCp-e2-45h"/>
+                            <constraint firstItem="NyM-q5-U2t" firstAttribute="centerX" secondItem="qfZ-zb-mXc" secondAttribute="centerX" id="rdf-PA-qhP"/>
                             <constraint firstItem="Mdb-Re-kqe" firstAttribute="top" secondItem="Za7-Ku-WIh" secondAttribute="bottom" constant="23" id="riX-5l-6eH"/>
                             <constraint firstItem="c2H-1w-eV3" firstAttribute="top" secondItem="R58-ZX-IfM" secondAttribute="bottom" constant="20" id="v4G-61-qe3"/>
                             <constraint firstItem="2a6-Ql-BqZ" firstAttribute="leading" secondItem="Za7-Ku-WIh" secondAttribute="leading" id="wYy-T8-FOA"/>
@@ -621,6 +628,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGk-Br-bQ9" customClass="TitleButton" customModule="Bonsai_FinalProject" customModuleProvider="target">
                                 <rect key="frame" x="125" y="537" width="115" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
