@@ -62,11 +62,15 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
             blurEffectView.frame = self.view.bounds
             blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             blurEffectView.tag = 100
-            self.view.addSubview(blurEffectView)
+            self.mainView.addSubview(blurEffectView)
             addGrayedText()
             addLoginBtn()
+            searchButton.isEnabled = false
+            searchButton.imageView?.image = nil
         }
         else{
+            searchButton.isEnabled = true
+            searchButton.imageView?.image = UIImage(named: "Search.png")
             if let viewWithTag = self.view.viewWithTag(100) {
                 viewWithTag.removeFromSuperview()
             }
@@ -144,7 +148,7 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
                 isUpdating = false
                 self.locationButton.isEnabled = true
                 self.searchButton.isEnabled = true
-                self.setImageToCity()
+                self.setBackgroundImage()
                 self.updateDisplay()
             }
         }

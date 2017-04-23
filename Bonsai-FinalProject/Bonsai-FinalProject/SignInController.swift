@@ -20,12 +20,9 @@ class SignInController: UIViewController, FBSDKLoginButtonDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         loginButton.delegate = self
+        
     }
     override func viewDidAppear(_ animated: Bool) {
-        if FBSDKAccessToken.current() != nil{
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
-            self.present(vc!, animated: true, completion: nil)
-        }
     }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
@@ -142,7 +139,6 @@ class SignInController: UIViewController, FBSDKLoginButtonDelegate{
         }
     }
 
-    
     
     
 }

@@ -22,7 +22,7 @@ class BezierBorder {
     var radius:CGFloat
     var center:CGPoint
     
-    var oldColor:UIColor = UIColor.clear
+    var oldColor:UIColor = UIColor(red: 0, green: 1, blue: 0, alpha: 0)
     private var oldValue:CGFloat
     public var value:CGFloat
     
