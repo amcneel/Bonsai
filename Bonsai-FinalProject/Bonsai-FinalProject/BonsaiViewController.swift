@@ -69,6 +69,9 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
         searchButton.addTarget(self, action: #selector(searchButtonPressed), for: .touchUpInside)
         locationButton.addTarget(self, action: #selector(useCurrentLocationButtonPressed), for: .touchUpInside)
         
+        
+        mainView.backgroundColor = mainBackgroundColor
+        
         update()
     }
     
@@ -273,6 +276,19 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
         
         return eta
         
+    }
+    
+    func setImageToCity(){
+        let airCode = curAirport?.getCode().lowercased()
+        let numPic = curAirport?.getNumPics()
+        let currBackNum = Int(arc4random_uniform(UInt32(numPic!)) + 1)
+        let imageName = airCode! + String(currBackNum) + ".jpg"
+        UIGraphicsBeginImageContext(self.mainView.frame.size)
+        UIImage(named: imageName)!.draw(in: self.mainView.bounds)
+        let image: UIImage! = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        mainBackgroundColor = UIColor(patternImage: image)
+        self.mainView.backgroundColor = mainBackgroundColor
     }
     
     func update(){

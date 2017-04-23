@@ -47,7 +47,11 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
         airportCode.text = curAirport?.getCode()
     }
     override func viewDidAppear(_ animated: Bool) {
-        update()
+        if !isUpdating{
+            mainView = theMainView
+            mainView.backgroundColor = mainBackgroundColor
+            updateDisplay()
+        }
     }
     
     func datePickerValueChanged (sender: UIDatePicker) {
@@ -105,6 +109,7 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
                 self.activityIndicator.isHidden = true
                 self.locationButton.isEnabled = true
                 self.searchButton.isEnabled = true
+                self.setImageToCity()
                 self.updateDisplay()
             }
         }
