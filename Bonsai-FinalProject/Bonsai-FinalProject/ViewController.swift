@@ -71,7 +71,7 @@ class ViewController: BonsaiViewController {
             activityIndicator.startAnimating()
             updateFadeIn()
             bonsaiInstallationCheck()
-            safeUpdateDisplay()
+            updateDisplay()
             
         }
         
@@ -110,7 +110,9 @@ class ViewController: BonsaiViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        update()
+
+        //we can't set the bezierborder here because the constraints don't update until after viewdidload
+        //we set bezierborder in updateWaitTimeDisplay
         
     }
     
@@ -239,7 +241,6 @@ class ViewController: BonsaiViewController {
             
             
             DispatchQueue.main.async {
-                print(curAirport)
                 isUpdating = false
                 self.firstTimeLoading = false
                 self.locationButton.isEnabled = true

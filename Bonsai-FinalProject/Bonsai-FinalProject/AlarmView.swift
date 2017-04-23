@@ -45,7 +45,7 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
         datePicker.addTarget(self, action: #selector(AlarmView.datePickerValueChanged(sender:)), for: UIControlEvents.valueChanged)
         alarmTime.text = "Your alarm is not scheduled."
         airportCode.text = curAirport?.getCode()
-        safeUpdateDisplay()
+        updateDisplay()
     }
     
     override func viewWillAppear(_ animated: Bool) {
