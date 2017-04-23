@@ -27,6 +27,14 @@ class InitialViewController: UIViewController{
     }
     
     @IBAction func signIn(_ sender: UIButton) {
+        if FIRAuth.auth()?.currentUser != nil || FBSDKAccessToken.current() != nil{
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+            self.present(vc!, animated: true, completion: nil)
+        }
+        else{
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Signin")
+            self.present(vc!, animated: true, completion: nil)
+        }
     }
     
     
