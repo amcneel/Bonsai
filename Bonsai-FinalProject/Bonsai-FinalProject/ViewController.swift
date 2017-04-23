@@ -239,6 +239,7 @@ class ViewController: BonsaiViewController {
             
             
             DispatchQueue.main.async {
+                print(curAirport)
                 isUpdating = false
                 self.firstTimeLoading = false
                 self.locationButton.isEnabled = true
