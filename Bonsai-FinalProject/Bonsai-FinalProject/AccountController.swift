@@ -20,7 +20,6 @@ class AccountController: UIViewController, MFMessageComposeViewControllerDelegat
     var loggedIn = false
     
     @IBOutlet var loginButton: FBSDKLoginButton!
-    @IBOutlet var logoutBtn: TitleButton!
     @IBOutlet var createAcctBtn: TitleButton!
     
     override func viewDidLoad() {
@@ -73,33 +72,19 @@ class AccountController: UIViewController, MFMessageComposeViewControllerDelegat
     }
     
     
-    @IBAction func logoutBtnClicked(_ sender: TitleButton) {
-        let firebaseAuth = FIRAuth.auth()
-        do {
-            try firebaseAuth?.signOut()
-        } catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
-        }
-        
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "Initial")
-        self.present(vc!, animated: true, completion: nil)
-    }
-    
     
     func changeButtonDisplay(){
         if(loggedAsFB){
-            self.logoutBtn.isHidden = true
             self.loginButton.isHidden = false
             self.createAcctBtn.isHidden = true
         }
         else if(loggedIn){
             self.loginButton.isHidden = true
-            self.logoutBtn.isHidden = false
+            
             self.createAcctBtn.isHidden = true
         }
         else{
             self.loginButton.isHidden = false
-            self.logoutBtn.isHidden = true
             self.createAcctBtn.isHidden = false
         }
     }

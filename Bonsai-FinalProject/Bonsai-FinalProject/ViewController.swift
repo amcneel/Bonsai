@@ -109,7 +109,7 @@ class ViewController: BonsaiViewController {
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        update()
 
         //we can't set the bezierborder here because the constraints don't update until after viewdidload
         //we set bezierborder in updateWaitTimeDisplay
@@ -230,7 +230,7 @@ class ViewController: BonsaiViewController {
                 self.searchButton.isEnabled = false
                 self.locationButton.isEnabled = false
                 self.locationManager.requestLocation()
-                while curAirport == nil{
+                while isUpdating{
                     sleep(1)
                 }
                 break
