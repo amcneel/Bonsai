@@ -262,57 +262,111 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qPo-zB-XQG" customClass="UIScrollView">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4f-dQ-kxS">
+                                <rect key="frame" x="0.0" y="10" width="375" height="647"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4f-dQ-kxS">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tree2.png" translatesAutoresizingMaskIntoConstraints="NO" id="zsL-Ns-sYm">
-                                                <rect key="frame" x="0.0" y="8" width="375" height="639"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Bonsai!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6a-KG-YL0">
-                                                <rect key="frame" x="44" y="33" width="286" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="26"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrJ-cy-qRQ">
-                                                <rect key="frame" x="20" y="81" width="324" height="110"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <string key="text">Bonsai is app made to save you time. Using our one of a kind calculation technology we provide you with live up to date wait time data for airports across the world</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G39-ze-I7H">
-                                                <rect key="frame" x="161" y="215" width="42" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tree2.png" translatesAutoresizingMaskIntoConstraints="NO" id="zsL-Ns-sYm">
+                                        <rect key="frame" x="0.0" y="8" width="375" height="639"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Bonsai!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6a-KG-YL0">
+                                        <rect key="frame" x="44" y="33" width="286" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="uyp-r5-1Sc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="26"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrJ-cy-qRQ">
+                                        <rect key="frame" x="28" y="56" width="324" height="116"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="116" id="FYy-qM-oJT"/>
+                                            <constraint firstAttribute="width" constant="324" id="otA-wb-BL2"/>
+                                        </constraints>
+                                        <string key="text">Bonsai is app made to save you time. Using our one of a kind calculation technology we provide you with live up to date wait time data for airports across the world</string>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G39-ze-I7H">
+                                        <rect key="frame" x="25" y="163" width="330" height="115"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="115" id="Uhg-ZG-pXV"/>
+                                        </constraints>
+                                        <string key="text">The main page allows you to browse wait times for any airport in the Bonsai Network. If you find an airport not using our technology, let us know and we will work to expand there as soon as we can</string>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Any issues with app? Feel free to contact us at sales@letsgobonsai.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZW-aA-PPh">
+                                        <rect key="frame" x="22" y="448" width="330" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="NK9-cu-zgn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pixabay.png" translatesAutoresizingMaskIntoConstraints="NO" id="20I-AB-Mrd">
+                                        <rect key="frame" x="22" y="544" width="92" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="92" id="hC9-5x-XSr"/>
+                                            <constraint firstAttribute="height" constant="90" id="zk3-A4-yan"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon8.png" translatesAutoresizingMaskIntoConstraints="NO" id="eSU-Sb-nF8">
+                                        <rect key="frame" x="210" y="539" width="142" height="95"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mq8-6q-zOI">
+                                        <rect key="frame" x="22" y="259" width="330" height="137"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="137" id="BGd-9B-0er"/>
+                                        </constraints>
+                                        <string key="text">Browse Maps of your current Airport or set an Alarm to catch your flight using the tools we've provided. You can even share Bonsai with your friends through Social Media, E-Mail, and Messaging Applications!</string>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="o4f-dQ-kxS" secondAttribute="trailing" id="AA3-sx-edh"/>
-                                    <constraint firstAttribute="bottom" secondItem="o4f-dQ-kxS" secondAttribute="bottom" id="BeE-1X-NE2"/>
-                                    <constraint firstItem="o4f-dQ-kxS" firstAttribute="top" secondItem="qPo-zB-XQG" secondAttribute="top" id="aku-mb-Fkx"/>
-                                    <constraint firstItem="o4f-dQ-kxS" firstAttribute="leading" secondItem="qPo-zB-XQG" secondAttribute="leading" id="tKq-xB-Ojs"/>
+                                    <constraint firstItem="a6a-KG-YL0" firstAttribute="centerX" secondItem="zsL-Ns-sYm" secondAttribute="centerX" id="8yU-q9-ph5"/>
+                                    <constraint firstItem="a6a-KG-YL0" firstAttribute="leading" secondItem="o4f-dQ-kxS" secondAttribute="leading" constant="44" id="AG8-mx-Wur"/>
+                                    <constraint firstItem="a6a-KG-YL0" firstAttribute="top" secondItem="o4f-dQ-kxS" secondAttribute="top" constant="33" id="AfN-cd-TFU"/>
+                                    <constraint firstItem="eSU-Sb-nF8" firstAttribute="trailing" secondItem="G39-ze-I7H" secondAttribute="trailing" constant="-3" id="CLw-3V-7qi"/>
+                                    <constraint firstItem="eSU-Sb-nF8" firstAttribute="top" secondItem="CZW-aA-PPh" secondAttribute="bottom" constant="36" id="EIn-4n-zZK"/>
+                                    <constraint firstItem="zsL-Ns-sYm" firstAttribute="top" secondItem="o4f-dQ-kxS" secondAttribute="topMargin" id="FVp-7p-ZBx"/>
+                                    <constraint firstAttribute="bottom" secondItem="20I-AB-Mrd" secondAttribute="bottom" constant="13" id="FbW-Lk-6WK"/>
+                                    <constraint firstItem="zsL-Ns-sYm" firstAttribute="leading" secondItem="o4f-dQ-kxS" secondAttribute="leading" id="Fvr-R3-aaI"/>
+                                    <constraint firstAttribute="bottom" secondItem="zsL-Ns-sYm" secondAttribute="bottom" id="H63-1A-H4w"/>
+                                    <constraint firstItem="Mq8-6q-zOI" firstAttribute="top" secondItem="G39-ze-I7H" secondAttribute="bottom" constant="-19" id="MiA-TU-yps"/>
+                                    <constraint firstItem="mrJ-cy-qRQ" firstAttribute="leading" secondItem="o4f-dQ-kxS" secondAttribute="leading" constant="28" id="NXf-Wn-srS"/>
+                                    <constraint firstItem="CZW-aA-PPh" firstAttribute="leading" secondItem="20I-AB-Mrd" secondAttribute="leading" id="O9Q-4J-lEl"/>
+                                    <constraint firstItem="G39-ze-I7H" firstAttribute="top" secondItem="mrJ-cy-qRQ" secondAttribute="bottom" constant="-9" id="Px1-CQ-ShJ"/>
+                                    <constraint firstItem="zsL-Ns-sYm" firstAttribute="leading" secondItem="Mq8-6q-zOI" secondAttribute="trailing" constant="-352" id="Tnb-7N-T1W"/>
+                                    <constraint firstItem="CZW-aA-PPh" firstAttribute="trailing" secondItem="eSU-Sb-nF8" secondAttribute="trailing" id="Xdm-jm-Tg5"/>
+                                    <constraint firstItem="CZW-aA-PPh" firstAttribute="top" secondItem="Mq8-6q-zOI" secondAttribute="bottom" constant="52" id="Z9N-DR-8gk"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mq8-6q-zOI" secondAttribute="trailing" constant="23" id="a9T-Qu-xGG"/>
+                                    <constraint firstItem="eSU-Sb-nF8" firstAttribute="leading" secondItem="zsL-Ns-sYm" secondAttribute="trailing" constant="-165" id="bs2-CH-3Vt"/>
+                                    <constraint firstItem="G39-ze-I7H" firstAttribute="centerX" secondItem="a6a-KG-YL0" secondAttribute="centerX" constant="3" id="c3c-Kk-7kG"/>
+                                    <constraint firstItem="20I-AB-Mrd" firstAttribute="leading" secondItem="G39-ze-I7H" secondAttribute="leading" constant="-3" id="caS-DN-yN0"/>
+                                    <constraint firstItem="20I-AB-Mrd" firstAttribute="top" secondItem="CZW-aA-PPh" secondAttribute="bottom" constant="41" id="d01-1l-rRh"/>
+                                    <constraint firstItem="a6a-KG-YL0" firstAttribute="centerX" secondItem="o4f-dQ-kxS" secondAttribute="centerX" id="eSb-i3-8EI"/>
+                                    <constraint firstItem="mrJ-cy-qRQ" firstAttribute="top" secondItem="a6a-KG-YL0" secondAttribute="bottom" constant="2" id="nm4-Id-fjF"/>
+                                    <constraint firstItem="G39-ze-I7H" firstAttribute="leading" secondItem="o4f-dQ-kxS" secondAttribute="leading" constant="25" id="qNh-Ps-Nzy"/>
+                                    <constraint firstItem="eSU-Sb-nF8" firstAttribute="bottom" secondItem="20I-AB-Mrd" secondAttribute="bottom" id="rSN-1T-xLx"/>
+                                    <constraint firstItem="eSU-Sb-nF8" firstAttribute="top" secondItem="zsL-Ns-sYm" secondAttribute="bottom" constant="-108" id="tWw-Oo-sR6"/>
+                                    <constraint firstItem="Mq8-6q-zOI" firstAttribute="leading" secondItem="mrJ-cy-qRQ" secondAttribute="leading" constant="-6" id="vXK-3Y-NEt"/>
+                                    <constraint firstItem="eSU-Sb-nF8" firstAttribute="leading" secondItem="20I-AB-Mrd" secondAttribute="trailing" constant="96" id="ydx-h6-S1S"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qPo-zB-XQG" firstAttribute="top" secondItem="pw8-MT-3jT" secondAttribute="bottom" id="Tuf-i0-Hxj"/>
-                            <constraint firstItem="qPo-zB-XQG" firstAttribute="leading" secondItem="2fR-qq-mip" secondAttribute="leading" id="Tz5-7g-ime"/>
-                            <constraint firstItem="qPo-zB-XQG" firstAttribute="bottom" secondItem="Fla-Zm-wyz" secondAttribute="top" id="rzQ-zx-fxO"/>
-                            <constraint firstAttribute="trailing" secondItem="qPo-zB-XQG" secondAttribute="trailing" id="seK-vs-271"/>
+                            <constraint firstItem="o4f-dQ-kxS" firstAttribute="centerY" secondItem="2fR-qq-mip" secondAttribute="centerY" id="HZG-kF-7Qp"/>
+                            <constraint firstAttribute="trailing" secondItem="o4f-dQ-kxS" secondAttribute="trailing" id="Ucg-9s-WKg"/>
+                            <constraint firstItem="Fla-Zm-wyz" firstAttribute="top" secondItem="o4f-dQ-kxS" secondAttribute="bottom" constant="10" id="UoG-OJ-avs"/>
+                            <constraint firstItem="o4f-dQ-kxS" firstAttribute="leading" secondItem="2fR-qq-mip" secondAttribute="leading" id="qPh-91-e3x"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -1076,7 +1130,9 @@
         <image name="Tree2.png" width="316" height="528"/>
         <image name="User Filled-25.png" width="25" height="25"/>
         <image name="fb.png" width="325" height="325"/>
+        <image name="icon8.png" width="600" height="300"/>
         <image name="mail.png" width="512" height="512"/>
+        <image name="pixabay.png" width="500" height="500"/>
         <image name="twitter.png" width="192" height="192"/>
         <image name="whatsapp.png" width="1000" height="1000"/>
     </resources>
