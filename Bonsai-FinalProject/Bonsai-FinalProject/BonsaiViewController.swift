@@ -152,7 +152,7 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
         else{
             curAirportHasBonsai = true
         }
-        
+        isUpdating = false
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error){

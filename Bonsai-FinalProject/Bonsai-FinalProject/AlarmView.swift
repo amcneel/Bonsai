@@ -173,7 +173,7 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
         self.view.addSubview(button)
     }
     func addedLoginBtnTapped(){
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "Initial")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "Signin")
         self.present(vc!, animated: true, completion: nil)
     }
     
