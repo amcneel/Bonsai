@@ -178,7 +178,7 @@ class AccountController: UIViewController, MFMessageComposeViewControllerDelegat
         }
        
     }
-        func messageComposeViewController(_ controller: MFMessageComposeViewController!, didFinishWith result: MessageComposeResult) {
+        func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
             //... handle sms screen actions
             self.dismiss(animated: true, completion: nil)
         }
@@ -211,8 +211,12 @@ class AccountController: UIViewController, MFMessageComposeViewControllerDelegat
     }
     
     func showSendMailErrorAlert() {
-        let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
-        sendMailErrorAlert.show()
+        let sendMailError = UIAlertController(title: "Could Not Open Mail", message: "Your device could not find a valid mail app", preferredStyle: .alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        sendMailError.addAction(defaultAction)
+        
+        present(sendMailError, animated: true, completion: nil)
     }
     
     // MARK: MFMailComposeViewControllerDelegate
@@ -254,8 +258,13 @@ class AccountController: UIViewController, MFMessageComposeViewControllerDelegat
 
     }
     func whatsAppError(){
-        let whatsAppError = UIAlertView(title: "Could Not Open WhatsApp", message: "Your device could not open WhatsApp.  Please check WhatsApp configuration or install the App. ", delegate: self, cancelButtonTitle: "OK")
-        whatsAppError .show()
+        
+        let whatsAppError = UIAlertController(title: "Could Not Open WhatsApp", message: "Your device could not open WhatsApp.  Please check WhatsApp configuration or install the App. ", preferredStyle: .alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        whatsAppError.addAction(defaultAction)
+        
+        present(whatsAppError, animated: true, completion: nil)
 
     }
     
