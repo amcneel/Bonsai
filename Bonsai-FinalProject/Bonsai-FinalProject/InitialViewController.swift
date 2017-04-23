@@ -16,15 +16,20 @@
 
 import CoreLocation
 import UIKit
+import FirebaseAuth
+import FBSDKLoginKit
+
 class InitialViewController: UIViewController{
     
     override func viewDidLoad() {
         //loads the airports from the csv into the var airports
         super.viewDidLoad()
-
+    }
+    
+    @IBAction func signIn(_ sender: UIButton) {
     }
     
     
-        
+    
     
 }

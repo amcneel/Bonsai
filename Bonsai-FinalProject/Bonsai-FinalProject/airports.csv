@@ -1,6 +1,6 @@
 IATA,Airport Name,Long,Lat,# terminals,Names of terminals,Num_Pics
 ATL,Hartsfield Jackson Atlanta International ,-84.388,33.749,2,"Concourse A,Concourse B,Concourse C,Concourse D,Concourse E,Concourse F,Concourse T",6
-AUS,Austin_Bergstrom International,-97.6663,30.1974,,Terminal,7
+AUS,Austin Bergstrom International,-97.6663,30.1974,,Terminal,7
 BNA,Nashville International,-86.6774,36.1263,1,"Main Terminal,Concourse A,Concourse B,Concourse C,Concourse D",5
 BOS,Boston Logan International Airport,-71.0096,42.3656,4,"Terminal A,Terminal B,Terminal C,Terminal E",13
 BWI,Baltimore/Washington International Thurgood Marshall Airport,-76.6684,39.1774,5 Concourses,Terminal,9

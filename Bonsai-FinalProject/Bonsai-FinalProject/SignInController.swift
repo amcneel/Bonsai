@@ -20,12 +20,9 @@ class SignInController: UIViewController, FBSDKLoginButtonDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         loginButton.delegate = self
+        
     }
     override func viewDidAppear(_ animated: Bool) {
-        if FBSDKAccessToken.current() != nil{
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
-            self.present(vc!, animated: true, completion: nil)
-        }
     }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
@@ -40,7 +37,15 @@ class SignInController: UIViewController, FBSDKLoginButtonDelegate{
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         if ((error) != nil){
-            print(error.localizedDescription)
+            //print(error.localizedDescription)
+            let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            present(alertController, animated: true, completion: nil)
+        }
+        else if result.isCancelled{
+            return
         }
         else{
             let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
@@ -134,7 +139,6 @@ class SignInController: UIViewController, FBSDKLoginButtonDelegate{
         }
     }
 
-    
     
     
 }
