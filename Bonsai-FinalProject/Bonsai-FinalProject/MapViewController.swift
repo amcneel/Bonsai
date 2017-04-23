@@ -43,7 +43,9 @@ class MapViewController: BonsaiViewController{
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        update()
+        mainView = theMainView
+        mainView.backgroundColor = mainBackgroundColor
+        updateDisplay()
     }
     
     override func didReceiveMemoryWarning() {
@@ -133,6 +135,7 @@ class MapViewController: BonsaiViewController{
                 self.activityIndicator.isHidden = true
                 self.locationButton.isEnabled = true
                 self.searchButton.isEnabled = true
+                self.setImageToCity()
                 self.updateDisplay()
             }
         }

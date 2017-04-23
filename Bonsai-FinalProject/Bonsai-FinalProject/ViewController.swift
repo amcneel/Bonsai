@@ -66,6 +66,8 @@ class ViewController: BonsaiViewController {
             updateFadeIn()
             bonsaiInstallationCheck()
             updateWaitTimeAndDisplay()
+            mainView = theMainView
+            mainView.backgroundColor = mainBackgroundColor
         }
         
     }
@@ -79,7 +81,6 @@ class ViewController: BonsaiViewController {
         searchTableView = theSearchTableView
         
         //set background image
-        mainView.backgroundColor = UIColor(patternImage: UIImage(named: "city_night")!)
         
         //set the timer to poll once a minute
         updateTimer = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(updateWaitTimeAndDisplay), userInfo: nil, repeats: true)
@@ -96,7 +97,7 @@ class ViewController: BonsaiViewController {
         
         //move the request installation button to off the screen
         self.requestView.alpha = 0
-        self.requestViewYConstraint.constant = self.mainView.frame.height
+        self.requestViewYConstraint.constant = mainView.frame.height
         
         requestBlurView.effect = UIBlurEffect(style: UIBlurEffectStyle.light)
         requestBlurView.alpha = 0
@@ -242,6 +243,7 @@ class ViewController: BonsaiViewController {
                 self.searchButton.isEnabled = true
                 self.bonsaiInstallationCheck()
                 self.updateFadeIn()
+                self.setImageToCity()
                 self.updateWaitTimeAndDisplay()
             }
         }
@@ -253,6 +255,10 @@ class ViewController: BonsaiViewController {
         
         activityIndicator.stopAnimating()
         activityIndicator.isHidden = true
+        
+        //set background image
+        
+        
         
         if bezierBorder == nil{
             //set the border to surround the wait label
