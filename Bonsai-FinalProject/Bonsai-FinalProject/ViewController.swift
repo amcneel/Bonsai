@@ -60,13 +60,17 @@ class ViewController: BonsaiViewController {
     var borderBackground:CAShapeLayer? = nil
     var borderFront:CAShapeLayer? = nil
     
+    
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         mainView = theMainView
         mainView.backgroundColor = mainBackgroundColor
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if !isUpdating{
+        if !isUpdating && !firstTimeLoading{
+            print("this is happening")
             activityIndicator.isHidden = false
             activityIndicator.startAnimating()
             updateFadeIn()
@@ -74,11 +78,16 @@ class ViewController: BonsaiViewController {
             updateDisplay()
             
         }
+        else if firstTimeLoading{
+            firstTimeLoading = false
+        }
         
     }
     
     override func viewDidLoad() {
         //sets the superclasses, navbar buttons and searchviews to allow for it to work
+        isUpdating = true
+        
         activityIndicator = theActivityIndicator
         locationButton = theLocationButton
         searchButton = theSearchButton
@@ -241,13 +250,14 @@ class ViewController: BonsaiViewController {
             
             
             DispatchQueue.main.async {
-                isUpdating = false
-                self.firstTimeLoading = false
+                print("update async finished")
+                
+                
                 self.locationButton.isEnabled = true
                 self.searchButton.isEnabled = true
                 self.bonsaiInstallationCheck()
                 self.updateFadeIn()
-                self.setImageToCity()
+                self.setBackgroundImage()
                 self.updateDisplay()
             }
         }
@@ -256,7 +266,8 @@ class ViewController: BonsaiViewController {
     }
     
     override func updateDisplay(){
-        
+        self.mainView.backgroundColor = mainBackgroundColor
+        self.mainView.setNeedsDisplay()
         activityIndicator.stopAnimating()
         activityIndicator.isHidden = true
         
@@ -290,6 +301,7 @@ class ViewController: BonsaiViewController {
             
             bezierBorder?.setValue(v:CGFloat(Int(waitTime.expected)))
         }
+        isUpdating = false
         //getTravelTime()
     }
     

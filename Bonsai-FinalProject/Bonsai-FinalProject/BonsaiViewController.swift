@@ -303,21 +303,61 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
         
     }
     
-    func setImageToCity(){
-        let airCode = curAirport?.getCode().lowercased()
-        let numPic = curAirport?.getNumPics()
-        let currBackNum = Int(arc4random_uniform(UInt32(numPic!)) + 1)
-        let imageName = airCode! + String(currBackNum) + ".jpg"
+    func setImageToCity(i:UIImage){
         UIGraphicsBeginImageContext(self.mainView.frame.size)
-        UIImage(named: imageName)!.draw(in: self.mainView.bounds)
+        i.draw(in: self.mainView.bounds)
         let image: UIImage! = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        
-        UIView.animate(withDuration: 0.3, animations: {
-            
-            self.mainView.backgroundColor = UIColor(patternImage: image)
-        })
         mainBackgroundColor = UIColor(patternImage: image)
+        UIView.animate(withDuration: 0, animations: {
+            self.mainView.backgroundColor = mainBackgroundColor
+        })
+        
+        print("setImageDone")
+    }
+    
+    func setBackgroundImage(){
+        let acode = curAirport?.getCode()
+        let url = "http://ec2-54-158-29-175.compute-1.amazonaws.com/bonsai/getBackgroundPhoto.php?code="+acode!
+        print(url)
+        let pictureURL = URL(string: url)!
+        // Creating a session object with the default configuration.
+        // You can read more about it here https://developer.apple.com/reference/foundation/urlsessionconfiguration
+        let session = URLSession(configuration: .default)
+        
+        // Define a download task. The download task will download the contents of the URL as a Data object and then you can do what you wish with that data.
+        
+        var image = UIImage(named: "city_night")
+        let downloadPicTask = session.dataTask(with: pictureURL) { (data, response, error) in
+            // The download has finished.
+            if let e = error {
+                print("Error downloading cat picture: \(e)")
+            } else {
+                // No errors found.
+                // It would be weird if we didn't have a response, so check for that too.
+                if let res = response as? HTTPURLResponse {
+                    //print("Downloaded background picture with response code \(res.statusCode)")
+                    if let imageData = data {
+                        // Finally convert that Data into an image and do what you wish with it.
+                        image = UIImage(data: imageData)
+                        self.setImageToCity(i: image!)
+                    } else {
+                        print("Couldn't get background image: Image is nil")
+                    }
+                } else {
+                    print("Couldn't get background image response code for some reason")
+                }
+            }
+            
+            DispatchQueue.main.sync(execute: {
+                self.setImageToCity(i: image!)
+            })
+            
+
+            
+        }
+        
+        downloadPicTask.resume()
         
     }
     

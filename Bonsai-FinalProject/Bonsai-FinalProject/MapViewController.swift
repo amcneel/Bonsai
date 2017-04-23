@@ -139,7 +139,7 @@ class MapViewController: BonsaiViewController{
                 
                 self.locationButton.isEnabled = true
                 self.searchButton.isEnabled = true
-                self.setImageToCity()
+                self.setBackgroundImage()
                 self.updateDisplay()
             }
         }
