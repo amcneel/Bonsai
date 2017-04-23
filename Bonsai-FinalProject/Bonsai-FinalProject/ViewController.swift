@@ -71,7 +71,7 @@ class ViewController: BonsaiViewController {
             activityIndicator.startAnimating()
             updateFadeIn()
             bonsaiInstallationCheck()
-            updateDisplay()
+            safeUpdateDisplay()
             
         }
         
@@ -110,9 +110,7 @@ class ViewController: BonsaiViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-
-        //we can't set the bezierborder here because the constraints don't update until after viewdidload
-        //we set bezierborder in updateWaitTimeDisplay
+        update()
         
     }
     

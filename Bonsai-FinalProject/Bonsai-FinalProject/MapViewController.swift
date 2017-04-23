@@ -41,14 +41,14 @@ class MapViewController: BonsaiViewController{
         searchTableView = theSearchTableView
         
         super.viewDidLoad()
-        updateDisplay()
+        safeUpdateDisplay()
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         mainView = theMainView
         mainView.backgroundColor = mainBackgroundColor
-        updateDisplay()
+        safeUpdateDisplay()
     }
     
     override func didReceiveMemoryWarning() {

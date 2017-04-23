@@ -333,6 +333,15 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
         showSearchBar()
     }
     
+    func safeUpdateDisplay(){
+        if curAirport == nil{
+            update()
+        }
+        else{
+            updateDisplay()
+        }
+    }
+    
     @IBAction func useCurrentLocationButtonPressed(_ sender: UIButton) {
         curAirport = nil
         airportType = .location
