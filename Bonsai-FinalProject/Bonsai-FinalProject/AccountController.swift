@@ -24,18 +24,15 @@ class AccountController: UIViewController, MFMessageComposeViewControllerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let user = FIRAuth.auth()?.currentUser
         if FBSDKAccessToken.current() != nil{
             loggedIn = true
             loggedAsFB = true
             changeButtonDisplay()
-            print(user?.displayName as Any)
         }
         else if FIRAuth.auth()?.currentUser != nil {
             loggedAsFB = false
             loggedIn = true
             changeButtonDisplay()
-            print(user?.email as Any)
         }
         else{
             loggedIn = false
@@ -58,7 +55,15 @@ class AccountController: UIViewController, MFMessageComposeViewControllerDelegat
     }
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         if ((error) != nil){
-            print(error.localizedDescription)
+            //print(error.localizedDescription)
+            let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            present(alertController, animated: true, completion: nil)
+        }
+        else if result.isCancelled{
+            return
         }
         else{
             let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
@@ -72,7 +77,14 @@ class AccountController: UIViewController, MFMessageComposeViewControllerDelegat
     }
     
     @IBAction func createBtnTouched(_ sender: UIButton) {
-        
+        if createAcctBtn.currentTitle == "Logout"{
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Initial")
+            self.present(vc!, animated: true, completion: nil)
+        }
+        else{
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Signin")
+            self.present(vc!, animated: true, completion: nil)
+        }
     }
     
     
@@ -83,12 +95,13 @@ class AccountController: UIViewController, MFMessageComposeViewControllerDelegat
         }
         else if(loggedIn){
             self.loginButton.isHidden = true
-            
-            self.createAcctBtn.isHidden = true
+            self.createAcctBtn.isHidden = false
+            createAcctBtn.setTitle("Logout", for: .normal)
         }
         else{
             self.loginButton.isHidden = false
             self.createAcctBtn.isHidden = false
+            createAcctBtn.setTitle("Create Account", for: .normal)
         }
     }
     
