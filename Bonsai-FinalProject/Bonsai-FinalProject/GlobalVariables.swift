@@ -6,6 +6,7 @@
 //  Copyright © 2017 wustl. All rights reserved.
 //
 
+import UIKit
 import CoreLocation
 
 enum AirportType{
@@ -13,6 +14,7 @@ enum AirportType{
     case searchbar
 }
 
+var mainBackgroundColor:UIColor = UIColor(patternImage: UIImage(named:"city_night")!)
 var airports:[Airport] = []
 var curAirport:Airport? //the most important global variable - it is the current airport that the user has selected or used location to get
 var airportType:AirportType = .location //used in update, determines which function to use when determining the wait times

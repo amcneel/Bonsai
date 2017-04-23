@@ -39,7 +39,9 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
                 
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        loadAirportsFromCSV()
+        if airports.count == 0{
+            loadAirportsFromCSV()
+        }
         //the main function at the moment is locationManager, as all the calculations happen once we know where we are
         //TODO: have the location manager run asyncronously, so that it doesn't freeze the app
         locationManager.delegate = self
@@ -67,7 +69,8 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
         searchButton.addTarget(self, action: #selector(searchButtonPressed), for: .touchUpInside)
         locationButton.addTarget(self, action: #selector(useCurrentLocationButtonPressed), for: .touchUpInside)
         
-        update()
+        
+        mainView.backgroundColor = mainBackgroundColor
     }
     
     func loadAirportsFromCSV(){
@@ -87,7 +90,8 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
                 let along:CLLocationDegrees = Double(csv[rowIndex][2])!
                 let aloc = CLLocation(latitude: alat, longitude: along)
                 let aterm:String = csv[rowIndex][5]
-                let a = Airport(n: aname, c: acode, l: aloc, t: aterm)
+                let anumpics:Int = Int(csv[rowIndex][6])!
+                let a = Airport(n: aname, c: acode, l: aloc, t: aterm, p: anumpics)
                 airports.append(a)
             }
             
@@ -299,8 +303,30 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
         
     }
     
+    func setImageToCity(){
+        let airCode = curAirport?.getCode().lowercased()
+        let numPic = curAirport?.getNumPics()
+        let currBackNum = Int(arc4random_uniform(UInt32(numPic!)) + 1)
+        let imageName = airCode! + String(currBackNum) + ".jpg"
+        UIGraphicsBeginImageContext(self.mainView.frame.size)
+        UIImage(named: imageName)!.draw(in: self.mainView.bounds)
+        let image: UIImage! = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            
+            self.mainView.backgroundColor = UIColor(patternImage: image)
+        })
+        mainBackgroundColor = UIColor(patternImage: image)
+        
+    }
+    
     func update(){
         preconditionFailure("function 'update' must be overridden")
+    }
+    
+    func updateDisplay(){
+        preconditionFailure("function 'updateDisplay' must be overridden")
     }
     
     @IBAction func searchButtonPressed(_ sender: Any) {

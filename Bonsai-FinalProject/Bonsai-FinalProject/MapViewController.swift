@@ -25,6 +25,10 @@ class MapViewController: BonsaiViewController{
     var terms = curAirport?.getTerm()
     var counter = 0
     
+    override func viewWillAppear(_ animated: Bool) {
+        mainView = theMainView
+        mainView.backgroundColor = mainBackgroundColor
+    }
     
     override func viewDidLoad(){
         
@@ -37,13 +41,14 @@ class MapViewController: BonsaiViewController{
         searchTableView = theSearchTableView
         
         super.viewDidLoad()
-        
-        update()
+        updateDisplay()
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        update()
+        mainView = theMainView
+        mainView.backgroundColor = mainBackgroundColor
+        updateDisplay()
     }
     
     override func didReceiveMemoryWarning() {
@@ -57,7 +62,7 @@ class MapViewController: BonsaiViewController{
         if (counter>0){
             counter-=1
             pageControl.currentPage = counter
-            update()
+            updateDisplay()
         }
         
     }
@@ -67,11 +72,13 @@ class MapViewController: BonsaiViewController{
         if (counter<pageControl.numberOfPages-1){
             counter+=1
             pageControl.currentPage = counter
-            update()
+            updateDisplay()
         }
     }
     
-    func updateDisplay(){
+    override func updateDisplay(){
+        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
         codeLabel.text = curAirport?.getCode()
         terms = curAirport?.getTerm()
         let count = terms?.components(separatedBy: ",").count
@@ -129,10 +136,10 @@ class MapViewController: BonsaiViewController{
             
             DispatchQueue.main.async {
                 isUpdating = false
-                self.activityIndicator.stopAnimating()
-                self.activityIndicator.isHidden = true
+                
                 self.locationButton.isEnabled = true
                 self.searchButton.isEnabled = true
+                self.setImageToCity()
                 self.updateDisplay()
             }
         }

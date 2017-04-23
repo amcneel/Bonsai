@@ -45,9 +45,20 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
         datePicker.addTarget(self, action: #selector(AlarmView.datePickerValueChanged(sender:)), for: UIControlEvents.valueChanged)
         alarmTime.text = "Your alarm is not scheduled."
         airportCode.text = curAirport?.getCode()
+        updateDisplay()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        mainView = theMainView
+        mainView.backgroundColor = mainBackgroundColor
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
-        update()
+        if !isUpdating{
+            mainView = theMainView
+            mainView.backgroundColor = mainBackgroundColor
+            updateDisplay()
+        }
     }
     
     func datePickerValueChanged (sender: UIDatePicker) {
@@ -73,7 +84,9 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
         // Dispose of any resources that can be recreated.
     }
     
-    func updateDisplay(){
+    override func updateDisplay(){
+        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
         self.airportCode.text = curAirport?.getCode()
     }
     
@@ -101,10 +114,9 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
             
             DispatchQueue.main.async {
                 isUpdating = false
-                self.activityIndicator.stopAnimating()
-                self.activityIndicator.isHidden = true
                 self.locationButton.isEnabled = true
                 self.searchButton.isEnabled = true
+                self.setImageToCity()
                 self.updateDisplay()
             }
         }
