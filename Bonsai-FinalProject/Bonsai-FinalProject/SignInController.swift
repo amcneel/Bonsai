@@ -9,21 +9,31 @@
 import CoreLocation
 import UIKit
 import FirebaseAuth
+import FBSDKCoreKit
 import FBSDKLoginKit
 
 class SignInController: UIViewController, FBSDKLoginButtonDelegate{
+
     
+    @IBOutlet var loginButton: FBSDKLoginButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginButton.delegate = self
     }
     override func viewDidAppear(_ animated: Bool) {
         if FBSDKAccessToken.current() != nil{
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
             self.present(vc!, animated: true, completion: nil)
-            }
         }
+    }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        let firebaseAuth = FIRAuth.auth()
+        do {
+            try firebaseAuth?.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
         return
     }
     
@@ -35,8 +45,8 @@ class SignInController: UIViewController, FBSDKLoginButtonDelegate{
             let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
             FIRAuth.auth()?.signIn(with: credential) { (user, error) in
             if error != nil {
-            print(error!)
-            return
+                print(error!)
+                return
             }
             else{
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")

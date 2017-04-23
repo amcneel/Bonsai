@@ -25,9 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FIRApp.configure()
         
-        
+        //for fb login
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        
         if(FBSDKAccessToken.current() != nil){
             let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let initialViewController : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "Home") as UIViewController
@@ -35,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = initialViewController
             self.window?.makeKeyAndVisible()
         }
+        
         // iOS 10 support
         if #available(iOS 10, *) {
             UNUserNotificationCenter.current().requestAuthorization(options:[.badge, .alert, .sound]){ (granted, error) in }
