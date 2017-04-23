@@ -15,17 +15,33 @@ import FirebaseAuth
 
 //set up logout button so that it disconnects you from the SQL database, not just segways you back to the main page
 class AccountController: UIViewController, MFMessageComposeViewControllerDelegate, MFMailComposeViewControllerDelegate, FBSDKLoginButtonDelegate{
-    let loggedAsFB = false
+    
+    var loggedAsFB = false
+    var loggedIn = false
+    
     @IBOutlet var loginButton: FBSDKLoginButton!
+    @IBOutlet var logoutBtn: TitleButton!
+    @IBOutlet var createAcctBtn: TitleButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let user = FIRAuth.auth()?.currentUser
         if FBSDKAccessToken.current() != nil{
+            loggedIn = true
+            loggedAsFB = true
+            changeButtonDisplay()
             print(user?.displayName as Any)
         }
-        else{
+        else if FIRAuth.auth()?.currentUser != nil {
+            loggedAsFB = false
+            loggedIn = true
+            changeButtonDisplay()
             print(user?.email as Any)
+        }
+        else{
+            loggedIn = false
+            loggedAsFB = false
+            changeButtonDisplay()
         }
         loginButton.delegate = self
     }
@@ -56,17 +72,37 @@ class AccountController: UIViewController, MFMessageComposeViewControllerDelegat
         }
     }
     
-    @IBAction func logoutBtnClicked(_ sender: UIButton) {
+    
+    @IBAction func logoutBtnClicked(_ sender: TitleButton) {
         let firebaseAuth = FIRAuth.auth()
-            do {
-                try firebaseAuth?.signOut()
-            } catch let signOutError as NSError {
-                print ("Error signing out: %@", signOutError)
-            }
+        do {
+            try firebaseAuth?.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+        
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "Initial")
-            self.present(vc!, animated: true, completion: nil)
+        self.present(vc!, animated: true, completion: nil)
     }
     
+    
+    func changeButtonDisplay(){
+        if(loggedAsFB){
+            self.logoutBtn.isHidden = true
+            self.loginButton.isHidden = false
+            self.createAcctBtn.isHidden = true
+        }
+        else if(loggedIn){
+            self.loginButton.isHidden = true
+            self.logoutBtn.isHidden = false
+            self.createAcctBtn.isHidden = true
+        }
+        else{
+            self.loginButton.isHidden = false
+            self.logoutBtn.isHidden = true
+            self.createAcctBtn.isHidden = false
+        }
+    }
     
     
     

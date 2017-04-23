@@ -39,7 +39,9 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
                 
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        loadAirportsFromCSV()
+        if airports.count == 0{
+            loadAirportsFromCSV()
+        }
         //the main function at the moment is locationManager, as all the calculations happen once we know where we are
         //TODO: have the location manager run asyncronously, so that it doesn't freeze the app
         locationManager.delegate = self
@@ -69,8 +71,6 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
         
         
         mainView.backgroundColor = mainBackgroundColor
-        
-        update()
     }
     
     func loadAirportsFromCSV(){
@@ -312,12 +312,21 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
         UIImage(named: imageName)!.draw(in: self.mainView.bounds)
         let image: UIImage! = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            
+            self.mainView.backgroundColor = UIColor(patternImage: image)
+        })
         mainBackgroundColor = UIColor(patternImage: image)
-        self.mainView.backgroundColor = mainBackgroundColor
+        
     }
     
     func update(){
         preconditionFailure("function 'update' must be overridden")
+    }
+    
+    func updateDisplay(){
+        preconditionFailure("function 'updateDisplay' must be overridden")
     }
     
     @IBAction func searchButtonPressed(_ sender: Any) {
