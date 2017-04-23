@@ -26,6 +26,8 @@ class InitialViewController: UIViewController{
         super.viewDidLoad()
     }
     
+    @IBAction func signIn(_ sender: UIButton) {
+    }
     
     
     

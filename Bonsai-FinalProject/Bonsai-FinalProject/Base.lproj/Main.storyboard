@@ -1,11 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qLp-DW-D8K">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qLp-DW-D8K">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -266,15 +268,27 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4f-dQ-kxS">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This will be an info page.  TODO: figure out how to make the whole page scroll" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9b-KU-ZLb">
-                                                <rect key="frame" x="77" y="0.0" width="221" height="145"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tree2.png" translatesAutoresizingMaskIntoConstraints="NO" id="zsL-Ns-sYm">
+                                                <rect key="frame" x="0.0" y="8" width="375" height="639"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Bonsai!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6a-KG-YL0">
+                                                <rect key="frame" x="44" y="33" width="286" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="26"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This can show: credits (to pixabay and icons 8), what bonsai is, how to use app" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDb-TR-4Gh">
-                                                <rect key="frame" x="115" y="278" width="144" height="183"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrJ-cy-qRQ">
+                                                <rect key="frame" x="20" y="81" width="324" height="110"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">Bonsai is app made to save you time. Using our one of a kind calculation technology we provide you with live up to date wait time data for airports across the world</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G39-ze-I7H">
+                                                <rect key="frame" x="161" y="215" width="42" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -496,7 +510,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ubi-87-vxx" kind="show" id="1zA-GY-C8q"/>
+                                    <action selector="signIn:" destination="qLp-DW-D8K" eventType="touchUpInside" id="bwQ-zW-3lg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvG-Ud-Yra" customClass="TitleButton" customModule="Bonsai_FinalProject" customModuleProvider="target">
@@ -581,49 +595,43 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w36-cT-jaA">
-                                <rect key="frame" x="271" y="192" width="70" height="73"/>
-                                <state key="normal" image="Messages.png"/>
+                                <rect key="frame" x="274" y="194" width="70" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="D1S-Qk-afB"/>
+                                    <constraint firstAttribute="width" constant="70" id="e4C-Rl-BD5"/>
+                                </constraints>
+                                <state key="normal" title="texting" image="Messages.png"/>
                                 <connections>
                                     <action selector="messagesClicked:" destination="0vn-RD-Jpo" eventType="touchUpInside" id="PdL-AH-pej"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SrJ-6T-Z3n">
-                                <rect key="frame" x="150" y="196" width="74" height="69"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="69" id="wte-oR-0ay"/>
-                                </constraints>
-                                <state key="normal" title="Facebook" image="fb.png"/>
-                                <connections>
-                                    <action selector="fbButtonClicked:" destination="0vn-RD-Jpo" eventType="touchUpInside" id="vmM-pe-IZo"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TP7-nq-4em">
-                                <rect key="frame" x="40" y="192" width="70" height="73"/>
+                                <rect key="frame" x="38" y="194" width="70" height="72"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="szo-xb-V7h"/>
+                                    <constraint firstAttribute="width" constant="70" id="1kJ-o6-PLS"/>
                                 </constraints>
-                                <state key="normal" image="twitter.png"/>
+                                <state key="normal" title="Twitter" image="twitter.png"/>
                                 <connections>
                                     <action selector="twitterButtonClicked:" destination="0vn-RD-Jpo" eventType="touchUpInside" id="Pr8-Er-dDd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Axc-Ft-O6M">
-                                <rect key="frame" x="214" y="297" width="70" height="73"/>
-                                <state key="normal" image="whatsapp.png"/>
+                                <rect key="frame" x="214" y="299" width="70" height="70"/>
+                                <state key="normal" title="whatsapp" image="whatsapp.png"/>
                                 <connections>
                                     <action selector="whatsAppTouched:" destination="0vn-RD-Jpo" eventType="touchUpInside" id="KtW-cf-eo5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBp-NH-vj3" customClass="FBSDKLoginButton">
                                 <rect key="frame" x="116" y="491" width="142" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="142" id="ajQ-qY-bUH"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGk-Br-bQ9" customClass="TitleButton" customModule="Bonsai_FinalProject" customModuleProvider="target">
                                 <rect key="frame" x="116" y="533" width="142" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="142" id="mBr-VR-rm3"/>
-                                </constraints>
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -632,44 +640,51 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWw-bp-hUY">
-                                <rect key="frame" x="88" y="297" width="70" height="73"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="XGG-fP-AHd"/>
-                                </constraints>
-                                <state key="normal" image="mail.png"/>
+                                <rect key="frame" x="88" y="298" width="70" height="72"/>
+                                <state key="normal" title="email" image="mail.png"/>
                                 <connections>
                                     <action selector="emailButton:" destination="0vn-RD-Jpo" eventType="touchUpInside" id="tAm-6V-TBG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SrJ-6T-Z3n">
+                                <rect key="frame" x="153" y="194" width="70" height="72"/>
+                                <state key="normal" title="Facebook" image="fb.png"/>
+                                <connections>
+                                    <action selector="fbButtonClicked:" destination="0vn-RD-Jpo" eventType="touchUpInside" id="vmM-pe-IZo"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.16664263469999999" green="0.55679242230000003" blue="0.28377072170000001" alpha="0.65831316019999997" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="MbA-5y-SxE" firstAttribute="bottom" secondItem="g6N-Z5-S7w" secondAttribute="top" id="37v-BG-Nmi"/>
-                            <constraint firstItem="Axc-Ft-O6M" firstAttribute="leading" secondItem="zWw-bp-hUY" secondAttribute="trailing" constant="56" id="4Sv-Gx-k5v"/>
-                            <constraint firstItem="SrJ-6T-Z3n" firstAttribute="top" secondItem="eqs-HL-yfY" secondAttribute="bottom" constant="176" id="F5P-UM-buS"/>
-                            <constraint firstItem="TP7-nq-4em" firstAttribute="leading" secondItem="faY-zF-rXj" secondAttribute="leadingMargin" constant="24" id="F66-5j-Tcx"/>
-                            <constraint firstItem="SrJ-6T-Z3n" firstAttribute="bottom" secondItem="w36-cT-jaA" secondAttribute="bottom" id="Hh2-Z8-0rW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Axc-Ft-O6M" secondAttribute="trailing" constant="75" id="JMU-rr-ozn"/>
-                            <constraint firstItem="g6N-Z5-S7w" firstAttribute="top" secondItem="BGk-Br-bQ9" secondAttribute="bottom" constant="51" id="NmP-uS-c6i"/>
-                            <constraint firstItem="zWw-bp-hUY" firstAttribute="bottom" secondItem="Axc-Ft-O6M" secondAttribute="bottom" id="PaY-7Q-8Nx"/>
-                            <constraint firstItem="zWw-bp-hUY" firstAttribute="centerY" secondItem="faY-zF-rXj" secondAttribute="centerY" id="QGl-Pv-WBU"/>
-                            <constraint firstItem="TP7-nq-4em" firstAttribute="top" secondItem="w36-cT-jaA" secondAttribute="top" id="VUT-SM-r66"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="w36-cT-jaA" secondAttribute="trailing" constant="18" id="ViD-xO-TvQ"/>
-                            <constraint firstItem="w36-cT-jaA" firstAttribute="leading" secondItem="SrJ-6T-Z3n" secondAttribute="trailing" constant="47" id="WP5-CV-pS4"/>
-                            <constraint firstItem="TP7-nq-4em" firstAttribute="bottom" secondItem="SrJ-6T-Z3n" secondAttribute="bottom" id="XPi-a2-5ce"/>
-                            <constraint firstItem="zWw-bp-hUY" firstAttribute="leading" secondItem="faY-zF-rXj" secondAttribute="leadingMargin" constant="72" id="XRA-qC-kDZ"/>
-                            <constraint firstItem="MbA-5y-SxE" firstAttribute="top" secondItem="faY-zF-rXj" secondAttribute="top" id="Ydx-kt-dub"/>
-                            <constraint firstItem="MbA-5y-SxE" firstAttribute="leading" secondItem="faY-zF-rXj" secondAttribute="leading" id="e7Z-zF-NMC"/>
-                            <constraint firstItem="SrJ-6T-Z3n" firstAttribute="leading" secondItem="TP7-nq-4em" secondAttribute="trailing" constant="40" id="eJY-Au-QhG"/>
-                            <constraint firstItem="zWw-bp-hUY" firstAttribute="top" secondItem="TP7-nq-4em" secondAttribute="bottom" constant="32" id="ggK-Ia-7Ia"/>
-                            <constraint firstItem="BGk-Br-bQ9" firstAttribute="centerX" secondItem="faY-zF-rXj" secondAttribute="centerX" id="k1d-tx-pri"/>
-                            <constraint firstItem="TP7-nq-4em" firstAttribute="top" secondItem="eqs-HL-yfY" secondAttribute="bottom" constant="172" id="lvT-b4-xC3"/>
-                            <constraint firstItem="BGk-Br-bQ9" firstAttribute="centerX" secondItem="SrJ-6T-Z3n" secondAttribute="centerX" id="m08-cc-N5Z"/>
-                            <constraint firstItem="aBp-NH-vj3" firstAttribute="leading" secondItem="BGk-Br-bQ9" secondAttribute="leading" id="mMQ-78-kBz"/>
-                            <constraint firstItem="aBp-NH-vj3" firstAttribute="trailing" secondItem="BGk-Br-bQ9" secondAttribute="trailing" id="s92-vZ-rgO"/>
-                            <constraint firstItem="BGk-Br-bQ9" firstAttribute="centerX" secondItem="MbA-5y-SxE" secondAttribute="centerX" id="sAG-nA-9gY"/>
-                            <constraint firstItem="BGk-Br-bQ9" firstAttribute="top" secondItem="aBp-NH-vj3" secondAttribute="bottom" constant="8" symbolic="YES" id="sIR-6W-cX9"/>
-                            <constraint firstItem="zWw-bp-hUY" firstAttribute="top" secondItem="Axc-Ft-O6M" secondAttribute="top" id="zup-dJ-tJx"/>
+                            <constraint firstItem="aBp-NH-vj3" firstAttribute="trailing" secondItem="BGk-Br-bQ9" secondAttribute="trailing" id="2lY-Hi-c41"/>
+                            <constraint firstItem="w36-cT-jaA" firstAttribute="top" secondItem="eqs-HL-yfY" secondAttribute="bottom" constant="174" id="5IK-8f-WVc"/>
+                            <constraint firstItem="w36-cT-jaA" firstAttribute="firstBaseline" secondItem="TP7-nq-4em" secondAttribute="firstBaseline" id="66d-Ab-4GG"/>
+                            <constraint firstItem="zWw-bp-hUY" firstAttribute="leading" secondItem="faY-zF-rXj" secondAttribute="leadingMargin" constant="72" id="7EQ-KS-fN9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Axc-Ft-O6M" secondAttribute="trailing" constant="75" id="7t0-2m-0XZ"/>
+                            <constraint firstItem="Axc-Ft-O6M" firstAttribute="firstBaseline" secondItem="zWw-bp-hUY" secondAttribute="firstBaseline" id="GyH-u9-zZ3"/>
+                            <constraint firstItem="zWw-bp-hUY" firstAttribute="top" secondItem="TP7-nq-4em" secondAttribute="bottom" constant="32" id="Kh8-81-a9q"/>
+                            <constraint firstItem="zWw-bp-hUY" firstAttribute="width" secondItem="faY-zF-rXj" secondAttribute="height" multiplier="70:667" id="Kx2-H6-Io0"/>
+                            <constraint firstItem="w36-cT-jaA" firstAttribute="firstBaseline" secondItem="SrJ-6T-Z3n" secondAttribute="firstBaseline" id="LkS-6f-hZR"/>
+                            <constraint firstItem="aBp-NH-vj3" firstAttribute="leading" secondItem="BGk-Br-bQ9" secondAttribute="leading" id="McA-kd-OKQ"/>
+                            <constraint firstItem="w36-cT-jaA" firstAttribute="baseline" secondItem="TP7-nq-4em" secondAttribute="baseline" id="Mku-Kk-1ho"/>
+                            <constraint firstItem="SrJ-6T-Z3n" firstAttribute="leading" secondItem="TP7-nq-4em" secondAttribute="trailing" constant="45" id="Q6K-4u-FyR"/>
+                            <constraint firstAttribute="trailing" secondItem="MbA-5y-SxE" secondAttribute="trailing" id="Qzh-kd-dQs"/>
+                            <constraint firstItem="g6N-Z5-S7w" firstAttribute="top" secondItem="BGk-Br-bQ9" secondAttribute="bottom" constant="51" id="RLO-fG-Kkn"/>
+                            <constraint firstItem="Axc-Ft-O6M" firstAttribute="leading" secondItem="zWw-bp-hUY" secondAttribute="trailing" constant="56" id="Rvh-GZ-ahp"/>
+                            <constraint firstItem="Axc-Ft-O6M" firstAttribute="top" secondItem="w36-cT-jaA" secondAttribute="bottom" constant="33" id="Uze-Oh-T4K"/>
+                            <constraint firstItem="w36-cT-jaA" firstAttribute="leading" secondItem="SrJ-6T-Z3n" secondAttribute="trailing" constant="51" id="WPb-Yp-Dgl"/>
+                            <constraint firstItem="zWw-bp-hUY" firstAttribute="centerY" secondItem="faY-zF-rXj" secondAttribute="centerY" id="dsb-wE-dQc"/>
+                            <constraint firstItem="MbA-5y-SxE" firstAttribute="centerX" secondItem="BGk-Br-bQ9" secondAttribute="centerX" id="eRr-nO-sLg"/>
+                            <constraint firstItem="w36-cT-jaA" firstAttribute="top" secondItem="SrJ-6T-Z3n" secondAttribute="top" id="g5C-fI-Ong"/>
+                            <constraint firstItem="BGk-Br-bQ9" firstAttribute="top" secondItem="aBp-NH-vj3" secondAttribute="bottom" constant="8" symbolic="YES" id="iHj-J5-s8l"/>
+                            <constraint firstItem="w36-cT-jaA" firstAttribute="top" secondItem="TP7-nq-4em" secondAttribute="top" id="kIq-uM-eS1"/>
+                            <constraint firstItem="Axc-Ft-O6M" firstAttribute="baseline" secondItem="zWw-bp-hUY" secondAttribute="baseline" id="kfk-x0-83w"/>
+                            <constraint firstItem="MbA-5y-SxE" firstAttribute="leading" secondItem="faY-zF-rXj" secondAttribute="leading" id="ldL-xp-5YZ"/>
+                            <constraint firstItem="MbA-5y-SxE" firstAttribute="bottom" secondItem="g6N-Z5-S7w" secondAttribute="top" id="oeY-do-Vzu"/>
+                            <constraint firstItem="MbA-5y-SxE" firstAttribute="top" secondItem="faY-zF-rXj" secondAttribute="top" id="ra8-nA-bva"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="w36-cT-jaA" secondAttribute="trailing" constant="15" id="rg1-WC-ZFD"/>
+                            <constraint firstItem="TP7-nq-4em" firstAttribute="leading" secondItem="faY-zF-rXj" secondAttribute="leadingMargin" constant="22" id="s42-Yw-37o"/>
+                            <constraint firstItem="w36-cT-jaA" firstAttribute="baseline" secondItem="SrJ-6T-Z3n" secondAttribute="baseline" id="zfh-t7-Xgk"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" image="User Filled-25.png" id="vsf-GG-2QE"/>
