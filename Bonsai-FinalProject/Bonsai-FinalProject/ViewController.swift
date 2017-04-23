@@ -59,15 +59,19 @@ class ViewController: BonsaiViewController {
     var borderBackground:CAShapeLayer? = nil
     var borderFront:CAShapeLayer? = nil
     
+    override func viewWillAppear(_ animated: Bool) {
+        mainView = theMainView
+        mainView.backgroundColor = mainBackgroundColor
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         if !isUpdating{
             activityIndicator.isHidden = false
             activityIndicator.startAnimating()
             updateFadeIn()
             bonsaiInstallationCheck()
-            updateWaitTimeAndDisplay()
-            mainView = theMainView
-            mainView.backgroundColor = mainBackgroundColor
+            updateDisplay()
+            
         }
         
     }
@@ -83,7 +87,7 @@ class ViewController: BonsaiViewController {
         //set background image
         
         //set the timer to poll once a minute
-        updateTimer = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(updateWaitTimeAndDisplay), userInfo: nil, repeats: true)
+        updateTimer = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(updateDisplay), userInfo: nil, repeats: true)
         
         //set the text fields to blank and start animating the activity indicator until the airport data is loaded
         initialActivityIndicator.startAnimating()
@@ -105,7 +109,7 @@ class ViewController: BonsaiViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        
+        update()
         //we can't set the bezierborder here because the constraints don't update until after viewdidload
         //we set bezierborder in updateWaitTimeDisplay
         
@@ -212,7 +216,6 @@ class ViewController: BonsaiViewController {
     }
     
     override func update(){
-        
         isUpdating = true
         if !firstTimeLoading{
             activityIndicator.isHidden = false
@@ -244,14 +247,14 @@ class ViewController: BonsaiViewController {
                 self.bonsaiInstallationCheck()
                 self.updateFadeIn()
                 self.setImageToCity()
-                self.updateWaitTimeAndDisplay()
+                self.updateDisplay()
             }
         }
         
         
     }
     
-    func updateWaitTimeAndDisplay(){
+    override func updateDisplay(){
         
         activityIndicator.stopAnimating()
         activityIndicator.isHidden = true
