@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import FirebaseInstanceID
 
 //the view that displays the wait time
 //uses global variables stored in globalvariables.swift
@@ -109,7 +110,7 @@ class ViewController: BonsaiViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        update()
+
         //we can't set the bezierborder here because the constraints don't update until after viewdidload
         //we set bezierborder in updateWaitTimeDisplay
         
