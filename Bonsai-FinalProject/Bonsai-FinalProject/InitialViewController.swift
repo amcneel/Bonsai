@@ -21,6 +21,7 @@ class InitialViewController: UIViewController{
     override func viewDidLoad() {
         //loads the airports from the csv into the var airports
         super.viewDidLoad()
+<<<<<<< HEAD
         loadAirportsFromCSV()
     }
     
@@ -49,8 +50,12 @@ class InitialViewController: UIViewController{
         } catch{
             print(error)
         }
+=======
+>>>>>>> master
         
     }
+    
+    
         
     
 }

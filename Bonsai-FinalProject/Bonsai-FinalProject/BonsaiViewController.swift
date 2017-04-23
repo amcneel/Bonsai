@@ -39,9 +39,7 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
                 
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
-        
+        loadAirportsFromCSV()
         //the main function at the moment is locationManager, as all the calculations happen once we know where we are
         //TODO: have the location manager run asyncronously, so that it doesn't freeze the app
         locationManager.delegate = self
@@ -75,7 +73,32 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
         update()
     }
     
-    
+    func loadAirportsFromCSV(){
+        
+        //make sure you have a file called "airports.csv" in the same main directory, not the assets folder
+        
+        guard let csvPath = Bundle.main.path(forResource: "airports", ofType: "csv") else { return }
+        do {
+            let csvData = try String(contentsOfFile: csvPath, encoding: String.Encoding.macOSRoman)
+            let csv = csvData.csvRows()
+            let numRows = csv.count
+            
+            for rowIndex in 1..<numRows-1{
+                let acode:String = csv[rowIndex][0]
+                let aname:String = csv[rowIndex][1]
+                let alat:CLLocationDegrees = Double(csv[rowIndex][3])!
+                let along:CLLocationDegrees = Double(csv[rowIndex][2])!
+                let aloc = CLLocation(latitude: alat, longitude: along)
+                let aterm:String = csv[rowIndex][5]
+                let a = Airport(n: aname, c: acode, l: aloc, t: aterm)
+                airports.append(a)
+            }
+            
+        } catch{
+            print(error)
+        }
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -84,6 +107,7 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
     
     func getClosestAirport(location:CLLocation)->Airport{
         var minDistance = CLLocationDistance(Double.infinity)
+        
         var minAirport = airports[0]
         for a in airports{
             let l = a.getLoc()
