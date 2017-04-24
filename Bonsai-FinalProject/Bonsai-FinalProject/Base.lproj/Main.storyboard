@@ -34,46 +34,6 @@
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="sbv-n1-g11">
                                         <rect key="frame" x="170" y="293" width="37" height="37"/>
                                     </activityIndicatorView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7b-pg-Zbe">
-                                        <rect key="frame" x="-1" y="0.0" width="376" height="621"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bonsai is not currently installed at" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tzb-qq-B5g">
-                                                <rect key="frame" x="22" y="181" width="332" height="67"/>
-                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oed-p2-kWK">
-                                                <rect key="frame" x="8" y="247" width="360" height="55"/>
-                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="21"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuF-CC-YIW" customClass="BonsaiButton" customModule="Bonsai_FinalProject" customModuleProvider="target">
-                                                <rect key="frame" x="22" y="336" width="332" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="ZMe-40-Ggv"/>
-                                                    <constraint firstAttribute="width" constant="332" id="uhl-ZO-zd4"/>
-                                                </constraints>
-                                                <connections>
-                                                    <action selector="requestBonsaiButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0La-AT-3ae"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="oed-p2-kWK" firstAttribute="leading" secondItem="h7b-pg-Zbe" secondAttribute="leading" constant="8" id="4go-WE-LqU"/>
-                                            <constraint firstItem="oed-p2-kWK" firstAttribute="centerX" secondItem="h7b-pg-Zbe" secondAttribute="centerX" id="BmK-YG-kze"/>
-                                            <constraint firstItem="Tzb-qq-B5g" firstAttribute="centerX" secondItem="h7b-pg-Zbe" secondAttribute="centerX" id="EBE-bQ-7e1"/>
-                                            <constraint firstItem="tuF-CC-YIW" firstAttribute="top" secondItem="oed-p2-kWK" secondAttribute="bottom" constant="34" id="Ivz-GO-Qol"/>
-                                            <constraint firstAttribute="trailing" secondItem="Tzb-qq-B5g" secondAttribute="trailing" constant="22" id="N1l-qt-62z"/>
-                                            <constraint firstItem="Tzb-qq-B5g" firstAttribute="leading" secondItem="h7b-pg-Zbe" secondAttribute="leading" constant="22" id="OGb-NB-ZMB"/>
-                                            <constraint firstAttribute="trailing" secondItem="oed-p2-kWK" secondAttribute="trailing" constant="8" id="QFW-HQ-ioF"/>
-                                            <constraint firstItem="tuF-CC-YIW" firstAttribute="centerX" secondItem="h7b-pg-Zbe" secondAttribute="centerX" id="dYl-Vw-2uc"/>
-                                            <constraint firstItem="oed-p2-kWK" firstAttribute="centerY" secondItem="h7b-pg-Zbe" secondAttribute="centerY" constant="-36" id="fE5-us-GLw"/>
-                                            <constraint firstItem="oed-p2-kWK" firstAttribute="top" secondItem="Tzb-qq-B5g" secondAttribute="bottom" constant="-1" id="lW8-ZF-IY8"/>
-                                        </constraints>
-                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ro-lR-Mk4">
                                         <rect key="frame" x="-1" y="0.0" width="376" height="621"/>
                                         <subviews>
@@ -123,6 +83,51 @@
                                             <constraint firstItem="JmU-5f-Qsn" firstAttribute="centerY" secondItem="3ro-lR-Mk4" secondAttribute="centerY" id="ekr-aQ-dAQ"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7b-pg-Zbe">
+                                        <rect key="frame" x="-1" y="0.0" width="376" height="621"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bonsai is not currently installed at" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tzb-qq-B5g">
+                                                <rect key="frame" x="22" y="181" width="332" height="67"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oed-p2-kWK">
+                                                <rect key="frame" x="8" y="247" width="360" height="55"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="21"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuF-CC-YIW" customClass="BonsaiButton" customModule="Bonsai_FinalProject" customModuleProvider="target">
+                                                <rect key="frame" x="22" y="336" width="332" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="ZMe-40-Ggv"/>
+                                                    <constraint firstAttribute="width" constant="332" id="uhl-ZO-zd4"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="requestBonsaiButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0La-AT-3ae"/>
+                                                </connections>
+                                            </button>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="jt0-Zq-6It">
+                                                <rect key="frame" x="178" y="390" width="20" height="20"/>
+                                            </activityIndicatorView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="jt0-Zq-6It" firstAttribute="top" secondItem="tuF-CC-YIW" secondAttribute="bottom" constant="4" id="3Ti-K2-GiM"/>
+                                            <constraint firstItem="oed-p2-kWK" firstAttribute="leading" secondItem="h7b-pg-Zbe" secondAttribute="leading" constant="8" id="4go-WE-LqU"/>
+                                            <constraint firstItem="oed-p2-kWK" firstAttribute="centerX" secondItem="h7b-pg-Zbe" secondAttribute="centerX" id="BmK-YG-kze"/>
+                                            <constraint firstItem="Tzb-qq-B5g" firstAttribute="centerX" secondItem="h7b-pg-Zbe" secondAttribute="centerX" id="EBE-bQ-7e1"/>
+                                            <constraint firstItem="tuF-CC-YIW" firstAttribute="top" secondItem="oed-p2-kWK" secondAttribute="bottom" constant="34" id="Ivz-GO-Qol"/>
+                                            <constraint firstAttribute="trailing" secondItem="Tzb-qq-B5g" secondAttribute="trailing" constant="22" id="N1l-qt-62z"/>
+                                            <constraint firstItem="Tzb-qq-B5g" firstAttribute="leading" secondItem="h7b-pg-Zbe" secondAttribute="leading" constant="22" id="OGb-NB-ZMB"/>
+                                            <constraint firstAttribute="trailing" secondItem="oed-p2-kWK" secondAttribute="trailing" constant="8" id="QFW-HQ-ioF"/>
+                                            <constraint firstItem="tuF-CC-YIW" firstAttribute="centerX" secondItem="h7b-pg-Zbe" secondAttribute="centerX" id="dYl-Vw-2uc"/>
+                                            <constraint firstItem="oed-p2-kWK" firstAttribute="centerY" secondItem="h7b-pg-Zbe" secondAttribute="centerY" constant="-36" id="fE5-us-GLw"/>
+                                            <constraint firstItem="jt0-Zq-6It" firstAttribute="centerX" secondItem="h7b-pg-Zbe" secondAttribute="centerX" id="imm-kf-Mbt"/>
+                                            <constraint firstItem="oed-p2-kWK" firstAttribute="top" secondItem="Tzb-qq-B5g" secondAttribute="bottom" constant="-1" id="lW8-ZF-IY8"/>
+                                        </constraints>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPk-9A-Li5">
                                         <rect key="frame" x="345" y="590" width="22" height="22"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -159,7 +164,7 @@
                                         <rect key="frame" x="0.0" y="28" width="376" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="arl-y2-hXh" id="pdc-sd-vZL">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGE-lQ-aIy">
@@ -236,6 +241,7 @@
                         <outlet property="requestBlurView" destination="1VN-Kb-thn" id="ymI-SC-A0H"/>
                         <outlet property="requestInstallationButton" destination="tuF-CC-YIW" id="bNc-LW-lnK"/>
                         <outlet property="requestView" destination="h7b-pg-Zbe" id="iOv-Np-ePI"/>
+                        <outlet property="requestViewActivityIndicator" destination="jt0-Zq-6It" id="TYX-zZ-pSg"/>
                         <outlet property="requestViewYConstraint" destination="xrh-jg-rKZ" id="EjY-xX-rAP"/>
                         <outlet property="searchButton" destination="WJZ-eb-GPC" id="faa-Kk-QTQ"/>
                         <outlet property="theActivityIndicator" destination="vfs-SB-Ja9" id="Tj9-E1-iuc"/>
@@ -847,7 +853,7 @@
                                         <rect key="frame" x="0.0" y="28" width="376" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3eU-gY-tJb" id="ysw-dp-jGJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5y-uX-SUn">
@@ -1009,7 +1015,7 @@
                                         <rect key="frame" x="0.0" y="28" width="376" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Aa-GM-ZcR" id="W0R-Db-Zbi">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhT-bK-tYE">

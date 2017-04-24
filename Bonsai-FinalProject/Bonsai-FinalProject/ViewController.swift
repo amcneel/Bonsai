@@ -20,6 +20,7 @@ class ViewController: BonsaiViewController {
     @IBOutlet weak var theLocationButton: UIButton!
     @IBOutlet weak var theSearchButton: UIButton!
     
+    @IBOutlet weak var requestViewActivityIndicator: UIActivityIndicatorView!
     
     //this view is shown when the airport does not have bonsai installed
     //it consists of a label saying that bonsai is not installed and a button requesting that bonsai be installed
@@ -240,6 +241,8 @@ class ViewController: BonsaiViewController {
         if !firstTimeLoading{
             activityIndicator.isHidden = false
             activityIndicator.startAnimating()
+            requestViewActivityIndicator.isHidden = false
+            requestViewActivityIndicator.startAnimating()
         }
         
         
@@ -282,6 +285,8 @@ class ViewController: BonsaiViewController {
         self.mainView.setNeedsDisplay()
         activityIndicator.stopAnimating()
         activityIndicator.isHidden = true
+        requestViewActivityIndicator.stopAnimating()
+        requestViewActivityIndicator.isHidden = true
         
         //set background image
         
