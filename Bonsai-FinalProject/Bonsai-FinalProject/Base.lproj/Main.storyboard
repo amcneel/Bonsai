@@ -440,7 +440,7 @@ Feel free to contact us at sales@letsgobonsai.com</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2H-1w-eV3" customClass="TitleButton" customModule="Bonsai_FinalProject" customModuleProvider="target">
-                                <rect key="frame" x="136" y="238" width="135" height="30"/>
+                                <rect key="frame" x="120" y="234" width="135" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="135" id="mKG-va-MjX"/>
@@ -463,7 +463,7 @@ Feel free to contact us at sales@letsgobonsai.com</string>
                             <constraint firstItem="5b1-6M-3UQ" firstAttribute="top" secondItem="qoo-iN-laV" secondAttribute="bottom" constant="8" symbolic="YES" id="AaS-KH-cQ4"/>
                             <constraint firstItem="NyM-q5-U2t" firstAttribute="centerX" secondItem="qfZ-zb-mXc" secondAttribute="centerX" id="Ci5-wR-ebo"/>
                             <constraint firstItem="qfZ-zb-mXc" firstAttribute="trailing" secondItem="R58-ZX-IfM" secondAttribute="trailing" id="DQ0-63-pzD"/>
-                            <constraint firstItem="c2H-1w-eV3" firstAttribute="top" secondItem="R58-ZX-IfM" secondAttribute="bottom" constant="47" id="E1A-fo-oUz"/>
+                            <constraint firstItem="c2H-1w-eV3" firstAttribute="top" secondItem="R58-ZX-IfM" secondAttribute="bottom" constant="43" id="E1A-fo-oUz"/>
                             <constraint firstItem="Gjj-AB-y2W" firstAttribute="top" secondItem="rza-fQ-jnm" secondAttribute="bottom" constant="279" id="E25-rk-wUZ"/>
                             <constraint firstItem="5b1-6M-3UQ" firstAttribute="leading" secondItem="rza-fQ-jnm" secondAttribute="leading" id="FYd-Tv-MgE"/>
                             <constraint firstItem="gti-fd-VS2" firstAttribute="leading" secondItem="ZSD-4R-e3O" secondAttribute="leadingMargin" constant="18" id="I9f-EF-cba"/>
@@ -477,6 +477,7 @@ Feel free to contact us at sales@letsgobonsai.com</string>
                             <constraint firstItem="R58-ZX-IfM" firstAttribute="trailing" secondItem="lM7-GT-Wk4" secondAttribute="trailing" id="gmc-1W-ejK"/>
                             <constraint firstAttribute="trailing" secondItem="E2V-Jt-M1u" secondAttribute="trailing" id="iMv-2C-BUo"/>
                             <constraint firstItem="E2V-Jt-M1u" firstAttribute="top" secondItem="ZSD-4R-e3O" secondAttribute="top" id="jzO-mM-mJl"/>
+                            <constraint firstItem="c2H-1w-eV3" firstAttribute="centerX" secondItem="E2V-Jt-M1u" secondAttribute="centerX" id="kj2-qX-0ez"/>
                             <constraint firstItem="E2V-Jt-M1u" firstAttribute="bottom" secondItem="Gjj-AB-y2W" secondAttribute="top" id="mVE-PV-1Dp"/>
                             <constraint firstItem="gti-fd-VS2" firstAttribute="top" secondItem="r3J-2Z-ufM" secondAttribute="bottom" constant="8" symbolic="YES" id="mqF-Qx-E0D"/>
                             <constraint firstItem="lM7-GT-Wk4" firstAttribute="centerX" secondItem="rza-fQ-jnm" secondAttribute="centerX" id="mru-z0-5DY"/>
@@ -484,7 +485,7 @@ Feel free to contact us at sales@letsgobonsai.com</string>
                             <constraint firstItem="E2V-Jt-M1u" firstAttribute="leading" secondItem="ZSD-4R-e3O" secondAttribute="leading" id="r0i-Ok-h5v"/>
                             <constraint firstItem="E2V-Jt-M1u" firstAttribute="centerY" secondItem="lM7-GT-Wk4" secondAttribute="centerY" id="ust-98-bnK"/>
                             <constraint firstItem="NyM-q5-U2t" firstAttribute="leading" secondItem="gti-fd-VS2" secondAttribute="trailing" constant="68" id="vzp-32-SOt"/>
-                            <constraint firstItem="c2H-1w-eV3" firstAttribute="leading" secondItem="ZSD-4R-e3O" secondAttribute="leadingMargin" constant="120" id="zn9-Si-lVZ"/>
+                            <constraint firstItem="c2H-1w-eV3" firstAttribute="leading" secondItem="ZSD-4R-e3O" secondAttribute="leadingMargin" constant="104" id="zn9-Si-lVZ"/>
                         </constraints>
                     </view>
                     <connections>
