@@ -144,6 +144,12 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
         //print("Your location is \(someLocation)")
         curAirport = getClosestAirport(location: someLocation)
         
+        updateBonsaiInstallationCheck()
+        isUpdating = false
+    }
+    
+    func updateBonsaiInstallationCheck(){
+        
         prevAirportHasBonsai = curAirportHasBonsai
         //THIS NEEDS TO CHANGE
         if curAirport?.getCode() == "MCI" || curAirport?.getCode() == "BOS"{
@@ -152,7 +158,7 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
         else{
             curAirportHasBonsai = true
         }
-        isUpdating = false
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error){
@@ -219,14 +225,7 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         curAirport = airportSearchArr[indexPath.row]
         
-        prevAirportHasBonsai = curAirportHasBonsai
-        //THIS NEEDS TO CHANGE
-        if curAirport?.getCode() == "MCI" || curAirport?.getCode() == "BOS"{
-            curAirportHasBonsai = false
-        }
-        else{
-            curAirportHasBonsai = true
-        }
+        updateBonsaiInstallationCheck()
         
         hideSearchBar()
         airportType = .searchbar

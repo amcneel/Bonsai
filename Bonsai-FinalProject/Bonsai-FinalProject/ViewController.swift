@@ -107,8 +107,6 @@ class ViewController: BonsaiViewController {
         minsLabel.alpha = 0
         activityIndicator.isHidden = true
         
-        
-        
         //move the request installation button to off the screen
         self.requestView.alpha = 0
         self.requestViewYConstraint.constant = mainView.frame.height
@@ -184,10 +182,14 @@ class ViewController: BonsaiViewController {
         else{
             //doesnt have bonsai, load the request button
             
-            
-            
             //we have to move everything onto the screen if the previous airport did have bonsai
             if prevAirportHasBonsai == true{
+                if (curAirport?.hasSubmittedRequest)!{
+                    requestInstallationButton.disable()
+                }
+                else{
+                    requestInstallationButton.enable()
+                }
                 self.requestAirportNameLabel.text = curAirport?.getName()
                 if airportType == .searchbar{
                     requestBlurView.alpha = 1
@@ -213,9 +215,17 @@ class ViewController: BonsaiViewController {
                 
                 UIView.animate(withDuration: 0.6, animations: {
                     self.requestAirportNameLabel.alpha = 0
+                    self.requestInstallationButton.alpha=0
                 }, completion: { finished in
                     self.requestAirportNameLabel.text = curAirport?.getName()
+                    if (curAirport?.hasSubmittedRequest)!{
+                        self.requestInstallationButton.disable()
+                    }
+                    else{
+                        self.requestInstallationButton.enable()
+                    }
                     UIView.animate(withDuration: 0.4, animations: {
+                        self.requestInstallationButton.alpha = 1
                         self.requestAirportNameLabel.alpha = 1
                     })
                 })
@@ -244,6 +254,7 @@ class ViewController: BonsaiViewController {
                 }
                 break
             default:
+                isUpdating = false
                 break
             }
             
@@ -251,6 +262,7 @@ class ViewController: BonsaiViewController {
             
             DispatchQueue.main.async {
                 print("update async finished")
+                
                 
                 
                 self.locationButton.isEnabled = true
@@ -305,12 +317,6 @@ class ViewController: BonsaiViewController {
         //getTravelTime()
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        let touchPoint = (touches.first)!.location(in: mainView) as CGPoint
-        print(touchPoint)
-    }
-    
     @IBAction func infoButtonPressed(_ sender: Any) {
         let infoVC = self.storyboard?.instantiateViewController(withIdentifier: "InfoViewController") as? InfoViewController
         let transition = CATransition()
@@ -319,6 +325,15 @@ class ViewController: BonsaiViewController {
         transition.subtype = kCATransitionFromLeft
         self.navigationController?.view.layer.add(transition, forKey: kCATransition)
         self.navigationController?.pushViewController(infoVC!, animated: false)
+    }
+    
+    
+    @IBAction func requestBonsaiButtonPressed(_ sender: UIButton) {
+        
+        curAirport?.hasSubmittedRequest = true
+        
+        requestInstallationButton.disable()
+        
     }
     
     
