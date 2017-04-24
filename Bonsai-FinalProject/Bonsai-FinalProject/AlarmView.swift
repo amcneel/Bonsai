@@ -9,6 +9,8 @@
 import UIKit
 import FirebaseAuth
 import FBSDKLoginKit
+import FirebaseMessaging
+import FirebaseInstanceID
 
 //the view controller that displays the alarm stuff
 //all global variables found in GlobalVariables.swift
@@ -181,7 +183,58 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
         self.present(vc!, animated: true, completion: nil)
     }
     
-    @IBAction func setNotificationTapped(_ sender: TitleButton) {
+    
+    @IBAction func setNotificationTapped(_ sender: UIButton) {
+        
+        let token = FIRInstanceID.instanceID().token()!
+        print(token)
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        let flightTime = formatter.string(from: datePicker.date)
+        
+        let tokenEncoded = token.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)?.replacingOccurrences(of: ":", with: "%3A")
+        let flightTimeEncoded = flightTime.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)?.replacingOccurrences(of: ":", with: "%3A")
+        
+        let args = "?registration_id="+tokenEncoded!+"&flight_time="+flightTimeEncoded!
+        let urlString:String = "http://ec2-54-158-29-175.compute-1.amazonaws.com/bonsai/enterNotification.php"+args
+        
+        setNotification(urlS: urlString)
+        
+    }
+    
+    func setNotification(urlS:String){
+        
+        let url = URL(string: urlS)!
+        let session = URLSession(configuration: .default)
+        
+        // Define a download task. The download task will download the contents of the URL as a Data object and then you can do what you wish with that data.
+        
+        let notificationTask = session.dataTask(with: url) { (data, response, error) in
+            // The download has finished.
+            if let e = error {
+                print("Error downloading cat picture: \(e)")
+            } else {
+                // No errors found.
+                // It would be weird if we didn't have a response, so check for that too.
+                if let res = response as? HTTPURLResponse {
+                    //print("Downloaded background picture with response code \(res.statusCode)")
+                    if let d = data {
+                        // Finally convert that Data into an image and do what you wish with it.
+                        print(d)
+                    } else {
+                        print("Error: enterNotification page responded nil")
+                    }
+                } else {
+                    print("Couldn't access enterNotification page for some reason")
+                }
+            }
+            
+            
+        }
+        
+        notificationTask.resume()
     }
     
     
