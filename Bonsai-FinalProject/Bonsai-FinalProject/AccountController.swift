@@ -89,7 +89,7 @@ class AccountController: UIViewController, MFMessageComposeViewControllerDelegat
             self.present(vc!, animated: true, completion: nil)
         }
         else{
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Signin")
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Create")
             self.present(vc!, animated: true, completion: nil)
         }
     }

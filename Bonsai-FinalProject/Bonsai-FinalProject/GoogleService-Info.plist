@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>463455609463-0biqcffspkke8ijthaibo91jrh57i4r7.apps.googleusercontent.com</string>
+	<string>806650645645-l2bl0nos0ks64al1kuj1ua001sbjpisn.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.463455609463-0biqcffspkke8ijthaibo91jrh57i4r7</string>
+	<string>com.googleusercontent.apps.806650645645-l2bl0nos0ks64al1kuj1ua001sbjpisn</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBhYmOnRtMs-84eETK7umgmJ0MWrsvYe2c</string>
+	<string>AIzaSyAcze883oxOPrcINUB1OVKTrK5y8ewiGOs</string>
 	<key>GCM_SENDER_ID</key>
-	<string>463455609463</string>
+	<string>806650645645</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>wustl.Bonsai-FinalProject</string>
+	<string>com.tjam.Bonsai</string>
 	<key>PROJECT_ID</key>
-	<string>bonsai-40620</string>
+	<string>tjambonsai</string>
 	<key>STORAGE_BUCKET</key>
-	<string>bonsai-40620.appspot.com</string>
+	<string>tjambonsai.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:463455609463:ios:83df7834fd7788df</string>
+	<string>1:806650645645:ios:e351ca3caa811f6d</string>
 	<key>DATABASE_URL</key>
-	<string>https://bonsai-40620.firebaseio.com</string>
+	<string>https://tjambonsai.firebaseio.com</string>
 </dict>
 </plist>
