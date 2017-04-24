@@ -123,7 +123,7 @@ class AccountController: UIViewController, MFMessageComposeViewControllerDelegat
             //add estimated time of wait later
             // either make additional json call or ask jesse how to get the number?
             
-            socialController?.setInitialText("There's a 30 minute wait at the STL Airport! Find your wait with Bonsai")
+            socialController?.setInitialText("I just found out my wait time with Bonsai! Find yours today!")
             
             //this line will be the link to the app store to get the bonsai app
              //socialController.addURL(someNSURLInstance)
@@ -152,7 +152,7 @@ class AccountController: UIViewController, MFMessageComposeViewControllerDelegat
             //add estimated time of wait later
             // either make additional json call or ask jesse how to get the number?
             
-            socialController?.setInitialText("There's a 30 minute wait at the STL Airport! Find your wait with #Bonsai")
+            socialController?.setInitialText("I just found out my wait time with #Bonsai! Find yours today!")
             
             //this line will be the link to the app store to get the bonsai app
             //socialController.addURL(someNSURLInstance)
@@ -180,7 +180,7 @@ class AccountController: UIViewController, MFMessageComposeViewControllerDelegat
     @IBAction func messagesClicked(_ sender: Any) {
         if (MFMessageComposeViewController.canSendText()) {
             let messageController = MFMessageComposeViewController()
-            messageController.body = "There's a 30 minute wait at the STL Airport! Find your wait with Bonsai!"
+            messageController.body = "I just found out my wait time with Bonsai! Find yours today!"
             messageController.messageComposeDelegate = self
             self.present(messageController, animated: true, completion: nil)
         }
@@ -214,7 +214,7 @@ class AccountController: UIViewController, MFMessageComposeViewControllerDelegat
         mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
         
         mailComposerVC.setSubject("Check out Bonsai!")
-        mailComposerVC.setMessageBody("There's a 30 minute wait at the STL Airport! Find your wait with Bonsai", isHTML: false)
+        mailComposerVC.setMessageBody("I just found out my wait time with Bonsai! Find yours today!", isHTML: false)
         return mailComposerVC
     }
     
@@ -238,9 +238,9 @@ class AccountController: UIViewController, MFMessageComposeViewControllerDelegat
     //found on stack overflow at 
     // http://stackoverflow.com/questions/32042702/sending-message-to-whatsapp-from-your-app-using-swift
     @IBAction func whatsAppTouched(_ sender: Any) {
-        let urlString = "There's a 30 minute wait at the STL Airport! Find your wait with Bonsai"
+        let urlString = "I just found out my wait time with Bonsai! Find yours today!"
         if let urlStringEncoded = urlString.addingPercentEncoding(withAllowedCharacters:.urlQueryAllowed){
-            let url  = NSURL(string: "whatsapp://send?text=\(urlStringEncoded)")
+            let url  = NSURL(string:"whatsapp://send?text=\(urlStringEncoded)")
             
             if UIApplication.shared.canOpenURL(url! as URL) {
                 if #available(iOS 10, *) {
