@@ -298,13 +298,13 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrJ-cy-qRQ">
                                         <rect key="frame" x="22" y="110" width="331" height="387"/>
-                                        <mutableString key="text">Bonsai is an app made to save you time. Using our one of a kind calculation technology we provide you with live up to date wait time data for airports across the world. 
+                                        <string key="text">Bonsai is an app made to save you time. Using our one of a kind calculation technology we provide you with live up to date wait time data for airports across the world. 
 
 The main page allows you to browse wait times for any airport in the Bonsai Network. If you find an airport not using our technology, let us know and we will work to expand there as soon as we can. Browse Maps of your current Airport or set an Alarm to catch your flight using the tools we've provided. 
 
 You can even share Bonsai with your friends through Social Media, E-Mail, and Messaging Applications!
 
-Feel free to contact us at sales@letsgobonsai.com</mutableString>
+Feel free to contact us at sales@letsgobonsai.com</string>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -629,7 +629,7 @@ Feel free to contact us at sales@letsgobonsai.com</mutableString>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jgV-LG-Nrf" kind="modal" id="wNX-Ri-HB5"/>
+                                    <segue destination="jgV-LG-Nrf" kind="show" id="Gja-sp-vCd"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bonsai" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTj-LZ-KpW">
