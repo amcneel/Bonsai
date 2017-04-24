@@ -48,7 +48,7 @@ class AccountController: UIViewController, MFMessageComposeViewControllerDelegat
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }
-        
+         
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "Initial")
         self.present(vc!, animated: true, completion: nil)
         return
@@ -75,9 +75,16 @@ class AccountController: UIViewController, MFMessageComposeViewControllerDelegat
             }
         }
     }
-    
+     
     @IBAction func createBtnTouched(_ sender: UIButton) {
         if createAcctBtn.currentTitle == "Logout"{
+            let firebaseAuth = FIRAuth.auth()
+            do {
+                try firebaseAuth?.signOut()
+            } catch let signOutError as NSError {
+                print ("Error signing out: %@", signOutError)
+            }
+            
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "Initial")
             self.present(vc!, animated: true, completion: nil)
         }
