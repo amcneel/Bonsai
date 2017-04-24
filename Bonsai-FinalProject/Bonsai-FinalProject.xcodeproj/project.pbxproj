@@ -50,11 +50,8 @@
 		685AE4981EA6FE3700DB71F2 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 685AE4971EA6FE3700DB71F2 /* mail.png */; };
 		685AE49C1EA7031D00DB71F2 /* whatsapp.png in Resources */ = {isa = PBXBuildFile; fileRef = 685AE49B1EA7031D00DB71F2 /* whatsapp.png */; };
 		686113EE1E981C3C00729FD1 /* BackgroundImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686113ED1E981C3C00729FD1 /* BackgroundImageHandler.swift */; };
-		686F89671EAD604B000B3000 /* pixabay.png in Resources */ = {isa = PBXBuildFile; fileRef = 686F89661EAD604B000B3000 /* pixabay.png */; };
-		686F89691EAD608D000B3000 /* icon8.png in Resources */ = {isa = PBXBuildFile; fileRef = 686F89681EAD608D000B3000 /* icon8.png */; };
 		6877CC6B1EAA9F9F00CF97D3 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6877CC6A1EAA9F9F00CF97D3 /* InitialViewController.swift */; };
 		687AD8CC1EAD8C06003A9165 /* CreateAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687AD8CB1EAD8C06003A9165 /* CreateAccountController.swift */; };
-		687AD8D21EAD9CD4003A9165 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 687AD8D11EAD9CD4003A9165 /* GoogleService-Info.plist */; };
 		6886A56C1E95885C00A57868 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886A56B1E95885C00A57868 /* AppDelegate.swift */; };
 		6886A56E1E95885C00A57868 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886A56D1E95885C00A57868 /* ViewController.swift */; };
 		6886A5711E95885C00A57868 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6886A56F1E95885C00A57868 /* Main.storyboard */; };
@@ -418,6 +415,7 @@
 		688D2AB11EA2C49A008C44F3 /* IAD-Concourse-Z.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 688D29531EA2C499008C44F3 /* IAD-Concourse-Z.jpg */; };
 		688D2AB21EA2C49A008C44F3 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 688D29551EA2C499008C44F3 /* Contents.json */; };
 		688D2AB31EA2C49A008C44F3 /* IAD-Main-Terminal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 688D29561EA2C499008C44F3 /* IAD-Main-Terminal.jpg */; };
+		689D135D1EAD9F9100931E39 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 689D135C1EAD9F9100931E39 /* GoogleService-Info.plist */; };
 		689EAF4F1EA1743E009DE2C7 /* BonsaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689EAF4E1EA1743E009DE2C7 /* BonsaiViewController.swift */; };
 		689EAF511EA1802D009DE2C7 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689EAF501EA1802D009DE2C7 /* GlobalVariables.swift */; };
 		689EAF531EA1871D009DE2C7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689EAF521EA1871D009DE2C7 /* MapViewController.swift */; };
@@ -505,7 +503,6 @@
 		686F89681EAD608D000B3000 /* icon8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon8.png; sourceTree = "<group>"; };
 		6877CC6A1EAA9F9F00CF97D3 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		687AD8CB1EAD8C06003A9165 /* CreateAccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountController.swift; sourceTree = "<group>"; };
-		687AD8D11EAD9CD4003A9165 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6886A5681E95885C00A57868 /* Bonsai-FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bonsai-FinalProject.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6886A56B1E95885C00A57868 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6886A56D1E95885C00A57868 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -875,6 +872,7 @@
 		688D29531EA2C499008C44F3 /* IAD-Concourse-Z.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "IAD-Concourse-Z.jpg"; sourceTree = "<group>"; };
 		688D29551EA2C499008C44F3 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		688D29561EA2C499008C44F3 /* IAD-Main-Terminal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "IAD-Main-Terminal.jpg"; sourceTree = "<group>"; };
+		689D135C1EAD9F9100931E39 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		689EAF4E1EA1743E009DE2C7 /* BonsaiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BonsaiViewController.swift; sourceTree = "<group>"; };
 		689EAF501EA1802D009DE2C7 /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		689EAF521EA1871D009DE2C7 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -1018,7 +1016,7 @@
 		6886A56A1E95885C00A57868 /* Bonsai-FinalProject */ = {
 			isa = PBXGroup;
 			children = (
-				687AD8D11EAD9CD4003A9165 /* GoogleService-Info.plist */,
+				689D135C1EAD9F9100931E39 /* GoogleService-Info.plist */,
 				6886A5771E95885C00A57868 /* Info.plist */,
 				6886A5DF1E95A1BC00A57868 /* airports.csv */,
 				688D23DC1EA283D4008C44F3 /* AccountController.swift */,
@@ -3233,6 +3231,7 @@
 				688D2A361EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D295C1EA2C499008C44F3 /* Contents.json in Resources */,
 				688D29A81EA2C499008C44F3 /* Contents.json in Resources */,
+				689D135D1EAD9F9100931E39 /* GoogleService-Info.plist in Resources */,
 				688D2AB11EA2C49A008C44F3 /* IAD-Concourse-Z.jpg in Resources */,
 				688D29AC1EA2C499008C44F3 /* Contents.json in Resources */,
 				688D29661EA2C499008C44F3 /* Contents.json in Resources */,
