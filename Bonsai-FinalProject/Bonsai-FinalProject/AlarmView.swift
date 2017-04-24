@@ -181,4 +181,8 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
         self.present(vc!, animated: true, completion: nil)
     }
     
+    @IBAction func setNotificationTapped(_ sender: TitleButton) {
+    }
+    
+    
 }
