@@ -20,6 +20,7 @@ class ViewController: BonsaiViewController {
     @IBOutlet weak var theLocationButton: UIButton!
     @IBOutlet weak var theSearchButton: UIButton!
     
+    @IBOutlet weak var requestViewActivityIndicator: UIActivityIndicatorView!
     
     //this view is shown when the airport does not have bonsai installed
     //it consists of a label saying that bonsai is not installed and a button requesting that bonsai be installed
@@ -60,13 +61,17 @@ class ViewController: BonsaiViewController {
     var borderBackground:CAShapeLayer? = nil
     var borderFront:CAShapeLayer? = nil
     
+    
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         mainView = theMainView
         mainView.backgroundColor = mainBackgroundColor
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if !isUpdating{
+        if !isUpdating && !firstTimeLoading{
+            print("this is happening")
             activityIndicator.isHidden = false
             activityIndicator.startAnimating()
             updateFadeIn()
@@ -74,11 +79,16 @@ class ViewController: BonsaiViewController {
             updateDisplay()
             
         }
+        else if firstTimeLoading{
+            firstTimeLoading = false
+        }
         
     }
     
     override func viewDidLoad() {
         //sets the superclasses, navbar buttons and searchviews to allow for it to work
+        isUpdating = true
+        
         activityIndicator = theActivityIndicator
         locationButton = theLocationButton
         searchButton = theSearchButton
@@ -97,8 +107,6 @@ class ViewController: BonsaiViewController {
         waitLabel.alpha = 0
         minsLabel.alpha = 0
         activityIndicator.isHidden = true
-        
-        
         
         //move the request installation button to off the screen
         self.requestView.alpha = 0
@@ -175,10 +183,14 @@ class ViewController: BonsaiViewController {
         else{
             //doesnt have bonsai, load the request button
             
-            
-            
             //we have to move everything onto the screen if the previous airport did have bonsai
             if prevAirportHasBonsai == true{
+                if (curAirport?.hasSubmittedRequest)!{
+                    requestInstallationButton.disable()
+                }
+                else{
+                    requestInstallationButton.enable()
+                }
                 self.requestAirportNameLabel.text = curAirport?.getName()
                 if airportType == .searchbar{
                     requestBlurView.alpha = 1
@@ -204,9 +216,17 @@ class ViewController: BonsaiViewController {
                 
                 UIView.animate(withDuration: 0.6, animations: {
                     self.requestAirportNameLabel.alpha = 0
+                    self.requestInstallationButton.alpha=0
                 }, completion: { finished in
                     self.requestAirportNameLabel.text = curAirport?.getName()
+                    if (curAirport?.hasSubmittedRequest)!{
+                        self.requestInstallationButton.disable()
+                    }
+                    else{
+                        self.requestInstallationButton.enable()
+                    }
                     UIView.animate(withDuration: 0.4, animations: {
+                        self.requestInstallationButton.alpha = 1
                         self.requestAirportNameLabel.alpha = 1
                     })
                 })
@@ -221,6 +241,8 @@ class ViewController: BonsaiViewController {
         if !firstTimeLoading{
             activityIndicator.isHidden = false
             activityIndicator.startAnimating()
+            requestViewActivityIndicator.isHidden = false
+            requestViewActivityIndicator.startAnimating()
         }
         
         
@@ -235,19 +257,22 @@ class ViewController: BonsaiViewController {
                 }
                 break
             default:
+                isUpdating = false
                 break
             }
             
             
             
             DispatchQueue.main.async {
-                isUpdating = false
-                self.firstTimeLoading = false
+                print("update async finished")
+                
+                
+                
                 self.locationButton.isEnabled = true
                 self.searchButton.isEnabled = true
                 self.bonsaiInstallationCheck()
                 self.updateFadeIn()
-                self.setImageToCity()
+                self.setBackgroundImage()
                 self.updateDisplay()
             }
         }
@@ -256,9 +281,12 @@ class ViewController: BonsaiViewController {
     }
     
     override func updateDisplay(){
-        
+        self.mainView.backgroundColor = mainBackgroundColor
+        self.mainView.setNeedsDisplay()
         activityIndicator.stopAnimating()
         activityIndicator.isHidden = true
+        requestViewActivityIndicator.stopAnimating()
+        requestViewActivityIndicator.isHidden = true
         
         //set background image
         
@@ -290,13 +318,8 @@ class ViewController: BonsaiViewController {
             
             bezierBorder?.setValue(v:CGFloat(Int(waitTime.expected)))
         }
+        isUpdating = false
         //getTravelTime()
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        let touchPoint = (touches.first)!.location(in: mainView) as CGPoint
-        print(touchPoint)
     }
     
     @IBAction func infoButtonPressed(_ sender: Any) {
@@ -307,6 +330,15 @@ class ViewController: BonsaiViewController {
         transition.subtype = kCATransitionFromLeft
         self.navigationController?.view.layer.add(transition, forKey: kCATransition)
         self.navigationController?.pushViewController(infoVC!, animated: false)
+    }
+    
+    
+    @IBAction func requestBonsaiButtonPressed(_ sender: UIButton) {
+        
+        curAirport?.hasSubmittedRequest = true
+        
+        requestInstallationButton.disable()
+        
     }
     
     

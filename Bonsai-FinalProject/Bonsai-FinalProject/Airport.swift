@@ -19,12 +19,14 @@ class Airport: NSObject{
     private var term:String
     private var numPics:Int
     
+    var hasSubmittedRequest:Bool
     init(n:String, c:String, l:CLLocation, t:String, p:Int) {
         name = n
         code = c
         loc = l
         term = t
         numPics = p
+        hasSubmittedRequest = false
     }
     
     func getName() -> String{
