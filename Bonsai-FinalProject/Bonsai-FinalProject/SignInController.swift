@@ -62,45 +62,12 @@ class SignInController: UIViewController, FBSDKLoginButtonDelegate{
         }
     }
     
-    //for creating account
-    @IBOutlet weak var EmailCreate: UITextField!
-    
-    @IBOutlet weak var PasswordCreate: UITextField!
     
     //for sign in
     @IBOutlet var emailLogin: UITextField!
     @IBOutlet var passLogin: UITextField!
     
     
-    //////////////////////
-    //at create Account
-    @IBAction func createAccountBtn(_ sender: UIButton) {
-        if EmailCreate.text == "" || PasswordCreate.text == ""{
-            let alertController = UIAlertController(title: "Error", message: "Please enter your email and password", preferredStyle: .alert)
-            
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alertController.addAction(defaultAction)
-            
-            present(alertController, animated: true, completion: nil)
-            
-        } else {
-            FIRAuth.auth()?.createUser(withEmail: EmailCreate.text!, password: PasswordCreate.text!) { (user, error) in
-                
-                if error == nil {
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
-                    self.present(vc!, animated: true, completion: nil)
-                    
-                } else {
-                    let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
-                    
-                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                    alertController.addAction(defaultAction)
-                    
-                    self.present(alertController, animated: true, completion: nil)
-                }
-            }
-        }
-    }
     
     //at login btn
     @IBAction func loginBtnPressed(_ sender: UIButton) {
@@ -139,6 +106,7 @@ class SignInController: UIViewController, FBSDKLoginButtonDelegate{
         }
     }
 
+    
     
     
 }
