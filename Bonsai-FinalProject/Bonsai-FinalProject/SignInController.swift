@@ -37,7 +37,7 @@ class SignInController: UIViewController, FBSDKLoginButtonDelegate{
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         if ((error) != nil){
-            //print(error.localizedDescription)
+            print(error.localizedDescription)
             let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
             
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
