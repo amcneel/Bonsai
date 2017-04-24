@@ -906,6 +906,9 @@
                                         <state key="normal" title="Set Notification">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="setNotificationTapped:" destination="g9W-o9-a5L" eventType="touchUpInside" id="7SG-aZ-fYz"/>
+                                        </connections>
                                     </button>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="QRc-pV-HPT">
                                         <rect key="frame" x="5" y="85" width="20" height="20"/>
