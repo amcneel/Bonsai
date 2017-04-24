@@ -11,7 +11,7 @@ import UIKit
 class TitleButton: UIButton{
     
     override func awakeFromNib() {
-        self.layer.cornerRadius = 10.0
+        self.layer.cornerRadius = self.frame.height/2
        // self.layer.borderWidth = 3.0
        // self.layer.borderColor = UIColor.init(red: 0, green: 200/255, blue: 0, alpha: 1).cgColor
        // self.layer.backgroundColor = UIColor.init(red: 0, green: 140/255, blue: 0, alpha: 1).cgColor

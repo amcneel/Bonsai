@@ -17,6 +17,7 @@ import FirebaseInstanceID
 class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate{
     
     
+    @IBOutlet weak var flightTimeLabel: UILabel!
     @IBOutlet weak var airportCode: UILabel!
     @IBOutlet weak var theActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var theLocationButton: UIButton!
@@ -51,8 +52,13 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
         datePicker.backgroundColor = UIColor.black.withAlphaComponent(0.7)
         datePicker.layer.cornerRadius = 40
         datePicker.layer.masksToBounds = true
-        
         datePicker.setValue(UIColor.white, forKeyPath: "textColor")
+        alarmTime.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+        alarmTime.layer.cornerRadius = alarmTime.frame.height/2
+        alarmTime.layer.masksToBounds = true
+        flightTimeLabel.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+        flightTimeLabel.layer.cornerRadius = flightTimeLabel.frame.height/2
+        flightTimeLabel.layer.masksToBounds = true
 
         updateDisplay()
     }
