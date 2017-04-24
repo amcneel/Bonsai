@@ -50,6 +50,8 @@
 		685AE4981EA6FE3700DB71F2 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 685AE4971EA6FE3700DB71F2 /* mail.png */; };
 		685AE49C1EA7031D00DB71F2 /* whatsapp.png in Resources */ = {isa = PBXBuildFile; fileRef = 685AE49B1EA7031D00DB71F2 /* whatsapp.png */; };
 		686113EE1E981C3C00729FD1 /* BackgroundImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686113ED1E981C3C00729FD1 /* BackgroundImageHandler.swift */; };
+		686F896B1EADA5B2000B3000 /* icons82.png in Resources */ = {isa = PBXBuildFile; fileRef = 686F896A1EADA5B2000B3000 /* icons82.png */; };
+		686F896D1EADA5BA000B3000 /* pixabay1.png in Resources */ = {isa = PBXBuildFile; fileRef = 686F896C1EADA5BA000B3000 /* pixabay1.png */; };
 		6877CC6B1EAA9F9F00CF97D3 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6877CC6A1EAA9F9F00CF97D3 /* InitialViewController.swift */; };
 		687AD8CC1EAD8C06003A9165 /* CreateAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687AD8CB1EAD8C06003A9165 /* CreateAccountController.swift */; };
 		6886A56C1E95885C00A57868 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886A56B1E95885C00A57868 /* AppDelegate.swift */; };
@@ -499,8 +501,8 @@
 		685AE4971EA6FE3700DB71F2 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
 		685AE49B1EA7031D00DB71F2 /* whatsapp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whatsapp.png; sourceTree = "<group>"; };
 		686113ED1E981C3C00729FD1 /* BackgroundImageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundImageHandler.swift; sourceTree = "<group>"; };
-		686F89661EAD604B000B3000 /* pixabay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pixabay.png; sourceTree = "<group>"; };
-		686F89681EAD608D000B3000 /* icon8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon8.png; sourceTree = "<group>"; };
+		686F896A1EADA5B2000B3000 /* icons82.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icons82.png; sourceTree = "<group>"; };
+		686F896C1EADA5BA000B3000 /* pixabay1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pixabay1.png; sourceTree = "<group>"; };
 		6877CC6A1EAA9F9F00CF97D3 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		687AD8CB1EAD8C06003A9165 /* CreateAccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountController.swift; sourceTree = "<group>"; };
 		6886A5681E95885C00A57868 /* Bonsai-FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bonsai-FinalProject.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2849,9 +2851,9 @@
 			isa = PBXGroup;
 			children = (
 				EF815DAE1EA01AF30055C3BE /* Tree4.png */,
-				686F89661EAD604B000B3000 /* pixabay.png */,
-				686F89681EAD608D000B3000 /* icon8.png */,
+				686F896C1EADA5BA000B3000 /* pixabay1.png */,
 				685AE49B1EA7031D00DB71F2 /* whatsapp.png */,
+				686F896A1EADA5B2000B3000 /* icons82.png */,
 				EF815DAC1EA0174E0055C3BE /* User Filled-25.png */,
 				688D23E01EA28D96008C44F3 /* twitter.png */,
 				685AE4971EA6FE3700DB71F2 /* mail.png */,
@@ -3191,6 +3193,7 @@
 				688D2A881EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D29B01EA2C499008C44F3 /* Contents.json in Resources */,
 				688D297B1EA2C499008C44F3 /* Contents.json in Resources */,
+				686F896B1EADA5B2000B3000 /* icons82.png in Resources */,
 				680009EE1EA8843300CEDCC8 /* Icon-App-60x60@3x.png in Resources */,
 				688D2A911EA2C49A008C44F3 /* SEA-Concourse-C.jpg in Resources */,
 				688D2A771EA2C49A008C44F3 /* Salt-Lake-City-SLC-ConcourseA.jpg in Resources */,
@@ -3355,6 +3358,7 @@
 				688D296C1EA2C499008C44F3 /* Contents.json in Resources */,
 				688D299C1EA2C499008C44F3 /* Contents.json in Resources */,
 				688D29B11EA2C499008C44F3 /* LGA-Terminal-A.jpg in Resources */,
+				686F896D1EADA5BA000B3000 /* pixabay1.png in Resources */,
 				688D2A861EA2C49A008C44F3 /* Contents.json in Resources */,
 				688D29691EA2C499008C44F3 /* BOS-Terminal-C.jpg in Resources */,
 				688D2A351EA2C49A008C44F3 /* JFK-Terminal-4.jpg in Resources */,
