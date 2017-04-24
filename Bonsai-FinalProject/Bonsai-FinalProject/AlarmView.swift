@@ -175,7 +175,7 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
         label.center = CGPoint(x: view.frame.size.width/2, y: view.frame.size.height/2)
         label.textColor = UIColor.white
         label.textAlignment = .center
-        label.text = "Login to Use Alarms"
+        label.text = "Log in to Use Alarms"
         label.tag = 99
         self.view.addSubview(label)
     }
@@ -183,7 +183,7 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
     func addLoginBtn(){
         let button = TitleButton(frame: CGRect(x: view.frame.size.width/2 - 69, y: view.frame.size.height/2 + 50, width: 137, height: 30))
         button.backgroundColor = UIColor.black
-        button.setTitle("Login", for: .normal)
+        button.setTitle("Log in", for: .normal)
         button.layer.cornerRadius = 10.0
         button.tag = 98
         button.addTarget(self, action: #selector(addedLoginBtnTapped), for: .touchUpInside)
