@@ -37,7 +37,7 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
         searchButton = theSearchButton
         mainView = theMainView
         searchTableView = theSearchTableView
-        
+
         super.viewDidLoad()
         
         
@@ -45,14 +45,20 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
         //datePicker.setValue(UIColor.white, forKeyPath: "textColor")
         datePicker.datePickerMode = .countDownTimer
         datePicker.datePickerMode = .dateAndTime
-        datePicker.tintColor = UIColor.white
         datePicker.addTarget(self, action: #selector(AlarmView.datePickerValueChanged(sender:)), for: UIControlEvents.valueChanged)
         alarmTime.text = "Your alarm is not scheduled."
         airportCode.text = curAirport?.getCode()
+        datePicker.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+        datePicker.layer.cornerRadius = 40
+        datePicker.layer.masksToBounds = true
+        
+        datePicker.setValue(UIColor.white, forKeyPath: "textColor")
+
         updateDisplay()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        datePicker.tintColor = UIColor.white
         mainView = theMainView
         mainView.backgroundColor = mainBackgroundColor
         if FBSDKAccessToken.current() == nil && FIRAuth.auth()?.currentUser == nil{
@@ -106,7 +112,7 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
         dateFormatter.dateStyle = DateFormatter.Style.none
         dateFormatter.timeStyle = DateFormatter.Style.short
         timeStr = timeStr + " at " + dateFormatter.string(from: sender.date)
-        alarmTime.text = "Your alarm is scheduled for " + timeStr + ". Press enter to confirm this time."
+        alarmTime.text = "Your alarm is scheduled for " + timeStr + ". Press 'Set Notification' to confirm this time."
         //alarmTime.tintColor = UIColor.white
         
     }
@@ -163,7 +169,7 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
         label.center = CGPoint(x: view.frame.size.width/2, y: view.frame.size.height/2)
         label.textColor = UIColor.white
         label.textAlignment = .center
-        label.text = "login to use alarms"
+        label.text = "Login to Use Alarms"
         label.tag = 99
         self.view.addSubview(label)
     }
