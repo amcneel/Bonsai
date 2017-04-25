@@ -33,7 +33,7 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
     
     
     let blurView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.light))
-    var backgroundOperation = BlockOperation()
+    
     
     override func viewDidLoad() {
                 
@@ -71,13 +71,7 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
         
         
         mainView.backgroundColor = mainBackgroundColor
-        backgroundOperation.addExecutionBlock {
-            self.update()
-        }
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        backgroundOperation.cancel()
+        
     }
     
     func loadAirportsFromCSV(){
