@@ -303,6 +303,9 @@ class ViewController: BonsaiViewController {
         }
         
         if curAirportHasBonsai{
+            if curAirport == nil{
+                return
+            }
             let waitTime = getWaitTime(airport: curAirport!)
             let waitTimeString = String(Int(waitTime.expected))
             
