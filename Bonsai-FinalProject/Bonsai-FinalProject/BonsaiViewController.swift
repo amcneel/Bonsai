@@ -315,6 +315,22 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
         print("setImageDone")
     }
     
+    private func getJSON(path: String) -> JSON {
+        if let url=URL(string: path){
+            do{
+                let json = try Data(contentsOf: url)
+                return JSON(data: json)
+            }
+            catch{
+                return JSON.null
+            }
+        }
+        else{
+            return JSON.null
+        }
+        
+    }
+    
     func setBackgroundImage(){
         let acode = curAirport?.getCode()
         let url = "http://ec2-54-158-29-175.compute-1.amazonaws.com/bonsai/getBackgroundPhoto.php?code="+acode!
@@ -334,7 +350,7 @@ class BonsaiViewController: UIViewController, CLLocationManagerDelegate, UISearc
             } else {
                 // No errors found.
                 // It would be weird if we didn't have a response, so check for that too.
-                if let res = response as? HTTPURLResponse {
+                if (response as? HTTPURLResponse) != nil {
                     //print("Downloaded background picture with response code \(res.statusCode)")
                     if let imageData = data {
                         // Finally convert that Data into an image and do what you wish with it.

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qLp-DW-D8K">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qLp-DW-D8K">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -162,7 +162,7 @@
                                         <rect key="frame" x="0.0" y="28" width="376" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="arl-y2-hXh" id="pdc-sd-vZL">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGE-lQ-aIy">
@@ -872,7 +872,7 @@ Feel free to contact us at sales@letsgobonsai.com</string>
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="setNotificationTapped:" destination="g9W-o9-a5L" eventType="touchUpInside" id="7SG-aZ-fYz"/>
+                                            <action selector="notificationButtonTapped:" destination="g9W-o9-a5L" eventType="touchUpInside" id="yqw-9S-Ddb"/>
                                         </connections>
                                     </button>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="QRc-pV-HPT">
@@ -977,6 +977,8 @@ Feel free to contact us at sales@letsgobonsai.com</string>
                         <outlet property="alarmTime" destination="wvG-Kj-tX9" id="NGo-5u-S6i"/>
                         <outlet property="datePicker" destination="5Xc-g4-PqA" id="baa-e2-dv6"/>
                         <outlet property="flightTimeLabel" destination="qX7-zU-6qw" id="GrN-eY-rsd"/>
+                        <outlet property="notificationButton" destination="jwN-b8-LTP" id="9FE-ao-3TY"/>
+                        <outlet property="notificationButtonWidthConstraint" destination="Lhw-nm-NCb" id="hxh-wz-ap2"/>
                         <outlet property="theActivityIndicator" destination="QRc-pV-HPT" id="8KZ-X9-3nS"/>
                         <outlet property="theLocationButton" destination="2PL-fV-ftE" id="VQx-cm-ltl"/>
                         <outlet property="theMainView" destination="zdT-c7-P8i" id="crl-0j-UA2"/>
@@ -1069,7 +1071,7 @@ Feel free to contact us at sales@letsgobonsai.com</string>
                                         <rect key="frame" x="0.0" y="28" width="376" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Aa-GM-ZcR" id="W0R-Db-Zbi">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhT-bK-tYE">

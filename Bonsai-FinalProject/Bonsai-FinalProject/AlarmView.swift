@@ -16,6 +16,13 @@ import FirebaseInstanceID
 //all global variables found in GlobalVariables.swift
 class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate{
     
+    let auth="bonsai"   //THE AUTH KEY ON THE SERVER - ALL REQUESTS MUST HAVE THIS IF THEY WANT PUSH NOTIFICATIONS TO WORK
+    
+    var notificationIsSet:Bool = false
+    
+    @IBOutlet weak var notificationButton: TitleButton!
+    
+    @IBOutlet weak var notificationButtonWidthConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var flightTimeLabel: UILabel!
     @IBOutlet weak var airportCode: UILabel!
@@ -95,6 +102,51 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
                 viewWithBtnTag.removeFromSuperview()
             }
         }
+        checkNotificationAlreadySet()
+        
+    }
+    
+    func checkNotificationAlreadySet(){
+        let token = FIRInstanceID.instanceID().token()!
+        var params = [String:String]()
+        params["registration_id"] = token
+        params["auth"] = auth
+        let args = urlEncode(dict: params)
+        let urlString = "http://ec2-54-158-29-175.compute-1.amazonaws.com/bonsai/getNotification.php"+args
+        let json = getJSON(path: urlString)
+        if json["error"].exists(){
+            print("Get Notification Error: "+json["error"].stringValue)
+            setupNotificationDoesNotExist()
+        }
+        else if json["success"].exists(){
+            if json["success"].intValue == 1{
+                let jsonFlightTime = json["flight_time"].stringValue
+                setupNotificationDoesExist(ft: jsonFlightTime)
+            }
+            else{
+                setupNotificationDoesNotExist()
+            }
+        }
+        else{
+            print("Get Notification Unexpected Response: "+json.stringValue)
+            setupNotificationDoesNotExist()
+        }
+    }
+    
+    func setupNotificationDoesExist(ft:String){
+        notificationIsSet = true
+        alarmTime.text = "Your notification's flight time is currently set for "+ft
+        notificationButtonWidthConstraint.constant = 250
+        notificationButton.setTitle("Clear Notification", for: .normal)
+        
+    }
+    
+    func setupNotificationDoesNotExist(){
+        notificationIsSet = false
+        alarmTime.text = "No notification currently set."
+        notificationButtonWidthConstraint.constant = 168
+        notificationButton.setTitle("Set Notification", for: .normal)
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -118,7 +170,7 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
         dateFormatter.dateStyle = DateFormatter.Style.none
         dateFormatter.timeStyle = DateFormatter.Style.short
         timeStr = timeStr + " at " + dateFormatter.string(from: sender.date)
-        alarmTime.text = "Your alarm is scheduled for " + timeStr + ". Press 'Set Notification' to confirm this time."
+        //alarmTime.text = "Your alarm is scheduled for " + timeStr + ". Press 'Set Notification' to confirm this time."
         //alarmTime.tintColor = UIColor.white
         
     }
@@ -195,8 +247,19 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
         self.present(vc!, animated: true, completion: nil)
     }
     
+    func urlEncode(dict:[String:String]) -> String{
+        var ret = ""
+        for(k,v) in dict{
+            let kEncoded = k.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)?.replacingOccurrences(of: ":", with: "%3A")
+            let vEncoded = v.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)?.replacingOccurrences(of: ":", with: "%3A")
+            ret += kEncoded!+"="+vEncoded!+"&"
+        }
+        ret = "?"+ret.substring(to: ret.index(before: ret.endIndex))
+        return ret
+    }
     
-    @IBAction func setNotificationTapped(_ sender: UIButton) {
+    @IBAction func notificationButtonTapped(_ sender: UIButton) {
+        
         
         let token = FIRInstanceID.instanceID().token()!
         print(token)
@@ -206,14 +269,58 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
         
         let flightTime = formatter.string(from: datePicker.date)
         
-        let tokenEncoded = token.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)?.replacingOccurrences(of: ":", with: "%3A")
-        let flightTimeEncoded = flightTime.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)?.replacingOccurrences(of: ":", with: "%3A")
+        var params = [String:String]()
+        params["registration_id"] = token
+        params["flight_time"] = flightTime
+        params["auth"] = auth
         
-        let args = "?registration_id="+tokenEncoded!+"&flight_time="+flightTimeEncoded!
-        let urlString:String = "http://ec2-54-158-29-175.compute-1.amazonaws.com/bonsai/enterNotification.php"+args
+        let args = urlEncode(dict: params)
         
-        setNotification(urlS: urlString)
+        if notificationIsSet{
+            let urlString:String = "http://ec2-54-158-29-175.compute-1.amazonaws.com/bonsai/deleteNotification.php"+args
+            clearNotification(urlS: urlString)
+        }
+        else{
+            let urlString:String = "http://ec2-54-158-29-175.compute-1.amazonaws.com/bonsai/enterNotification.php"+args
+            setNotification(urlS: urlString)
+        }
         
+        
+    }
+
+    func clearNotification(urlS: String){
+        let url = URL(string: urlS)!
+        let session = URLSession(configuration: .default)
+        
+        // Define a download task. The download task will download the contents of the URL as a Data object and then you can do what you wish with that data.
+        
+        let notificationTask = session.dataTask(with: url) { (data, response, error) in
+            // The download has finished.
+            if let e = error {
+                print("Error downloading cat picture: \(e)")
+            } else {
+                // No errors found.
+                // It would be weird if we didn't have a response, so check for that too.
+                if (response as? HTTPURLResponse) != nil {
+                    //print("Downloaded background picture with response code \(res.statusCode)")
+                    if data != nil {
+                        // Finally convert that Data into an image and do what you wish with it.
+                        DispatchQueue.main.sync(execute: {
+                            self.setupNotificationDoesNotExist()
+                        })
+                        
+                    } else {
+                        print("Error: enterNotification page responded nil")
+                    }
+                } else {
+                    print("Couldn't access enterNotification page for some reason")
+                }
+            }
+            
+            
+        }
+        
+        notificationTask.resume()
     }
     
     func setNotification(urlS:String){
@@ -230,11 +337,17 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
             } else {
                 // No errors found.
                 // It would be weird if we didn't have a response, so check for that too.
-                if let res = response as? HTTPURLResponse {
+                if (response as? HTTPURLResponse) != nil {
                     //print("Downloaded background picture with response code \(res.statusCode)")
-                    if let d = data {
+                    if data != nil {
                         // Finally convert that Data into an image and do what you wish with it.
-                        print(d)
+                        let ft = self.datePicker.date.description
+                        
+                        DispatchQueue.main.sync(execute: {
+                            self.setupNotificationDoesExist(ft: ft)
+                        })
+                        
+                        
                     } else {
                         print("Error: enterNotification page responded nil")
                     }
