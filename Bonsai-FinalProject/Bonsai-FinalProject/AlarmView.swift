@@ -55,7 +55,6 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
         datePicker.datePickerMode = .dateAndTime
         datePicker.addTarget(self, action: #selector(AlarmView.datePickerValueChanged(sender:)), for: UIControlEvents.valueChanged)
         alarmTime.text = "Your alarm is not scheduled."
-        airportCode.text = curAirport?.getCode()
         datePicker.backgroundColor = UIColor.black.withAlphaComponent(0.7)
         datePicker.layer.cornerRadius = 40
         datePicker.layer.masksToBounds = true
@@ -66,8 +65,13 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
         flightTimeLabel.backgroundColor = UIColor.black.withAlphaComponent(0.7)
         flightTimeLabel.layer.cornerRadius = flightTimeLabel.frame.height/2
         flightTimeLabel.layer.masksToBounds = true
-
-        updateDisplay()
+        if curAirport == nil{
+            update()
+        }
+        else{
+            updateDisplay()
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

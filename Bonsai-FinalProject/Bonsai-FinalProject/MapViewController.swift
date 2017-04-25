@@ -41,7 +41,13 @@ class MapViewController: BonsaiViewController{
         searchTableView = theSearchTableView
         
         super.viewDidLoad()
-        updateDisplay()
+        if curAirport == nil{
+            update()
+        }
+        else{
+            updateDisplay()
+        }
+        
         
     }
     
