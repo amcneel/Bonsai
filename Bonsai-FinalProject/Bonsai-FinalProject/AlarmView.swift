@@ -121,7 +121,11 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
         else if json["success"].exists(){
             if json["success"].intValue == 1{
                 let jsonFlightTime = json["flight_time"].stringValue
-                setupNotificationDoesExist(ft: jsonFlightTime)
+                let df = DateFormatter()
+                df.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                let date = df.date(from: jsonFlightTime)
+                let timeStr = getPrettyDate(d: date!)
+                setupNotificationDoesExist(ft: timeStr)
             }
             else{
                 setupNotificationDoesNotExist()
@@ -323,6 +327,20 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
         notificationTask.resume()
     }
     
+    func getPrettyDate(d:Date) -> String{
+        let dateFormatter = DateFormatter()
+        
+        
+        dateFormatter.dateStyle = DateFormatter.Style.medium
+        dateFormatter.timeStyle = DateFormatter.Style.none
+        var timeStr = dateFormatter.string(from: d)
+        dateFormatter.dateStyle = DateFormatter.Style.none
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        timeStr = timeStr + " at " + dateFormatter.string(from: d)
+        
+        return timeStr
+    }
+    
     func setNotification(urlS:String){
         
         let url = URL(string: urlS)!
@@ -341,10 +359,10 @@ class AlarmView: BonsaiViewController, UITextFieldDelegate, UIPickerViewDelegate
                     //print("Downloaded background picture with response code \(res.statusCode)")
                     if data != nil {
                         // Finally convert that Data into an image and do what you wish with it.
-                        let ft = self.datePicker.date.description
-                        
+                        let ft = self.datePicker.date
+                        let timeStr = self.getPrettyDate(d: ft)
                         DispatchQueue.main.sync(execute: {
-                            self.setupNotificationDoesExist(ft: ft)
+                            self.setupNotificationDoesExist(ft: timeStr)
                         })
                         
                         
