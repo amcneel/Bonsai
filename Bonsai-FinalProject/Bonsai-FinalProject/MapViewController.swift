@@ -41,7 +41,7 @@ class MapViewController: BonsaiViewController{
         searchTableView = theSearchTableView
         
         super.viewDidLoad()
-        if curAirport == nil{
+        if isUpdating{
             update()
         }
         else{
@@ -88,6 +88,9 @@ class MapViewController: BonsaiViewController{
         codeLabel.text = curAirport?.getCode()
         terms = curAirport?.getTerm()
         let count = terms?.components(separatedBy: ",").count
+        if count == nil{
+            return 
+        }
         pageControl.numberOfPages = count!
         if(counter>count!-1){
             counter = 0
