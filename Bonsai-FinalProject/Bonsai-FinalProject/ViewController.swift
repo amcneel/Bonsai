@@ -117,7 +117,8 @@ class ViewController: BonsaiViewController {
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        update()
+        
+        backgroundOperation.start()
 
         //we can't set the bezierborder here because the constraints don't update until after viewdidload
         //we set bezierborder in updateWaitTimeDisplay
