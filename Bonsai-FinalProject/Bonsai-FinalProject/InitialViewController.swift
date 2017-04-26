@@ -24,8 +24,13 @@ class InitialViewController: UIViewController{
     override func viewDidLoad() {
         //loads the airports from the csv into the var airports
         super.viewDidLoad()
-    } 
-    
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        if FIRAuth.auth()?.currentUser != nil || FBSDKAccessToken.current() != nil{
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+            self.present(vc!, animated: true, completion: nil)
+        }
+    }
     @IBAction func signIn(_ sender: UIButton) {
         if FIRAuth.auth()?.currentUser != nil || FBSDKAccessToken.current() != nil{
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")

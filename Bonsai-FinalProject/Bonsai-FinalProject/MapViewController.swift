@@ -89,6 +89,7 @@ class MapViewController: BonsaiViewController{
         terms = curAirport?.getTerm()
         let count = terms?.components(separatedBy: ",").count
         if count == nil{
+            update()
             return 
         }
         pageControl.numberOfPages = count!
