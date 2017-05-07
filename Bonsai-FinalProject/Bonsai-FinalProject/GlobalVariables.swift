@@ -22,3 +22,5 @@ var curAirportHasBonsai:Bool = true     //used to show request button or wait-ti
 var prevAirportHasBonsai:Bool = true    //used for transitions between airports, currently only needed for animations on the wait time page
 var curLocation:CLLocation? = nil
 var isUpdating:Bool = false //used to check if the curAirport is being updated, helpful for double loading the wait time and switching between tabs
+
+let requestIdentifier = "SampleRequest" //identifier is to cancel the notification request - not sure where this is called
